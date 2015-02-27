@@ -7,17 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "ObjectFileManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //实例化主故事版
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ObjectFileManager *manager = [ObjectFileManager sharedManager];
+    
+    //如果已经登录则将rootVC设置为主VC，否则设置为LoginVC
+    if ([manager checkLoginInfo]) {
+        
+        UITabBarController *mainVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+        self.window.rootViewController = mainVC;
+        
+    }else{
+        
+        UIViewController *loginVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        self.window.rootViewController = loginVC;
+    }
     return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
+    
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
