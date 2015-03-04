@@ -20,6 +20,8 @@
 {
     [super viewDidLoad];
     
+    self.title = @"登录";
+    
     self.bl = [LoginAndRegisterBusiness sharedManager];
     self.bl.delegate = self;
     
@@ -52,7 +54,7 @@
     
     RegisterViewController *registerVC = [mainStoreboard instantiateViewControllerWithIdentifier:@"registerViewController"];
     
-    [self presentViewController:registerVC animated:YES completion:nil];
+    [self.navigationController pushViewController:registerVC animated:YES];
 }
 
 - (IBAction)login:(id)sender {

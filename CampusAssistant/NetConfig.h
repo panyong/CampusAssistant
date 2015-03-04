@@ -10,8 +10,8 @@
 
 #pragma http method常量
 #define kPost  @"POST"
-#define kGet = @"GET"
-#define kUpdate = @"UPDATE"
+#define kGet @"GET"
+#define kUpdate @"UPDATE"
 
 
 

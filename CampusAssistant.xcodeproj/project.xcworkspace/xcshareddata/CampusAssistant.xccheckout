@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FE4E9E1F-EA50-4111-AC1D-347F2F302EB1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CampusAssistant</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>93619CBC28EAE5171AD6BBB69BA64DA6185395FC</key>
+		<string>https://github.com/panyong/CampusAssistant.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CampusAssistant.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>93619CBC28EAE5171AD6BBB69BA64DA6185395FC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/panyong/CampusAssistant.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>93619CBC28EAE5171AD6BBB69BA64DA6185395FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>93619CBC28EAE5171AD6BBB69BA64DA6185395FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CampusAssistant</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -22,6 +22,12 @@
 		4C12C4C61A77DA1000BE6775 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C4BC1A77DA1000BE6775 /* Reachability.m */; };
 		4C153CD91A78A8FA00B36695 /* LoginInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C153CD81A78A8FA00B36695 /* LoginInfo.plist */; };
 		4C153CDD1A78F37800B36695 /* MyResponseDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C153CDC1A78F37800B36695 /* MyResponseDto.m */; };
+		4C1F6E271AA5E1B0001DC576 /* DaiDodgeKeyboard+AccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E201AA5E1B0001DC576 /* DaiDodgeKeyboard+AccessObject.m */; };
+		4C1F6E281AA5E1B0001DC576 /* DaiDodgeKeyboard+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E221AA5E1B0001DC576 /* DaiDodgeKeyboard+Animation.m */; };
+		4C1F6E291AA5E1B0001DC576 /* DaiDodgeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E241AA5E1B0001DC576 /* DaiDodgeKeyboard.m */; };
+		4C1F6E2A1AA5E1B0001DC576 /* UIView+FirstResponderNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E261AA5E1B0001DC576 /* UIView+FirstResponderNotify.m */; };
+		4C1F6E2D1AA6C632001DC576 /* ImportCourseStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E2C1AA6C632001DC576 /* ImportCourseStep1VC.m */; };
+		4C1F6E331AA6D216001DC576 /* ImportCourseBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E321AA6D216001DC576 /* ImportCourseBL.m */; };
 		4C213D8A1A7680DE008CD12B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C213D891A7680DE008CD12B /* Foundation.framework */; };
 		4C213D8C1A7680DE008CD12B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C213D8B1A7680DE008CD12B /* CoreGraphics.framework */; };
 		4C213D8E1A7680DE008CD12B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C213D8D1A7680DE008CD12B /* UIKit.framework */; };
@@ -110,6 +116,19 @@
 		4C153CDA1A78EE7700B36695 /* NetConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetConfig.h; sourceTree = "<group>"; };
 		4C153CDB1A78F37800B36695 /* MyResponseDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyResponseDto.h; sourceTree = "<group>"; };
 		4C153CDC1A78F37800B36695 /* MyResponseDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyResponseDto.m; sourceTree = "<group>"; };
+		4C1F6E1F1AA5E1B0001DC576 /* DaiDodgeKeyboard+AccessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+AccessObject.h"; sourceTree = "<group>"; };
+		4C1F6E201AA5E1B0001DC576 /* DaiDodgeKeyboard+AccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+AccessObject.m"; sourceTree = "<group>"; };
+		4C1F6E211AA5E1B0001DC576 /* DaiDodgeKeyboard+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+Animation.h"; sourceTree = "<group>"; };
+		4C1F6E221AA5E1B0001DC576 /* DaiDodgeKeyboard+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+Animation.m"; sourceTree = "<group>"; };
+		4C1F6E231AA5E1B0001DC576 /* DaiDodgeKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiDodgeKeyboard.h; sourceTree = "<group>"; };
+		4C1F6E241AA5E1B0001DC576 /* DaiDodgeKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiDodgeKeyboard.m; sourceTree = "<group>"; };
+		4C1F6E251AA5E1B0001DC576 /* UIView+FirstResponderNotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FirstResponderNotify.h"; sourceTree = "<group>"; };
+		4C1F6E261AA5E1B0001DC576 /* UIView+FirstResponderNotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponderNotify.m"; sourceTree = "<group>"; };
+		4C1F6E2B1AA6C632001DC576 /* ImportCourseStep1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportCourseStep1VC.h; sourceTree = "<group>"; };
+		4C1F6E2C1AA6C632001DC576 /* ImportCourseStep1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportCourseStep1VC.m; sourceTree = "<group>"; };
+		4C1F6E311AA6D216001DC576 /* ImportCourseBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportCourseBL.h; sourceTree = "<group>"; };
+		4C1F6E321AA6D216001DC576 /* ImportCourseBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportCourseBL.m; sourceTree = "<group>"; };
+		4C1F6E341AA6D2AD001DC576 /* ImportCourseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportCourseDelegate.h; sourceTree = "<group>"; };
 		4C213D861A7680DE008CD12B /* CampusAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C213D891A7680DE008CD12B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C213D8B1A7680DE008CD12B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -265,6 +284,31 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		4C1F6E1E1AA5E1B0001DC576 /* DaiDodgeKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4C1F6E1F1AA5E1B0001DC576 /* DaiDodgeKeyboard+AccessObject.h */,
+				4C1F6E201AA5E1B0001DC576 /* DaiDodgeKeyboard+AccessObject.m */,
+				4C1F6E211AA5E1B0001DC576 /* DaiDodgeKeyboard+Animation.h */,
+				4C1F6E221AA5E1B0001DC576 /* DaiDodgeKeyboard+Animation.m */,
+				4C1F6E231AA5E1B0001DC576 /* DaiDodgeKeyboard.h */,
+				4C1F6E241AA5E1B0001DC576 /* DaiDodgeKeyboard.m */,
+				4C1F6E251AA5E1B0001DC576 /* UIView+FirstResponderNotify.h */,
+				4C1F6E261AA5E1B0001DC576 /* UIView+FirstResponderNotify.m */,
+			);
+			path = DaiDodgeKeyboard;
+			sourceTree = "<group>";
+		};
+		4C1F6E2E1AA6D16E001DC576 /* ImportCourseBL */ = {
+			isa = PBXGroup;
+			children = (
+				4C1F6E311AA6D216001DC576 /* ImportCourseBL.h */,
+				4C1F6E321AA6D216001DC576 /* ImportCourseBL.m */,
+				4C1F6E341AA6D2AD001DC576 /* ImportCourseDelegate.h */,
+			);
+			name = ImportCourseBL;
+			sourceTree = "<group>";
+		};
 		4C213D7D1A7680DE008CD12B = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +407,8 @@
 			children = (
 				4C282FEB1A77A16300B36D47 /* TimetableViewController.h */,
 				4C282FEC1A77A16300B36D47 /* TimetableViewController.m */,
+				4C1F6E2B1AA6C632001DC576 /* ImportCourseStep1VC.h */,
+				4C1F6E2C1AA6C632001DC576 /* ImportCourseStep1VC.m */,
 			);
 			name = Timetable;
 			path = ..;
@@ -406,6 +452,7 @@
 		4C4986661A791EA500F2CA42 /* BussinessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4C1F6E2E1AA6D16E001DC576 /* ImportCourseBL */,
 				4C5CA8151A7A6F7900627BB9 /* CourseBL */,
 				4C4986761A7942F100F2CA42 /* LoginAndRegister */,
 			);
@@ -501,6 +548,7 @@
 		4C5CA8251A7B69BF00627BB9 /* OtherView */ = {
 			isa = PBXGroup;
 			children = (
+				4C1F6E1E1AA5E1B0001DC576 /* DaiDodgeKeyboard */,
 				4C5CA83D1A7B945300627BB9 /* KVN */,
 				4C5CA8391A7B8C6400627BB9 /* GMDCircleLoader */,
 				4C5CA8271A7B6B6400627BB9 /* YYAnimationIndicator.m */,
@@ -703,6 +751,7 @@
 				4C213DA01A7680DE008CD12B /* ViewController.m in Sources */,
 				4C12C4BE1A77DA1000BE6775 /* NSData+MKBase64.m in Sources */,
 				4C12C4BF1A77DA1000BE6775 /* NSDate+RFC1123.m in Sources */,
+				4C1F6E331AA6D216001DC576 /* ImportCourseBL.m in Sources */,
 				4C5CA87F1A7B988A00627BB9 /* UIImage+KVNImageEffects.m in Sources */,
 				4C5CA88B1A7B9B2400627BB9 /* DrawLabelAndButton.m in Sources */,
 				4C213D9A1A7680DE008CD12B /* AppDelegate.m in Sources */,
@@ -721,17 +770,22 @@
 				4C153CDD1A78F37800B36695 /* MyResponseDto.m in Sources */,
 				4C5CA8201A7A71A000627BB9 /* CourseBL.m in Sources */,
 				4C49867A1A79447D00F2CA42 /* LoginAndRegisterBusiness.m in Sources */,
+				4C1F6E291AA5E1B0001DC576 /* DaiDodgeKeyboard.m in Sources */,
 				4C9841731A81033000C12DF1 /* RegisterViewController.m in Sources */,
+				4C1F6E2D1AA6C632001DC576 /* ImportCourseStep1VC.m in Sources */,
 				4C12C4C01A77DA1000BE6775 /* NSDictionary+RequestEncoding.m in Sources */,
 				4C5CA83C1A7B8C6400627BB9 /* GMDCircleLoader.m in Sources */,
 				4C5CA8121A7A59DC00627BB9 /* NSObject+MJCoding.m in Sources */,
 				4C5CA8131A7A59DC00627BB9 /* NSObject+MJIvar.m in Sources */,
+				4C1F6E271AA5E1B0001DC576 /* DaiDodgeKeyboard+AccessObject.m in Sources */,
+				4C1F6E281AA5E1B0001DC576 /* DaiDodgeKeyboard+Animation.m in Sources */,
 				4C5CA8141A7A59DC00627BB9 /* NSObject+MJKeyValue.m in Sources */,
 				4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */,
 				4C5CA8801A7B988A00627BB9 /* KVNProgress.m in Sources */,
 				4C5CA87E1A7B988A00627BB9 /* UIImage+KVNEmpty.m in Sources */,
 				4C12C4BD1A77DA1000BE6775 /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				4C12C4C61A77DA1000BE6775 /* Reachability.m in Sources */,
+				4C1F6E2A1AA5E1B0001DC576 /* UIView+FirstResponderNotify.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    [self.window makeKeyAndVisible];
     //实例化主故事版
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ObjectFileManager *manager = [ObjectFileManager sharedManager];
@@ -24,9 +25,10 @@
         self.window.rootViewController = mainVC;
         
     }else{
-        
+        //实例化导航控制器
         UIViewController *loginVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        self.window.rootViewController = loginVC;
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        self.window.rootViewController = nav;
     }
     return YES;
 }
