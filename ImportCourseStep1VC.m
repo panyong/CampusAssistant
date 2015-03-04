@@ -22,6 +22,9 @@
     self.stuNo.delegate = self;
     
     self.title = @"导入课程第一步";
+    
+    self.bl = [ImportCourseBL sharedManager];
+    self.bl.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -44,7 +47,7 @@
 - (IBAction)nextStep:(id)sender {
     
     if ([self validateText]) {
-        
+        [self.bl beginStep1RequestWithStuNo:self.stuNo.text andStuPwd:self.stuPwd.text];
         NSLog(@"下一步");
     }
 }
@@ -69,4 +72,17 @@
     return YES;
 }
 
+
+#pragma 以下方法为importCourseDelegate中要求实现的方法
+-(void)step1RequestBegin{
+    NSLog(@"doing nothing");
+}
+
+-(void)step1RequestFailedWithMsg:(NSString *)msg{
+    [KVNProgress showErrorWithStatus:msg];
+}
+
+-(void)step1RequestSuccessWithPicData:(NSData *)pic{
+    NSLog(@"开始加载自定义view");
+}
 @end

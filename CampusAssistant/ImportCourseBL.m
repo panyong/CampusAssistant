@@ -39,7 +39,7 @@ static ImportCourseBL* sharedManager;
 }
 
 -(void)requestSuccess:(NSDictionary *)dic{
-    NSData *picStr = [dic objectForKey:@"data"];
+    NSData *picStr = [dic objectForKey:@"pic"];
     
     [self.delegate step1RequestSuccessWithPicData:picStr];
 }

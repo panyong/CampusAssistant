@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImportCourseBL.h"
+#import "ImportCourseDelegate.h"
+#import "KVNProgress.h"
 
-@interface ImportCourseStep1VC : UIViewController<UITextFieldDelegate>
+@interface ImportCourseStep1VC : UIViewController<UITextFieldDelegate,ImportCourseDelegate>
+@property(strong,nonatomic) ImportCourseBL *bl;
+
+@property(strong,nonatomic) KVNProgress *imgIndicator;
 @property (weak, nonatomic) IBOutlet UITextField *stuNo;
 @property (weak, nonatomic) IBOutlet UITextField *stuPwd;
 

@@ -111,7 +111,7 @@
 }
 -(void)readCourseFailed:(NSString *)msg{
     NSLog(@"VIEW:readCourseFailed");
-    [KVNProgress showSuccessWithStatus:msg];
+    [KVNProgress showErrorWithStatus:msg];
     
 //    [self performSelector:@selector(delayView) withObject:nil afterDelay:1.5];
 }
