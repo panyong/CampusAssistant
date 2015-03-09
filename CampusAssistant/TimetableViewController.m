@@ -81,15 +81,49 @@
         int sectionCount = (course.sectionend.intValue - course.sectionstart.intValue) + 1;
         
         CGRect btnRect = [self.drawer getBtnFrameforWeek:week andSection:section andSectionCount:sectionCount];
-        UIButton *courseButton = [[UIButton alloc]initWithFrame:btnRect];
-        [courseButton setBackgroundColor:[UIColor blueColor]];
+        
+        UILabel *courseLabel = [[UILabel alloc] initWithFrame:btnRect];
+        //设置text
         NSString *btnContent = [NSString stringWithFormat:@"%@@%@",course.name,course.locale];
-        [courseButton setTitle:btnContent forState:UIControlStateNormal];
-//        courseButton.titleLabel.numberOfLines = 0;
-        courseButton.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-        courseButton.titleLabel.adjustsFontSizeToFitWidth = YES;
-        //TODO 设置点击事件响应函数
-        [self.scrollView addSubview:courseButton];
+        [courseLabel setText:btnContent];
+        [courseLabel setFont:[UIFont systemFontOfSize:11.0]];
+        [courseLabel setTextAlignment:NSTextAlignmentCenter];//设置对齐方式
+        [courseLabel setNumberOfLines:0];//设置换行
+        [courseLabel setBaselineAdjustment:UIBaselineAdjustmentAlignBaselines];
+        [courseLabel setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:0.3]];
+        [courseLabel setAdjustsFontSizeToFitWidth:YES];//设置字体自动适应
+        
+        //设置圆角
+        [courseLabel.layer setMasksToBounds:YES];
+        [courseLabel.layer setCornerRadius:5.0];
+        [courseLabel.layer setBorderWidth:0.3];
+        
+        [self.scrollView addSubview:courseLabel];
+        
+//        UIButton *courseButton = [[UIButton alloc]initWithFrame:btnRect];
+//        [courseButton setBackgroundColor:[UIColor blueColor]];
+//        NSString *btnContent = [NSString stringWithFormat:@"%@@%@",course.name,course.locale];
+//        [courseButton setTitle:btnContent forState:UIControlStateNormal];
+//        //设置按钮圆角
+//        [courseButton.layer setMasksToBounds:YES];
+//        [courseButton.layer setCornerRadius:5.0]; //设置矩形四个圆角半径
+//        [courseButton.layer setBorderWidth:0.3]; //边框宽度
+//        //设置字体大小
+////        [courseButton.titleLabel setFont: [UIFont boldSystemFontOfSize:10.0]];
+////        courseButton.titleLabel.adjustsFontSizeToFitWidth = TRUE;
+//        [courseButton.titleLabel setAdjustsFontSizeToFitWidth:YES];
+////        [courseButton.titleLabel sizeToFit];
+////        courseButton.titleLabel.minimumFontSize = 9;
+////        courseButton.titleLabel.numberOfLines = 0;
+////        [courseButton.titleLabel setNumberOfLines:0];
+//        courseButton.titleLabel.lineBreakMode = 0;//设置label自动换行，这样文字就可以正常显示了
+//        courseButton.contentHorizontalAlignment=UIControlContentHorizontalAlignmentLeft;
+//        courseButton.contentEdgeInsets = UIEdgeInsetsMake(0,2, 0, 0);//设置文字距离边框的像素
+////        courseButton.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
+////        courseButton.titleLabel.font = [UIFont systemFontOfSize: 11];
+////        courseButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+//        //TODO 设置点击事件响应函数
+//        [self.scrollView addSubview:courseButton];
     }
 }
 

@@ -54,7 +54,7 @@
 #pragma 继续按钮
 - (IBAction)nextStep:(id)sender {
     
-    if ([self validateText]) {
+    if (YES) {
         [self keyboardHide];
         [self.bl beginStep1RequestWithStuNo:self.stuNo.text andStuPwd:self.stuPwd.text];
         

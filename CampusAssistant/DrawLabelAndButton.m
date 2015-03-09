@@ -75,10 +75,10 @@
 //获得指定btn的frame
 -(CGRect ) getBtnFrameforWeek:(int)week andSection:(int)section andSectionCount:(int) count{
     
-    float x = self.point.x + self.sectionWidth + ((week - 1)* self.weekWidth);
-    float y = ((section - 1) * self.sectionHeight);
+    float x = self.point.x + self.sectionWidth + ((week - 1)* self.weekWidth) + 1.5;
+    float y = ((section - 1) * self.sectionHeight) + 2;
     
-    CGRect frame = CGRectMake(x, y, self.weekWidth, self.sectionHeight*count);
+    CGRect frame = CGRectMake(x, y, self.weekWidth - 3, self.sectionHeight*count - 4);
     
     return frame;
 }
