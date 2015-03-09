@@ -10,21 +10,30 @@
 #import "CourseConfig.h"
 
 @implementation DrawLabelAndButton
-static DrawLabelAndButton* sharedManager = nil;
+//static DrawLabelAndButton* sharedManager = nil;
 
 #pragma mark - 单例初始化
 
-//单例模式
-+(DrawLabelAndButton*) sharedManagerWithMainViewFrame:(CGRect) mainViewFrame{
-    static dispatch_once_t once;
-    dispatch_once(&once,^{
-        sharedManager = [[self alloc] init];
-        
-        [sharedManager calWidthAndHeightWithMainViewFrame:mainViewFrame];
-        
-        [sharedManager initParams];
-    });
-    return sharedManager;
+
+-(DrawLabelAndButton*) initWithMainViewFrame:(CGRect) mainViewFrame{
+//    static dispatch_once_t once;
+//    dispatch_once(&once,^{
+//        sharedManager = [[self alloc] init];
+//        
+//        [sharedManager calWidthAndHeightWithMainViewFrame:mainViewFrame];
+//        
+//        [sharedManager initParams];
+//    });
+//    return sharedManager;
+    
+    self = [super init];
+    
+    if (self) {
+        [self calWidthAndHeightWithMainViewFrame:mainViewFrame];
+        [self initParams];
+    }
+    
+    return self;
 }
 
 

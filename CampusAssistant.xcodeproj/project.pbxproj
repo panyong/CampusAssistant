@@ -75,6 +75,8 @@
 		4C5CA8871A7B988A00627BB9 /* KVNProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C5CA87C1A7B988A00627BB9 /* KVNProgressView.xib */; };
 		4C5CA88B1A7B9B2400627BB9 /* DrawLabelAndButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5CA88A1A7B9B2400627BB9 /* DrawLabelAndButton.m */; };
 		4C9841731A81033000C12DF1 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9841721A81033000C12DF1 /* RegisterViewController.m */; };
+		4CDB93051AAD7727005625BF /* ImportCourseStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB93031AAD7727005625BF /* ImportCourseStep2VC.m */; };
+		4CDB93061AAD7727005625BF /* ImportCourseStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB93041AAD7727005625BF /* ImportCourseStep2VC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +213,9 @@
 		4C5CA88A1A7B9B2400627BB9 /* DrawLabelAndButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLabelAndButton.m; sourceTree = "<group>"; };
 		4C9841711A81033000C12DF1 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		4C9841721A81033000C12DF1 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		4CDB93021AAD7727005625BF /* ImportCourseStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportCourseStep2VC.h; sourceTree = "<group>"; };
+		4CDB93031AAD7727005625BF /* ImportCourseStep2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportCourseStep2VC.m; sourceTree = "<group>"; };
+		4CDB93041AAD7727005625BF /* ImportCourseStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportCourseStep2VC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +414,9 @@
 				4C282FEC1A77A16300B36D47 /* TimetableViewController.m */,
 				4C1F6E2B1AA6C632001DC576 /* ImportCourseStep1VC.h */,
 				4C1F6E2C1AA6C632001DC576 /* ImportCourseStep1VC.m */,
+				4CDB93021AAD7727005625BF /* ImportCourseStep2VC.h */,
+				4CDB93031AAD7727005625BF /* ImportCourseStep2VC.m */,
+				4CDB93041AAD7727005625BF /* ImportCourseStep2VC.xib */,
 			);
 			name = Timetable;
 			path = ..;
@@ -430,6 +438,13 @@
 				4C282FF51A77A1D100B36D47 /* AboutMeViewController.m */,
 			);
 			name = AboutMe;
+			sourceTree = "<group>";
+		};
+		4C48D74D1AA98C6B00C9DE52 /* AlterView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AlterView;
 			sourceTree = "<group>";
 		};
 		4C4986651A791E3F00F2CA42 /* PersistenceLayer */ = {
@@ -548,6 +563,7 @@
 		4C5CA8251A7B69BF00627BB9 /* OtherView */ = {
 			isa = PBXGroup;
 			children = (
+				4C48D74D1AA98C6B00C9DE52 /* AlterView */,
 				4C1F6E1E1AA5E1B0001DC576 /* DaiDodgeKeyboard */,
 				4C5CA83D1A7B945300627BB9 /* KVN */,
 				4C5CA8391A7B8C6400627BB9 /* GMDCircleLoader */,
@@ -714,6 +730,7 @@
 				4C5CA8341A7B6B8200627BB9 /* 6.png in Resources */,
 				4C5CA8871A7B988A00627BB9 /* KVNProgressView.xib in Resources */,
 				4C5CA8321A7B6B8200627BB9 /* 4.png in Resources */,
+				4CDB93061AAD7727005625BF /* ImportCourseStep2VC.xib in Resources */,
 				4C5CA8331A7B6B8200627BB9 /* 5.png in Resources */,
 				4C213DA21A7680DE008CD12B /* Images.xcassets in Resources */,
 				4C213D941A7680DE008CD12B /* InfoPlist.strings in Resources */,
@@ -769,6 +786,7 @@
 				4C213D961A7680DE008CD12B /* main.m in Sources */,
 				4C153CDD1A78F37800B36695 /* MyResponseDto.m in Sources */,
 				4C5CA8201A7A71A000627BB9 /* CourseBL.m in Sources */,
+				4CDB93051AAD7727005625BF /* ImportCourseStep2VC.m in Sources */,
 				4C49867A1A79447D00F2CA42 /* LoginAndRegisterBusiness.m in Sources */,
 				4C1F6E291AA5E1B0001DC576 /* DaiDodgeKeyboard.m in Sources */,
 				4C9841731A81033000C12DF1 /* RegisterViewController.m in Sources */,

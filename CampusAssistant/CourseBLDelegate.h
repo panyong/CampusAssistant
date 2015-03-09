@@ -15,8 +15,5 @@
 -(void)readCourseSuccess:(NSArray*) array;
 -(void)readCourseFailed:(NSString*) msg;
 
-@optional
--(void)writeCourseBegin;
--(void)writeCourseSuccess;
--(void)wirteCourseFailed:(NSString*) msg;
+
 @end

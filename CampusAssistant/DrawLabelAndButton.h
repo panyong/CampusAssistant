@@ -20,7 +20,7 @@
 @property(strong,nonatomic) NSArray *sectionsArray;
 
 
-+(DrawLabelAndButton*) sharedManagerWithMainViewFrame:(CGRect) mainViewFrame;
+-(DrawLabelAndButton*) initWithMainViewFrame:(CGRect) mainViewFrame;
 //-(float) getWidth;
 //-(float) getHeight;
 -(CGRect) getBtnFrameforWeek:(int)week andSection:(int)section andSectionCount:(int) count;

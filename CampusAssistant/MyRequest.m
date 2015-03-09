@@ -9,14 +9,22 @@
 #import "MyRequest.h"
 
 @implementation MyRequest
-static MyRequest* sharedManager = nil;
+//static MyRequest* sharedManager = nil;
 
-+(MyRequest*) sharedManager{
-    static dispatch_once_t once;
-    dispatch_once(&once,^{
-        sharedManager = [[self alloc] init];
-    });
-    return sharedManager;
+-(MyRequest*) init{
+//    static dispatch_once_t once;
+//    dispatch_once(&once,^{
+//        sharedManager = [[self alloc] init];
+//    });
+//    return sharedManager;
+    
+    self = [super init]; //首先子类要继承父类的属性和方法
+    
+    if (self) {
+        //如果子类实例不为空，则做一些个性化的设置
+    }
+    
+    return self;
 }
 
 

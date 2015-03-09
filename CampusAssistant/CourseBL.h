@@ -15,8 +15,7 @@
 @property(weak,nonatomic) id<CourseBLDelegate> delegate;
 @property(strong,nonatomic) ObjectFileManager * objectFileManager;
 
-//单例模式
-+(CourseBL*) sharedManager;
+-(CourseBL*) init;
 
 -(void) readCourseArray;
 

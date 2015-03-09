@@ -22,5 +22,5 @@
 #pragma 常用的path常量
 #define kLoginPath @"/user/login/v1"//登录
 #define kGetVerifyPath @"/timetable/getVerification/v1"//获取课程表第一步
-#define kCheckVerifyPath @"/timetable/checkVerification/v1";//获取课程表第二步
+#define kCheckVerifyPath @"/timetable/checkVerification/v1"//获取课程表第二步
 #define kRegisterPath @"/user/register/v1"//注册

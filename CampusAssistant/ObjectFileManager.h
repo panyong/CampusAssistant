@@ -13,7 +13,7 @@
 @interface ObjectFileManager : NSObject
 @property(weak,nonatomic) id<ObjectFileDelegate> delegate;
 
-+(ObjectFileManager*) sharedManager;
+-(ObjectFileManager*) init;
 -(BOOL) checkLoginInfo;
 -(BOOL) writeUserInfo:(UserInfoModel*) user;
 -(BOOL) writeUserInfoWithDic:(NSDictionary*) dic;

@@ -22,7 +22,7 @@
     
     self.title = @"登录";
     
-    self.bl = [LoginAndRegisterBusiness sharedManager];
+    self.bl = [[LoginAndRegisterBusiness alloc]init];
     self.bl.delegate = self;
     
     

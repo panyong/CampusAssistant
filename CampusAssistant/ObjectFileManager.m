@@ -11,21 +11,28 @@
 
 @implementation ObjectFileManager
 
-static ObjectFileManager* sharedManager = nil;
+//static ObjectFileManager* sharedManager = nil;
 
-+(ObjectFileManager*) sharedManager{
-    static dispatch_once_t once;
-    dispatch_once(&once,^{
-        sharedManager = [[self alloc] init];
-    });
-    return sharedManager;
+-(ObjectFileManager*) init{
+//    static dispatch_once_t once;
+//    dispatch_once(&once,^{
+//        sharedManager = [[self alloc] init];
+//    });
+//    return sharedManager;
+    self = [super init];
+    
+    if (self) {
+        
+    }
+    
+    return  self;
 }
 
-//将字典数据写入相应的文件
--(BOOL) writeDictionary:(NSDictionary*) dic IntoFile:(NSString*) fileName{
+#pragma  将字典数据写入相应的文件
+-(BOOL)writeDictionary:(NSDictionary *)dic IntoFile:(NSString *)fileName{
     [self.delegate writeBegin];
     
-    NSLog(@"PL:");
+    NSLog(@"开始写入文件%@",fileName);
     
     NSString *filePath = [self applicationDocumentsDirectoryFile:fileName];
     
@@ -41,35 +48,35 @@ static ObjectFileManager* sharedManager = nil;
     }
 }
 
-//从指定的文件中读取对象
--(BOOL) readDictionaryFromFile:(NSString*) fileName{
+#pragma  从指定的文件中读取对象
+-(BOOL)readDictionaryFromFile:(NSString *)fileName{
     [self.delegate readBegin];
     
-    NSLog(@"PL:readDictionaryFromFile");
+    NSLog(@"开始读取文件%@",fileName);
     
     NSString *filePath = [self applicationDocumentsDirectoryFile:fileName];
     
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:filePath];
     
-
+    
     BOOL flag = dic.count > 0;
     
     if (flag) {
         [self.delegate readSuccess:dic];
         
-        NSLog(@"PL:readSuccess");
+        NSLog(@"读取文件成功%@",fileName);
         
         return YES;
         
     }else{
         [self.delegate readFailedWithMsg:[NSString stringWithFormat:@"读取文件%@失败",fileName]];
         
-        NSLog(@"PL:readFailedWithMsg");
+        NSLog(@"读取文件失败%@",fileName);
         
         return NO;
     }
-}
 
+}
 
 
 //判断用户信息中得userToken是否存在，如果存在则表示登陆成功，返回YES，否则返回NO

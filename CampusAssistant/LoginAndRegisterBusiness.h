@@ -16,8 +16,8 @@
 @property(weak,nonatomic) id<LoginAndRegisterDelegate> delegate;
 @property(strong,nonatomic) MyRequest * request;
 @property BOOL loginFlag;
-//单例模式
-+(LoginAndRegisterBusiness*) sharedManager;
+
+-(LoginAndRegisterBusiness*) init;
 -(void) loginWithName:(NSString*) userName andPwd:(NSString*) pwd;
 -(void) registerWithName:(NSString*) userName andPwd:(NSString*) pwd andNickname:(NSString*) nickname;
 @end

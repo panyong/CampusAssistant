@@ -10,16 +10,23 @@
 #import "ObjectFileManager.h"
 
 @implementation LoginAndRegisterBusiness
-static LoginAndRegisterBusiness* sharedManager;
+//static LoginAndRegisterBusiness* sharedManager;
 
-+(LoginAndRegisterBusiness*) sharedManager{
-    static dispatch_once_t once;
-    dispatch_once(&once,^{
-        sharedManager = [[self alloc] init];
-        sharedManager.request = [MyRequest sharedManager];
-        sharedManager.request.delegate = sharedManager;
-    });
-    return sharedManager;
+-(LoginAndRegisterBusiness*) init{
+//    static dispatch_once_t once;
+//    dispatch_once(&once,^{
+//        sharedManager = [[self alloc] init];
+//        sharedManager.request = [[MyRequest alloc]init];
+//        sharedManager.request.delegate = sharedManager;
+//    });
+//    return sharedManager;
+    self = [super init];
+    
+    if (self) {
+        self.request = [[MyRequest alloc] init];
+        self.request.delegate = self;
+    }
+    return self;
 }
 
 
@@ -71,7 +78,7 @@ static LoginAndRegisterBusiness* sharedManager;
     
     NSLog(@"requestSuccess，结果：data:%@",dic);//打印结果
     
-    ObjectFileManager *manager = [ObjectFileManager sharedManager];
+    ObjectFileManager *manager = [[ObjectFileManager alloc]init];
     
     if (self.loginFlag) {
         

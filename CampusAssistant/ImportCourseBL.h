@@ -10,12 +10,17 @@
 #import "MyRequest.h"
 #import "RequestDelegate.h"
 #import "ImportCourseDelegate.h"
+#import "ObjectFileManager.h"
+#import "ObjectFileDelegate.h"
 
-@interface ImportCourseBL : NSObject<RequestDelegate>
+@interface ImportCourseBL : NSObject<RequestDelegate,ObjectFileDelegate>
 @property(weak,nonatomic) id<ImportCourseDelegate> delegate;
 @property(strong,nonatomic) MyRequest *myRequest;
+@property(strong,nonatomic) ObjectFileManager *objectManager;
 
-+(ImportCourseBL*) sharedManager;
+@property BOOL flag;
+-(ImportCourseBL*) init;
 
 -(void) beginStep1RequestWithStuNo:(NSString*) stuNo andStuPwd:(NSString*) stuPwd;
+-(void) beginStep2RequestWithVerifyCode:(NSString*) verifyCode;
 @end

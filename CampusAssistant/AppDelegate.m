@@ -16,7 +16,7 @@
 //    [self.window makeKeyAndVisible];
     //实例化主故事版
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ObjectFileManager *manager = [ObjectFileManager sharedManager];
+    ObjectFileManager *manager = [[ObjectFileManager alloc]init];
     
     //如果已经登录则将rootVC设置为主VC，否则设置为LoginVC
     if ([manager checkLoginInfo]) {

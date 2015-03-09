@@ -12,20 +12,28 @@
 
 @implementation CourseBL
 
-static CourseBL* sharedManager;
+//static CourseBL* sharedManager;
 
-+(CourseBL*) sharedManager{
-    static dispatch_once_t once;
-    dispatch_once(&once,^{
-        sharedManager = [[self alloc] init];
-        sharedManager.objectFileManager = [ObjectFileManager sharedManager];
-        sharedManager.objectFileManager.delegate = sharedManager;
-    });
-    return sharedManager;
+-(CourseBL*) init{
+//    static dispatch_once_t once;
+//    dispatch_once(&once,^{
+//        sharedManager = [[self alloc] init];
+//        sharedManager.objectFileManager = [[ObjectFileManager alloc]init];
+//        sharedManager.objectFileManager.delegate = sharedManager;
+//    });
+//    return sharedManager;
+    
+    self = [super init];
+    
+    if (self) {
+        self.objectFileManager = [[ObjectFileManager alloc] init];
+        self.objectFileManager.delegate = self;
+    }
+    return  self;
 }
 
 
-//VIEW调用，读取Course的数组
+#pragma VIEW调用，读取Course的数组
 -(void)readCourseArray{
     
     

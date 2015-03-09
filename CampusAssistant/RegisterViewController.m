@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.bl = [LoginAndRegisterBusiness sharedManager];
+    self.bl = [[LoginAndRegisterBusiness alloc]init];
     self.bl.delegate = self;
     
     UIToolbar *toolBar = [self createToolbar];
@@ -56,7 +56,7 @@
 - (IBAction)register:(id)sender {
     NSLog(@"点击注册");
     
-    if([self validateText]){
+    if(YES){
         [self.bl registerWithName:self.userName.text andPwd:self.userPwd.text andNickname:self.userNickname.text];
     }else{
         NSLog(@"验证失败");
@@ -101,7 +101,7 @@
 
 #pragma 以下方法为delegate中要求实现的方法
 -(void)registerBegin{
-    [KVNProgress showProgress:2.0f status:@"Loading with progress..."];    //加载等待指示器
+//    [KVNProgress showProgress:2.0f status:@"Loading with progress..."];    //加载等待指示器
 }
 
 -(void)registerFailed:(NSError *)error{
