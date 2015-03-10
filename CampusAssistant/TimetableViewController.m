@@ -8,8 +8,9 @@
 
 #import "TimetableViewController.h"
 
-@interface TimetableViewController ()
 
+@interface TimetableViewController ()
+#define ARC4RANDOM_MAX      0x100000000
 @end
 
 @implementation TimetableViewController
@@ -42,12 +43,11 @@
     
     self.courseBL.delegate = self;
     
-//    [self.courseBL readCourseArray];
+    //设置背景图
+    NSString *imageName = @"bgImage2.png";
+    UIImage *backgroundImage = [UIImage imageNamed:imageName];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundImage]];
     
-    
-    // 初始化控件，周view， scrollview
-    
-    // Do any additional setup after loading the view.
 }
 
 
@@ -55,17 +55,23 @@
 {
     // 设置frame
     [super viewDidLayoutSubviews];
+    
+   
+    
     //初始化drawer
     self.drawer = [[DrawLabelAndButton alloc]initWithMainViewFrame:self.view.frame];
     
     
     //初始化scrollView
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 30, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.scrollView setBackgroundColor:[UIColor colorWithWhite:0.3 alpha:0.6]];
+    [self.scrollView setBackgroundColor:[UIColor clearColor]];
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, [self.drawer getContentSizeHeight])];
     self.scrollView.bounces = NO;
     [self.view addSubview:self.scrollView];
 
+    
+   
+    
     //调用draw方法，进行两类Label的绘制
     [self drawWeekAndSectionLabel];
     
@@ -89,9 +95,16 @@
         [courseLabel setFont:[UIFont systemFontOfSize:11.0]];
         [courseLabel setTextAlignment:NSTextAlignmentCenter];//设置对齐方式
         [courseLabel setNumberOfLines:0];//设置换行
-        [courseLabel setBaselineAdjustment:UIBaselineAdjustmentAlignBaselines];
-        [courseLabel setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:0.3]];
         [courseLabel setAdjustsFontSizeToFitWidth:YES];//设置字体自动适应
+        [courseLabel setBaselineAdjustment:UIBaselineAdjustmentAlignBaselines];
+        [courseLabel setTextColor:[UIColor whiteColor]];
+        //设置随机的背景颜色
+        CGFloat hue = ( arc4random() % 256 / 256.0 ); //0.0 to 1.0
+        CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5; // 0.5 to 1.0,away from white
+        CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5; //0.5 to 1.0,away from black
+        UIColor *labelColor =  [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:0.8];
+        courseLabel.backgroundColor = labelColor;//[UIColor redColor];
+        
         
         //设置圆角
         [courseLabel.layer setMasksToBounds:YES];

@@ -16,8 +16,8 @@
 
 
 #pragma host name 常量
-//#define kHostName @"10.101.145.252:8666/SpringMVCTest"
-#define kHostName @"192.168.1.109:8080/SpringMVCTest"
+#define kHostName @"10.101.145.252:8666/SpringMVCTest"
+//#define kHostName @"192.168.1.109:8080/SpringMVCTest"
 
 #pragma 常用的path常量
 #define kLoginPath @"/user/login/v1"//登录
