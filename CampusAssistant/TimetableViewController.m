@@ -10,7 +10,7 @@
 
 
 @interface TimetableViewController ()
-#define ARC4RANDOM_MAX      0x100000000
+
 @end
 
 @implementation TimetableViewController
@@ -81,6 +81,9 @@
 
 #pragma 以下是加载课程表的方法
 -(void)loadCourseFromArray:(NSArray *)array{
+    int tag = 0;
+    self.tag4CourseDictionary = [[NSMutableDictionary alloc] init];
+    
     for (CourseModel *course in array) {
         int week = course.day.intValue;
         int section = course.sectionstart.intValue;
@@ -111,35 +114,37 @@
         [courseLabel.layer setCornerRadius:5.0];
         [courseLabel.layer setBorderWidth:0.3];
         
+        //增加Tag
+        [courseLabel setTag:tag];
+        [self.tag4CourseDictionary setObject:course forKey:[NSString stringWithFormat:@"%i",tag]];
+        
+        //添加点击事件
+        UITapGestureRecognizer *tapGestureTel = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(courseLabelEvent:)];
+        courseLabel.userInteractionEnabled = YES;//设置接收用户操作
+        [courseLabel addGestureRecognizer:tapGestureTel];
+        
         [self.scrollView addSubview:courseLabel];
         
-//        UIButton *courseButton = [[UIButton alloc]initWithFrame:btnRect];
-//        [courseButton setBackgroundColor:[UIColor blueColor]];
-//        NSString *btnContent = [NSString stringWithFormat:@"%@@%@",course.name,course.locale];
-//        [courseButton setTitle:btnContent forState:UIControlStateNormal];
-//        //设置按钮圆角
-//        [courseButton.layer setMasksToBounds:YES];
-//        [courseButton.layer setCornerRadius:5.0]; //设置矩形四个圆角半径
-//        [courseButton.layer setBorderWidth:0.3]; //边框宽度
-//        //设置字体大小
-////        [courseButton.titleLabel setFont: [UIFont boldSystemFontOfSize:10.0]];
-////        courseButton.titleLabel.adjustsFontSizeToFitWidth = TRUE;
-//        [courseButton.titleLabel setAdjustsFontSizeToFitWidth:YES];
-////        [courseButton.titleLabel sizeToFit];
-////        courseButton.titleLabel.minimumFontSize = 9;
-////        courseButton.titleLabel.numberOfLines = 0;
-////        [courseButton.titleLabel setNumberOfLines:0];
-//        courseButton.titleLabel.lineBreakMode = 0;//设置label自动换行，这样文字就可以正常显示了
-//        courseButton.contentHorizontalAlignment=UIControlContentHorizontalAlignmentLeft;
-//        courseButton.contentEdgeInsets = UIEdgeInsetsMake(0,2, 0, 0);//设置文字距离边框的像素
-////        courseButton.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-////        courseButton.titleLabel.font = [UIFont systemFontOfSize: 11];
-////        courseButton.titleLabel.adjustsFontSizeToFitWidth = YES;
-//        //TODO 设置点击事件响应函数
-//        [self.scrollView addSubview:courseButton];
+
     }
 }
 
+#pragma mark - 手势点击事件处理方法
+-(void) courseLabelEvent:(UITapGestureRecognizer *)sender{
+    if (sender.numberOfTapsRequired) {
+        UILabel *tapLabel =  (UILabel *)sender.view;
+        int labelTag = tapLabel.tag;
+        CourseModel *course = [self.tag4CourseDictionary objectForKey:[NSString stringWithFormat:@"%i",labelTag]];
+        
+        
+        
+//        NSLog(@"course:%@",course.name);
+        
+//        NSLog(@"Label内容:%@",tapLabel.text);
+        
+        NSLog(@"跳转到课程详情页");
+    }
+}
 
 #pragma 以下是绘制Label的方法
 -(void) drawWeekAndSectionLabel{
@@ -155,6 +160,7 @@
         [self.scrollView addSubview:sectionLabel];
     }
 }
+
 
 
 

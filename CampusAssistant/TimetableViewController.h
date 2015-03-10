@@ -16,6 +16,7 @@
 @property(strong,nonatomic) CourseBL* courseBL;
 @property(strong,nonatomic) KVNProgress *imgIndicator;
 @property(strong,nonatomic) DrawLabelAndButton *drawer;
+@property NSMutableDictionary *tag4CourseDictionary;
 
 @property (strong, nonatomic) UIScrollView *scrollView;
 

@@ -112,6 +112,19 @@
     
     [UIApplication sharedApplication].keyWindow.rootViewController = timetableVC;
     
+    //用代码实例化Tab bar controller。
+//    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//    
+//    TimetableViewController *timetabelVC = [[TimetableViewController alloc]init];
+//    
+//    UINavigationController *timetabelNVC = [[UINavigationController alloc] initWithRootViewController:timetabelVC];
+//    
+//    timetabelNVC.tabBarItem.image = [UIImage imageNamed:@"icon1.png"];
+//    
+//    [tabBarController addChildViewController:timetabelNVC];
+//    
+//    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarController;
+    
     NSLog(@"跳转到课程表界面");
 }
 
