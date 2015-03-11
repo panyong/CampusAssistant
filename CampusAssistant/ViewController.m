@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "RegisterViewController.h"
+#import "TimetableViewController.h"
 
 @interface ViewController ()
 
@@ -90,11 +91,18 @@
     
     [self.activity stopAnimationWithLoadText:@"登陆成功~" withType:YES];
     
-    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UITabBarController* mainTabBarController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+//    //用storyboard初始化
+//    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UITabBarController* mainTabBarController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+//    
+//    [self presentViewController:mainTabBarController animated:YES completion:nil];
     
-    [self presentViewController:mainTabBarController animated:YES completion:nil];
+    //用代码初始化
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
+    TimetableViewController *timetabelVC = [[TimetableViewController alloc] init];
+    UINavigationController *timetabelNC = [[UINavigationController alloc] initWithRootViewController:timetabelVC];
+    timetabelVC.tabBarItem.image = [UIImage imageNamed:@""];
     NSLog(@"login");
 }
 

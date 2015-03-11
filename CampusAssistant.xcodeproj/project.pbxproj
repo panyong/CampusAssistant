@@ -28,7 +28,7 @@
 		4C1F6E2A1AA5E1B0001DC576 /* UIView+FirstResponderNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E261AA5E1B0001DC576 /* UIView+FirstResponderNotify.m */; };
 		4C1F6E2D1AA6C632001DC576 /* ImportCourseStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E2C1AA6C632001DC576 /* ImportCourseStep1VC.m */; };
 		4C1F6E331AA6D216001DC576 /* ImportCourseBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F6E321AA6D216001DC576 /* ImportCourseBL.m */; };
-		4C1F79FE1AAEC6E000A9CDCD /* bgImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F79FD1AAEC6E000A9CDCD /* bgImage2.png */; };
+		4C1F79FE1AAEC6E000A9CDCD /* bgImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F79FD1AAEC6E000A9CDCD /* bgImage.png */; };
 		4C213D8A1A7680DE008CD12B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C213D891A7680DE008CD12B /* Foundation.framework */; };
 		4C213D8C1A7680DE008CD12B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C213D8B1A7680DE008CD12B /* CoreGraphics.framework */; };
 		4C213D8E1A7680DE008CD12B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C213D8D1A7680DE008CD12B /* UIKit.framework */; };
@@ -48,10 +48,6 @@
 		4C282FED1A77A16300B36D47 /* TimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C282FEC1A77A16300B36D47 /* TimetableViewController.m */; };
 		4C282FF11A77A1A800B36D47 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C282FF01A77A1A800B36D47 /* FindViewController.m */; };
 		4C282FF61A77A1D100B36D47 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C282FF51A77A1D100B36D47 /* AboutMeViewController.m */; };
-		4C33BAF71AAEBE20009965AC /* bgImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33BAF31AAEBE20009965AC /* bgImage.png */; };
-		4C33BAF81AAEBE20009965AC /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33BAF41AAEBE20009965AC /* icon1.png */; };
-		4C33BAF91AAEBE20009965AC /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33BAF51AAEBE20009965AC /* icon2.png */; };
-		4C33BAFA1AAEBE20009965AC /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33BAF61AAEBE20009965AC /* icon3.png */; };
 		4C342CBC1AAFF97E0064C8CE /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342CBA1AAFF97E0064C8CE /* CourseDetailViewController.m */; };
 		4C342CBD1AAFF97E0064C8CE /* CourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CBB1AAFF97E0064C8CE /* CourseDetailViewController.xib */; };
 		4C49866E1A79327E00F2CA42 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49866D1A79327E00F2CA42 /* UserInfoModel.m */; };
@@ -138,7 +134,7 @@
 		4C1F6E311AA6D216001DC576 /* ImportCourseBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportCourseBL.h; sourceTree = "<group>"; };
 		4C1F6E321AA6D216001DC576 /* ImportCourseBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportCourseBL.m; sourceTree = "<group>"; };
 		4C1F6E341AA6D2AD001DC576 /* ImportCourseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportCourseDelegate.h; sourceTree = "<group>"; };
-		4C1F79FD1AAEC6E000A9CDCD /* bgImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgImage2.png; sourceTree = "<group>"; };
+		4C1F79FD1AAEC6E000A9CDCD /* bgImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgImage.png; sourceTree = "<group>"; };
 		4C213D861A7680DE008CD12B /* CampusAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C213D891A7680DE008CD12B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C213D8B1A7680DE008CD12B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -167,13 +163,10 @@
 		4C282FF01A77A1A800B36D47 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindViewController.m; path = ../FindViewController.m; sourceTree = "<group>"; };
 		4C282FF41A77A1D100B36D47 /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
 		4C282FF51A77A1D100B36D47 /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
-		4C33BAF31AAEBE20009965AC /* bgImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgImage.png; sourceTree = "<group>"; };
-		4C33BAF41AAEBE20009965AC /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
-		4C33BAF51AAEBE20009965AC /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
-		4C33BAF61AAEBE20009965AC /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
 		4C342CB91AAFF97E0064C8CE /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
 		4C342CBA1AAFF97E0064C8CE /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
 		4C342CBB1AAFF97E0064C8CE /* CourseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseDetailViewController.xib; sourceTree = "<group>"; };
+		4C342CBE1AB018FB0064C8CE /* ImageConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageConfig.h; sourceTree = "<group>"; };
 		4C49866C1A79327E00F2CA42 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
 		4C49866D1A79327E00F2CA42 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
 		4C4986721A7936DB00F2CA42 /* RequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
@@ -462,13 +455,17 @@
 		4C33BAF21AAEBE20009965AC /* imageAndicon */ = {
 			isa = PBXGroup;
 			children = (
-				4C1F79FD1AAEC6E000A9CDCD /* bgImage2.png */,
-				4C33BAF31AAEBE20009965AC /* bgImage.png */,
-				4C33BAF41AAEBE20009965AC /* icon1.png */,
-				4C33BAF51AAEBE20009965AC /* icon2.png */,
-				4C33BAF61AAEBE20009965AC /* icon3.png */,
+				4C342CBF1AB01B070064C8CE /* tabbar */,
+				4C1F79FD1AAEC6E000A9CDCD /* bgImage.png */,
 			);
 			path = imageAndicon;
+			sourceTree = "<group>";
+		};
+		4C342CBF1AB01B070064C8CE /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tabbar;
 			sourceTree = "<group>";
 		};
 		4C48D74D1AA98C6B00C9DE52 /* AlterView */ = {
@@ -481,6 +478,7 @@
 		4C4986651A791E3F00F2CA42 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4C342CBE1AB018FB0064C8CE /* ImageConfig.h */,
 				4C5CA8211A7B4D0000627BB9 /* CourseConfig.h */,
 				4C5CA7FD1A79FF7700627BB9 /* ObjectFileDelegate.h */,
 				4C49867B1A794AAA00F2CA42 /* ObjectFileManager.h */,
@@ -759,19 +757,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5CA8341A7B6B8200627BB9 /* 6.png in Resources */,
-				4C33BAF91AAEBE20009965AC /* icon2.png in Resources */,
 				4C342CBD1AAFF97E0064C8CE /* CourseDetailViewController.xib in Resources */,
 				4C5CA8871A7B988A00627BB9 /* KVNProgressView.xib in Resources */,
 				4C5CA8321A7B6B8200627BB9 /* 4.png in Resources */,
 				4CDB93061AAD7727005625BF /* ImportCourseStep2VC.xib in Resources */,
 				4C5CA8331A7B6B8200627BB9 /* 5.png in Resources */,
 				4C213DA21A7680DE008CD12B /* Images.xcassets in Resources */,
-				4C33BAF81AAEBE20009965AC /* icon1.png in Resources */,
-				4C33BAFA1AAEBE20009965AC /* icon3.png in Resources */,
 				4C213D941A7680DE008CD12B /* InfoPlist.strings in Resources */,
 				4C5CA8301A7B6B8200627BB9 /* 2.png in Resources */,
-				4C1F79FE1AAEC6E000A9CDCD /* bgImage2.png in Resources */,
-				4C33BAF71AAEBE20009965AC /* bgImage.png in Resources */,
+				4C1F79FE1AAEC6E000A9CDCD /* bgImage.png in Resources */,
 				4C5CA8311A7B6B8200627BB9 /* 3.png in Resources */,
 				4C213DBF1A7688E3008CD12B /* img01.jpg in Resources */,
 				4C4A17A01A7FC4220027F303 /* background.jpg in Resources */,

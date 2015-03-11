@@ -66,7 +66,7 @@
     self.weekWidth = (frmWidth - self.sectionWidth) / 7;
     self.sectionHeight = 46;
     
-    self.contentSizeHeight = self.sectionHeight * 13 - 20;
+//    self.contentSizeHeight = self.sectionHeight * 13 - 20;
 
 }
 
@@ -102,7 +102,9 @@
         
         [label setText:[self.weeksArray objectAtIndex:i]];
         
-        label.layer.borderWidth = 0.5;
+        [label setTextColor:[UIColor blueColor]];
+        
+        label.layer.borderWidth = 0.3;
         
         [labelArray addObject:label];
     }
@@ -124,7 +126,9 @@
         
         [label setText:[self.sectionsArray objectAtIndex:i]];
         
-        label.layer.borderWidth = 1.0;
+        [label setTextColor:[UIColor blueColor]];
+        
+        label.layer.borderWidth = 0.3;
 
         
         [labelArray addObject:label];
@@ -134,6 +138,7 @@
 }
 
 -(float)getContentSizeHeight{
+    self.contentSizeHeight = self.sectionHeight * 15 + 6;
     return self.contentSizeHeight;
 }
 @end

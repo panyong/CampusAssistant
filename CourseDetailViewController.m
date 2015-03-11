@@ -28,6 +28,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = self.course.name;
+    
+    [self.courseNameFiled setNumberOfLines:0];
+    [self.courseNameFiled setAdjustsFontSizeToFitWidth:YES];
+    
+    [self.courseLocationField setNumberOfLines:0];
+    [self.courseLocationField setAdjustsFontSizeToFitWidth:YES];
+    
     self.courseNameFiled.text = self.course.name;
     self.courseTeacherField.text = self.course.teacher;
     self.courseLocationField.text = self.course.locale;

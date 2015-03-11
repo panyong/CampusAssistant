@@ -28,15 +28,7 @@
 {
     [super viewDidLoad];
     
-//    self.drawer = [[DrawLabelAndButton alloc]initWithMainViewFrame:self.view.frame];
-
-    
-    //设置背景图片
-//    UIColor *backColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
-//    [self.view setBackgroundColor:backColor];
-    
     NSLog(@"TimetableViewController viewDidLoad!");
-//    NSLog(@".:%@", NSStringFromCGRect(self.view.frame));
     
     //实例化业务类，并调用其加载课程表的方法
     self.courseBL = [[CourseBL alloc]init];
@@ -47,14 +39,7 @@
     NSString *imageName = @"bgImage2.png";
     UIImage *backgroundImage = [UIImage imageNamed:imageName];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundImage]];
-    
-}
 
-
--(void)viewDidLayoutSubviews
-{
-    // 设置frame
-    [super viewDidLayoutSubviews];
     
     //初始化drawer
     self.drawer = [[DrawLabelAndButton alloc]initWithMainViewFrame:self.view.frame];
@@ -75,6 +60,34 @@
     
     [self.courseBL readCourseArray];
     NSLog(@"..:%@", NSStringFromCGRect(self.view.frame));
+    
+}
+
+
+-(void)viewDidLayoutSubviews
+{
+//    // 设置frame
+//    [super viewDidLayoutSubviews];
+//    
+//    //初始化drawer
+//    self.drawer = [[DrawLabelAndButton alloc]initWithMainViewFrame:self.view.frame];
+//    
+//    
+//    //初始化scrollView
+//    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 30, self.view.frame.size.width, self.view.frame.size.height)];
+//    [self.scrollView setBackgroundColor:[UIColor clearColor]];
+//    [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, [self.drawer getContentSizeHeight])];
+//    self.scrollView.bounces = NO;
+//    [self.view addSubview:self.scrollView];
+//    
+//    
+//    
+//    
+//    //调用draw方法，进行两类Label的绘制
+//    [self drawWeekAndSectionLabel];
+//    
+//    [self.courseBL readCourseArray];
+//    NSLog(@"..:%@", NSStringFromCGRect(self.view.frame));
     
    
 }
@@ -115,6 +128,7 @@
         [courseLabel.layer setBorderWidth:0.3];
         
         //增加Tag
+        tag++;
         [courseLabel setTag:tag];
         [self.tag4CourseDictionary setObject:course forKey:[NSString stringWithFormat:@"%i",tag]];
         
