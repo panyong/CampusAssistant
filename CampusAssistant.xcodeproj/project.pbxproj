@@ -56,6 +56,21 @@
 		4C342CDD1AB01DFF0064C8CE /* pic_tabbar_find@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CD91AB01DFF0064C8CE /* pic_tabbar_find@2x.png */; };
 		4C342CDE1AB01DFF0064C8CE /* pic_tabbar_setting_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CDA1AB01DFF0064C8CE /* pic_tabbar_setting_selected@2x.png */; };
 		4C342CDF1AB01DFF0064C8CE /* pic_tabbar_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CDB1AB01DFF0064C8CE /* pic_tabbar_setting@2x.png */; };
+		4C342D001AB065D60064C8CE /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C342CFA1AB065D60064C8CE /* libzbar.a */; };
+		4C342D011AB065D60064C8CE /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CFC1AB065D60064C8CE /* zbar-back.png */; };
+		4C342D021AB065D60064C8CE /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CFD1AB065D60064C8CE /* zbar-help.html */; };
+		4C342D031AB065D60064C8CE /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CFE1AB065D60064C8CE /* zbar-helpicons.png */; };
+		4C342D041AB065D60064C8CE /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CFF1AB065D60064C8CE /* zbar-samples.png */; };
+		4C342D061AB0660C0064C8CE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C342D051AB0660C0064C8CE /* AVFoundation.framework */; };
+		4C342D081AB066180064C8CE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C342D071AB066180064C8CE /* CoreMedia.framework */; };
+		4C342D0A1AB066220064C8CE /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C342D091AB066220064C8CE /* CoreVideo.framework */; };
+		4C342D0C1AB066300064C8CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C342D0B1AB066300064C8CE /* QuartzCore.framework */; };
+		4C342D0E1AB0663A0064C8CE /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C342D0D1AB0663A0064C8CE /* libiconv.dylib */; };
+		4C342D141AB06E670064C8CE /* pic_find_treehole@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D131AB06E670064C8CE /* pic_find_treehole@2x.png */; };
+		4C342D1D1AB0740C0064C8CE /* MyDIYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342D1C1AB0740C0064C8CE /* MyDIYButton.m */; };
+		4C342D1F1AB07AF20064C8CE /* pic_find_robot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D1E1AB07AF20064C8CE /* pic_find_robot@2x.png */; };
+		4C342D211AB07B870064C8CE /* pic_find_countdown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D201AB07B870064C8CE /* pic_find_countdown@2x.png */; };
+		4C342D241AB07FBE0064C8CE /* pic_main_course_week_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D231AB07FBE0064C8CE /* pic_main_course_week_bg.png */; };
 		4C49866E1A79327E00F2CA42 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49866D1A79327E00F2CA42 /* UserInfoModel.m */; };
 		4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986741A7937F100F2CA42 /* MyRequest.m */; };
 		4C49867A1A79447D00F2CA42 /* LoginAndRegisterBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986791A79447D00F2CA42 /* LoginAndRegisterBusiness.m */; };
@@ -179,6 +194,42 @@
 		4C342CDA1AB01DFF0064C8CE /* pic_tabbar_setting_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_tabbar_setting_selected@2x.png"; sourceTree = "<group>"; };
 		4C342CDB1AB01DFF0064C8CE /* pic_tabbar_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_tabbar_setting@2x.png"; sourceTree = "<group>"; };
 		4C342CE11AB01EAD0064C8CE /* ImageConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageConfig.h; sourceTree = "<group>"; };
+		4C342CE61AB065D60064C8CE /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		4C342CE71AB065D60064C8CE /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		4C342CE81AB065D60064C8CE /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		4C342CE91AB065D60064C8CE /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		4C342CEA1AB065D60064C8CE /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		4C342CEB1AB065D60064C8CE /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		4C342CEC1AB065D60064C8CE /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		4C342CED1AB065D60064C8CE /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		4C342CEE1AB065D60064C8CE /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		4C342CEF1AB065D60064C8CE /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		4C342CF01AB065D60064C8CE /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		4C342CF11AB065D60064C8CE /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		4C342CF21AB065D60064C8CE /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		4C342CF31AB065D60064C8CE /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		4C342CF41AB065D60064C8CE /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		4C342CF51AB065D60064C8CE /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		4C342CF61AB065D60064C8CE /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		4C342CF71AB065D60064C8CE /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		4C342CF81AB065D60064C8CE /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		4C342CF91AB065D60064C8CE /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		4C342CFA1AB065D60064C8CE /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		4C342CFC1AB065D60064C8CE /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		4C342CFD1AB065D60064C8CE /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		4C342CFE1AB065D60064C8CE /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		4C342CFF1AB065D60064C8CE /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		4C342D051AB0660C0064C8CE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4C342D071AB066180064C8CE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4C342D091AB066220064C8CE /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4C342D0B1AB066300064C8CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C342D0D1AB0663A0064C8CE /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		4C342D131AB06E670064C8CE /* pic_find_treehole@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pic_find_treehole@2x.png"; path = "../../../../../Desktop/appImages/pic_find_treehole@2x.png"; sourceTree = "<group>"; };
+		4C342D1B1AB0740C0064C8CE /* MyDIYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDIYButton.h; sourceTree = "<group>"; };
+		4C342D1C1AB0740C0064C8CE /* MyDIYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDIYButton.m; sourceTree = "<group>"; };
+		4C342D1E1AB07AF20064C8CE /* pic_find_robot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_find_robot@2x.png"; sourceTree = "<group>"; };
+		4C342D201AB07B870064C8CE /* pic_find_countdown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_find_countdown@2x.png"; sourceTree = "<group>"; };
+		4C342D231AB07FBE0064C8CE /* pic_main_course_week_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_main_course_week_bg.png; sourceTree = "<group>"; };
 		4C49866C1A79327E00F2CA42 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
 		4C49866D1A79327E00F2CA42 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
 		4C4986721A7936DB00F2CA42 /* RequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
@@ -189,7 +240,7 @@
 		4C4986791A79447D00F2CA42 /* LoginAndRegisterBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginAndRegisterBusiness.m; sourceTree = "<group>"; };
 		4C49867B1A794AAA00F2CA42 /* ObjectFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectFileManager.h; sourceTree = "<group>"; };
 		4C49867C1A794AAA00F2CA42 /* ObjectFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectFileManager.m; sourceTree = "<group>"; };
-		4C4A179F1A7FC4220027F303 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		4C4A179F1A7FC4220027F303 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../background.jpg; sourceTree = "<group>"; };
 		4C5CA7FD1A79FF7700627BB9 /* ObjectFileDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectFileDelegate.h; sourceTree = "<group>"; };
 		4C5CA7FF1A7A59DC00627BB9 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
 		4C5CA8001A7A59DC00627BB9 /* MJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst.m; sourceTree = "<group>"; };
@@ -243,8 +294,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C342D0E1AB0663A0064C8CE /* libiconv.dylib in Frameworks */,
+				4C342D0C1AB066300064C8CE /* QuartzCore.framework in Frameworks */,
+				4C342D0A1AB066220064C8CE /* CoreVideo.framework in Frameworks */,
+				4C342D081AB066180064C8CE /* CoreMedia.framework in Frameworks */,
+				4C342D061AB0660C0064C8CE /* AVFoundation.framework in Frameworks */,
 				4C12C4A41A77D98D00BE6775 /* Security.framework in Frameworks */,
 				4C12C4A21A77D98300BE6775 /* CFNetwork.framework in Frameworks */,
+				4C342D001AB065D60064C8CE /* libzbar.a in Frameworks */,
 				4C12C4A01A77D97800BE6775 /* SystemConfiguration.framework in Frameworks */,
 				4C213D8C1A7680DE008CD12B /* CoreGraphics.framework in Frameworks */,
 				4C213D8E1A7680DE008CD12B /* UIKit.framework in Frameworks */,
@@ -356,6 +413,11 @@
 		4C213D881A7680DE008CD12B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C342D0D1AB0663A0064C8CE /* libiconv.dylib */,
+				4C342D0B1AB066300064C8CE /* QuartzCore.framework */,
+				4C342D091AB066220064C8CE /* CoreVideo.framework */,
+				4C342D071AB066180064C8CE /* CoreMedia.framework */,
+				4C342D051AB0660C0064C8CE /* AVFoundation.framework */,
 				4C12C4A31A77D98D00BE6775 /* Security.framework */,
 				4C12C4A11A77D98300BE6775 /* CFNetwork.framework */,
 				4C12C49F1A77D97800BE6775 /* SystemConfiguration.framework */,
@@ -386,7 +448,6 @@
 			isa = PBXGroup;
 			children = (
 				4C33BAF21AAEBE20009965AC /* imageAndicon */,
-				4C4A179F1A7FC4220027F303 /* background.jpg */,
 				4C5CA8351A7B6B9100627BB9 /* IndicatorImgs */,
 				4C5CA7FE1A7A59DC00627BB9 /* MJExtension */,
 				4C213DBE1A7688E3008CD12B /* img01.jpg */,
@@ -449,6 +510,10 @@
 		4C282FF21A77A1B000B36D47 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				4C342D1B1AB0740C0064C8CE /* MyDIYButton.h */,
+				4C342D1C1AB0740C0064C8CE /* MyDIYButton.m */,
+				4C342D0F1AB0673D0064C8CE /* QRSignIn */,
+				4C342CE21AB065D50064C8CE /* ZBarSDK */,
 				4C282FEF1A77A1A800B36D47 /* FindViewController.h */,
 				4C282FF01A77A1A800B36D47 /* FindViewController.m */,
 			);
@@ -467,8 +532,9 @@
 		4C33BAF21AAEBE20009965AC /* imageAndicon */ = {
 			isa = PBXGroup;
 			children = (
+				4C342D221AB07FA40064C8CE /* background */,
+				4C342D151AB06E6F0064C8CE /* find */,
 				4C342CBF1AB01B070064C8CE /* tabbar */,
-				4C1F79FD1AAEC6E000A9CDCD /* bgImage.png */,
 			);
 			path = imageAndicon;
 			sourceTree = "<group>";
@@ -484,6 +550,97 @@
 				4C342CD41AB01DD80064C8CE /* pic_tabbar_course_selected@2x.png */,
 			);
 			name = tabbar;
+			sourceTree = "<group>";
+		};
+		4C342CE21AB065D50064C8CE /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4C342CE31AB065D60064C8CE /* Headers */,
+				4C342CFA1AB065D60064C8CE /* libzbar.a */,
+				4C342CFB1AB065D60064C8CE /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		4C342CE31AB065D60064C8CE /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4C342CE41AB065D60064C8CE /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		4C342CE41AB065D60064C8CE /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4C342CE51AB065D60064C8CE /* zbar */,
+				4C342CEF1AB065D60064C8CE /* zbar.h */,
+				4C342CF01AB065D60064C8CE /* ZBarCameraSimulator.h */,
+				4C342CF11AB065D60064C8CE /* ZBarCaptureReader.h */,
+				4C342CF21AB065D60064C8CE /* ZBarHelpController.h */,
+				4C342CF31AB065D60064C8CE /* ZBarImage.h */,
+				4C342CF41AB065D60064C8CE /* ZBarImageScanner.h */,
+				4C342CF51AB065D60064C8CE /* ZBarReaderController.h */,
+				4C342CF61AB065D60064C8CE /* ZBarReaderView.h */,
+				4C342CF71AB065D60064C8CE /* ZBarReaderViewController.h */,
+				4C342CF81AB065D60064C8CE /* ZBarSDK.h */,
+				4C342CF91AB065D60064C8CE /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		4C342CE51AB065D60064C8CE /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				4C342CE61AB065D60064C8CE /* Decoder.h */,
+				4C342CE71AB065D60064C8CE /* Exception.h */,
+				4C342CE81AB065D60064C8CE /* Image.h */,
+				4C342CE91AB065D60064C8CE /* ImageScanner.h */,
+				4C342CEA1AB065D60064C8CE /* Processor.h */,
+				4C342CEB1AB065D60064C8CE /* Scanner.h */,
+				4C342CEC1AB065D60064C8CE /* Symbol.h */,
+				4C342CED1AB065D60064C8CE /* Video.h */,
+				4C342CEE1AB065D60064C8CE /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		4C342CFB1AB065D60064C8CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C342CFC1AB065D60064C8CE /* zbar-back.png */,
+				4C342CFD1AB065D60064C8CE /* zbar-help.html */,
+				4C342CFE1AB065D60064C8CE /* zbar-helpicons.png */,
+				4C342CFF1AB065D60064C8CE /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C342D0F1AB0673D0064C8CE /* QRSignIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = QRSignIn;
+			sourceTree = "<group>";
+		};
+		4C342D151AB06E6F0064C8CE /* find */ = {
+			isa = PBXGroup;
+			children = (
+				4C342D201AB07B870064C8CE /* pic_find_countdown@2x.png */,
+				4C342D1E1AB07AF20064C8CE /* pic_find_robot@2x.png */,
+				4C342D131AB06E670064C8CE /* pic_find_treehole@2x.png */,
+			);
+			name = find;
+			sourceTree = "<group>";
+		};
+		4C342D221AB07FA40064C8CE /* background */ = {
+			isa = PBXGroup;
+			children = (
+				4C342D231AB07FBE0064C8CE /* pic_main_course_week_bg.png */,
+				4C4A179F1A7FC4220027F303 /* background.jpg */,
+				4C1F79FD1AAEC6E000A9CDCD /* bgImage.png */,
+			);
+			name = background;
 			sourceTree = "<group>";
 		};
 		4C48D74D1AA98C6B00C9DE52 /* AlterView */ = {
@@ -776,6 +933,7 @@
 			files = (
 				4C5CA8341A7B6B8200627BB9 /* 6.png in Resources */,
 				4C342CBD1AAFF97E0064C8CE /* CourseDetailViewController.xib in Resources */,
+				4C342D041AB065D60064C8CE /* zbar-samples.png in Resources */,
 				4C342CD51AB01DD80064C8CE /* pic_tabbar_course_selected@2x.png in Resources */,
 				4C342CDC1AB01DFF0064C8CE /* pic_tabbar_find_selected@2x.png in Resources */,
 				4C5CA8871A7B988A00627BB9 /* KVNProgressView.xib in Resources */,
@@ -789,13 +947,20 @@
 				4C5CA8311A7B6B8200627BB9 /* 3.png in Resources */,
 				4C213DBF1A7688E3008CD12B /* img01.jpg in Resources */,
 				4C4A17A01A7FC4220027F303 /* background.jpg in Resources */,
+				4C342D031AB065D60064C8CE /* zbar-helpicons.png in Resources */,
+				4C342D211AB07B870064C8CE /* pic_find_countdown@2x.png in Resources */,
 				4C342CDE1AB01DFF0064C8CE /* pic_tabbar_setting_selected@2x.png in Resources */,
+				4C342D141AB06E670064C8CE /* pic_find_treehole@2x.png in Resources */,
+				4C342D011AB065D60064C8CE /* zbar-back.png in Resources */,
 				4C342CDF1AB01DFF0064C8CE /* pic_tabbar_setting@2x.png in Resources */,
 				4C5CA82F1A7B6B8200627BB9 /* 1.png in Resources */,
 				4C213D9D1A7680DE008CD12B /* Main.storyboard in Resources */,
 				4C342CD71AB01DF20064C8CE /* pic_tabbar_course@2x.png in Resources */,
 				4C342CDD1AB01DFF0064C8CE /* pic_tabbar_find@2x.png in Resources */,
+				4C342D021AB065D60064C8CE /* zbar-help.html in Resources */,
 				4C153CD91A78A8FA00B36695 /* LoginInfo.plist in Resources */,
+				4C342D1F1AB07AF20064C8CE /* pic_find_robot@2x.png in Resources */,
+				4C342D241AB07FBE0064C8CE /* pic_main_course_week_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,6 +1011,7 @@
 				4C49867A1A79447D00F2CA42 /* LoginAndRegisterBusiness.m in Sources */,
 				4C1F6E291AA5E1B0001DC576 /* DaiDodgeKeyboard.m in Sources */,
 				4C9841731A81033000C12DF1 /* RegisterViewController.m in Sources */,
+				4C342D1D1AB0740C0064C8CE /* MyDIYButton.m in Sources */,
 				4C1F6E2D1AA6C632001DC576 /* ImportCourseStep1VC.m in Sources */,
 				4C12C4C01A77DA1000BE6775 /* NSDictionary+RequestEncoding.m in Sources */,
 				4C5CA83C1A7B8C6400627BB9 /* GMDCircleLoader.m in Sources */,
@@ -988,6 +1154,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CampusAssistant/CampusAssistant-Prefix.pch";
 				INFOPLIST_FILE = "CampusAssistant/CampusAssistant-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CampusAssistant/ZBarSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1002,6 +1172,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CampusAssistant/CampusAssistant-Prefix.pch";
 				INFOPLIST_FILE = "CampusAssistant/CampusAssistant-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CampusAssistant/ZBarSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

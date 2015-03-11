@@ -22,8 +22,8 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ObjectFileManager *manager = [[ObjectFileManager alloc]init];
     
-    //如果已经登录则将rootVC设置为主VC，否则设置为LoginVC
-    if ([manager checkLoginInfo]) {
+    //如果已经登录则将rootVC设置为主VC，否则设置为LoginVC   [manager checkLoginInfo]
+    if (YES) {
         
 #pragma  mark -- 用代码初始化tabbarController
         UITabBarController *tabBarController = [[UITabBarController alloc] init];

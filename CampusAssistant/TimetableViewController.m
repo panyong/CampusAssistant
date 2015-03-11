@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    self.edgesForExtendedLayout = UIRectEdgeNone ;
+    self.edgesForExtendedLayout = UIRectEdgeNone ;//设置view大小
     
     NSLog(@"TimetableViewController viewDidLoad!");
     
