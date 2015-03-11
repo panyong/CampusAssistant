@@ -7,7 +7,7 @@
 //
 
 #import "TimetableViewController.h"
-
+#import "CourseDetailViewController.h"
 
 @interface TimetableViewController ()
 
@@ -19,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+     
     }
     return self;
 }
@@ -56,8 +56,6 @@
     // 设置frame
     [super viewDidLayoutSubviews];
     
-   
-    
     //初始化drawer
     self.drawer = [[DrawLabelAndButton alloc]initWithMainViewFrame:self.view.frame];
     
@@ -68,15 +66,17 @@
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, [self.drawer getContentSizeHeight])];
     self.scrollView.bounces = NO;
     [self.view addSubview:self.scrollView];
-
     
-   
+    
+    
     
     //调用draw方法，进行两类Label的绘制
     [self drawWeekAndSectionLabel];
     
     [self.courseBL readCourseArray];
     NSLog(@"..:%@", NSStringFromCGRect(self.view.frame));
+    
+   
 }
 
 #pragma 以下是加载课程表的方法
@@ -136,7 +136,9 @@
         int labelTag = tapLabel.tag;
         CourseModel *course = [self.tag4CourseDictionary objectForKey:[NSString stringWithFormat:@"%i",labelTag]];
         
+        CourseDetailViewController *courseDetailVC = [[CourseDetailViewController alloc] initWithNibName:@"CourseDetailViewController" bundle:nil course:course];
         
+        [self.navigationController pushViewController:courseDetailVC animated:YES];
         
 //        NSLog(@"course:%@",course.name);
         
@@ -176,7 +178,7 @@
 -(void)readCourseSuccess:(NSArray *)array{
     NSLog(@"VIEW:readCourseSuccess");
     
-    [KVNProgress showSuccessWithStatus:@"Success"];
+//    [KVNProgress showSuccessWithStatus:@"Success"];
     
     NSLog(@"courseList:%@",array);
     

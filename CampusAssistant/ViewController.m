@@ -83,7 +83,7 @@
     
     [self.view addSubview:self.activity];
     
-    [self.activity startAnimation];
+//    [self.activity startAnimation];
 }
 
 -(void)loginSuccess{

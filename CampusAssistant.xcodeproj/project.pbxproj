@@ -52,6 +52,8 @@
 		4C33BAF81AAEBE20009965AC /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33BAF41AAEBE20009965AC /* icon1.png */; };
 		4C33BAF91AAEBE20009965AC /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33BAF51AAEBE20009965AC /* icon2.png */; };
 		4C33BAFA1AAEBE20009965AC /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33BAF61AAEBE20009965AC /* icon3.png */; };
+		4C342CBC1AAFF97E0064C8CE /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342CBA1AAFF97E0064C8CE /* CourseDetailViewController.m */; };
+		4C342CBD1AAFF97E0064C8CE /* CourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CBB1AAFF97E0064C8CE /* CourseDetailViewController.xib */; };
 		4C49866E1A79327E00F2CA42 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49866D1A79327E00F2CA42 /* UserInfoModel.m */; };
 		4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986741A7937F100F2CA42 /* MyRequest.m */; };
 		4C49867A1A79447D00F2CA42 /* LoginAndRegisterBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986791A79447D00F2CA42 /* LoginAndRegisterBusiness.m */; };
@@ -169,6 +171,9 @@
 		4C33BAF41AAEBE20009965AC /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		4C33BAF51AAEBE20009965AC /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		4C33BAF61AAEBE20009965AC /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		4C342CB91AAFF97E0064C8CE /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
+		4C342CBA1AAFF97E0064C8CE /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
+		4C342CBB1AAFF97E0064C8CE /* CourseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseDetailViewController.xib; sourceTree = "<group>"; };
 		4C49866C1A79327E00F2CA42 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
 		4C49866D1A79327E00F2CA42 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
 		4C4986721A7936DB00F2CA42 /* RequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
@@ -428,6 +433,9 @@
 				4CDB93021AAD7727005625BF /* ImportCourseStep2VC.h */,
 				4CDB93031AAD7727005625BF /* ImportCourseStep2VC.m */,
 				4CDB93041AAD7727005625BF /* ImportCourseStep2VC.xib */,
+				4C342CB91AAFF97E0064C8CE /* CourseDetailViewController.h */,
+				4C342CBA1AAFF97E0064C8CE /* CourseDetailViewController.m */,
+				4C342CBB1AAFF97E0064C8CE /* CourseDetailViewController.xib */,
 			);
 			name = Timetable;
 			path = ..;
@@ -752,6 +760,7 @@
 			files = (
 				4C5CA8341A7B6B8200627BB9 /* 6.png in Resources */,
 				4C33BAF91AAEBE20009965AC /* icon2.png in Resources */,
+				4C342CBD1AAFF97E0064C8CE /* CourseDetailViewController.xib in Resources */,
 				4C5CA8871A7B988A00627BB9 /* KVNProgressView.xib in Resources */,
 				4C5CA8321A7B6B8200627BB9 /* 4.png in Resources */,
 				4CDB93061AAD7727005625BF /* ImportCourseStep2VC.xib in Resources */,
@@ -793,6 +802,7 @@
 				4C5CA81C1A7A700D00627BB9 /* CourseModel.m in Sources */,
 				4C49867D1A794AAA00F2CA42 /* ObjectFileManager.m in Sources */,
 				4C12C4C51A77DA1000BE6775 /* MKNetworkOperation.m in Sources */,
+				4C342CBC1AAFF97E0064C8CE /* CourseDetailViewController.m in Sources */,
 				4C213DA01A7680DE008CD12B /* ViewController.m in Sources */,
 				4C12C4BE1A77DA1000BE6775 /* NSData+MKBase64.m in Sources */,
 				4C12C4BF1A77DA1000BE6775 /* NSDate+RFC1123.m in Sources */,
