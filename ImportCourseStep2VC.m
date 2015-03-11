@@ -9,6 +9,9 @@
 #import "ImportCourseStep2VC.h"
 #import "KVNProgress.h"
 #import "TimetableViewController.h"
+#import "ImageConfig.h"
+#import "FindViewController.h"
+#import "AboutMeViewController.h"
 
 @interface ImportCourseStep2VC ()
 
@@ -105,25 +108,38 @@
     [self.view removeFromSuperview];
     [self removeFromParentViewController];
     
-    //实例化主故事版
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    //实例化主故事版
+//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    
+//    UITabBarController *timetableVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+//    
+//    [UIApplication sharedApplication].keyWindow.rootViewController = timetableVC;
     
-    UITabBarController *timetableVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+#pragma  mark -- 用代码初始化tabbarController
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    //课程表
+    TimetableViewController *timetabelVC = [[TimetableViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *timetabelNC = [[UINavigationController alloc] initWithRootViewController:timetabelVC];
+    timetabelVC.navigationItem.title = @"课程表";
+    timetabelNC.tabBarItem.title = @"课程表";
+    timetabelNC.tabBarItem.image = [UIImage imageNamed:kTabbar_course_detail_icon];
+    [tabBarController addChildViewController:timetabelNC];
+    //发现
+    FindViewController *findVC = [[FindViewController alloc] init];
+    UINavigationController *findNC = [[UINavigationController alloc] initWithRootViewController:findVC];
+    findVC.navigationItem.title = @"发现";
+    findNC.tabBarItem.title = @"发现";
+    findNC.tabBarItem.image = [UIImage imageNamed:kTabbar_find_icon];
+    [tabBarController addChildViewController:findNC];
+    //关于我
+    AboutMeViewController *aboutMeVC = [[AboutMeViewController alloc] init];
+    UINavigationController *aboutMeNC = [[UINavigationController alloc] initWithRootViewController:aboutMeVC];
+    aboutMeVC.navigationItem.title = @"个人中心";
+    aboutMeNC.tabBarItem.title = @"个人中心";
+    aboutMeNC.tabBarItem.image = [UIImage imageNamed:kTabbar_setting_icon];
+    [tabBarController addChildViewController:aboutMeNC];
     
-    [UIApplication sharedApplication].keyWindow.rootViewController = timetableVC;
-    
-    //用代码实例化Tab bar controller。
-//    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-//    
-//    TimetableViewController *timetabelVC = [[TimetableViewController alloc]init];
-//    
-//    UINavigationController *timetabelNVC = [[UINavigationController alloc] initWithRootViewController:timetabelVC];
-//    
-//    timetabelNVC.tabBarItem.image = [UIImage imageNamed:@"icon1.png"];
-//    
-//    [tabBarController addChildViewController:timetabelNVC];
-//    
-//    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarController;
+    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarController;
     
     NSLog(@"跳转到课程表界面");
 }

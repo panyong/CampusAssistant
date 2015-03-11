@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "ObjectFileManager.h"
+#import "TimetableViewController.h"
+#import "ImageConfig.h"
+#import "FindViewController.h"
+#import "AboutMeViewController.h"
 
 @implementation AppDelegate
 
@@ -21,8 +25,31 @@
     //如果已经登录则将rootVC设置为主VC，否则设置为LoginVC
     if ([manager checkLoginInfo]) {
         
-        UITabBarController *mainVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-        self.window.rootViewController = mainVC;
+#pragma  mark -- 用代码初始化tabbarController
+        UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        //课程表
+        TimetableViewController *timetabelVC = [[TimetableViewController alloc] initWithNibName:nil bundle:nil];
+        UINavigationController *timetabelNC = [[UINavigationController alloc] initWithRootViewController:timetabelVC];
+        timetabelVC.navigationItem.title = @"课程表";
+        timetabelNC.tabBarItem.title = @"课程表";
+        timetabelNC.tabBarItem.image = [UIImage imageNamed:kTabbar_course_detail_icon];
+        [tabBarController addChildViewController:timetabelNC];
+        //发现
+        FindViewController *findVC = [[FindViewController alloc] init];
+        UINavigationController *findNC = [[UINavigationController alloc] initWithRootViewController:findVC];
+        findVC.navigationItem.title = @"发现";
+        findNC.tabBarItem.title = @"发现";
+        findNC.tabBarItem.image = [UIImage imageNamed:kTabbar_find_icon];
+        [tabBarController addChildViewController:findNC];
+        //关于我
+        AboutMeViewController *aboutMeVC = [[AboutMeViewController alloc] init];
+        UINavigationController *aboutMeNC = [[UINavigationController alloc] initWithRootViewController:aboutMeVC];
+        aboutMeVC.navigationItem.title = @"个人中心";
+        aboutMeNC.tabBarItem.title = @"个人中心";
+        aboutMeNC.tabBarItem.image = [UIImage imageNamed:kTabbar_setting_icon];
+        [tabBarController addChildViewController:aboutMeNC];
+
+        self.window.rootViewController = tabBarController;
         
     }else{
         //实例化导航控制器

@@ -8,6 +8,7 @@
 
 #import "TimetableViewController.h"
 #import "CourseDetailViewController.h"
+#import "ImageConfig.h"
 
 @interface TimetableViewController ()
 
@@ -28,7 +29,11 @@
 {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout = UIRectEdgeNone ;
+    
     NSLog(@"TimetableViewController viewDidLoad!");
+    
+    self.title = @"课程表";
     
     //实例化业务类，并调用其加载课程表的方法
     self.courseBL = [[CourseBL alloc]init];
@@ -36,7 +41,7 @@
     self.courseBL.delegate = self;
     
     //设置背景图
-    NSString *imageName = @"bgImage2.png";
+    NSString *imageName = kTimetable_background_image;
     UIImage *backgroundImage = [UIImage imageNamed:imageName];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundImage]];
 
