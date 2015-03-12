@@ -74,6 +74,9 @@
 		4C342D281AB174990064C8CE /* QRSignInBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342D271AB174990064C8CE /* QRSignInBL.m */; };
 		4C342D2D1AB1806D0064C8CE /* QRSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342D2B1AB1806D0064C8CE /* QRSignInViewController.m */; };
 		4C342D2E1AB1806D0064C8CE /* QRSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D2C1AB1806D0064C8CE /* QRSignInViewController.xib */; };
+		4C342D331AB1BA180064C8CE /* ShakeItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342D311AB1BA180064C8CE /* ShakeItViewController.m */; };
+		4C342D341AB1BA180064C8CE /* ShakeItViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D321AB1BA180064C8CE /* ShakeItViewController.xib */; };
+		4C342D391AB1C18B0064C8CE /* ShakeItBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342D381AB1C18B0064C8CE /* ShakeItBL.m */; };
 		4C49866E1A79327E00F2CA42 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49866D1A79327E00F2CA42 /* UserInfoModel.m */; };
 		4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986741A7937F100F2CA42 /* MyRequest.m */; };
 		4C49867A1A79447D00F2CA42 /* LoginAndRegisterBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986791A79447D00F2CA42 /* LoginAndRegisterBusiness.m */; };
@@ -239,6 +242,12 @@
 		4C342D2A1AB1806D0064C8CE /* QRSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRSignInViewController.h; sourceTree = "<group>"; };
 		4C342D2B1AB1806D0064C8CE /* QRSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRSignInViewController.m; sourceTree = "<group>"; };
 		4C342D2C1AB1806D0064C8CE /* QRSignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRSignInViewController.xib; sourceTree = "<group>"; };
+		4C342D301AB1BA180064C8CE /* ShakeItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeItViewController.h; sourceTree = "<group>"; };
+		4C342D311AB1BA180064C8CE /* ShakeItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeItViewController.m; sourceTree = "<group>"; };
+		4C342D321AB1BA180064C8CE /* ShakeItViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShakeItViewController.xib; sourceTree = "<group>"; };
+		4C342D371AB1C18B0064C8CE /* ShakeItBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeItBL.h; sourceTree = "<group>"; };
+		4C342D381AB1C18B0064C8CE /* ShakeItBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeItBL.m; sourceTree = "<group>"; };
+		4C342D3A1AB1C19D0064C8CE /* ShakeItDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShakeItDelegate.h; sourceTree = "<group>"; };
 		4C49866C1A79327E00F2CA42 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
 		4C49866D1A79327E00F2CA42 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
 		4C4986721A7936DB00F2CA42 /* RequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
@@ -659,9 +668,8 @@
 		4C342D251AB174530064C8CE /* Find */ = {
 			isa = PBXGroup;
 			children = (
-				4C342D261AB174990064C8CE /* QRSignInBL.h */,
-				4C342D271AB174990064C8CE /* QRSignInBL.m */,
-				4C342D291AB174B00064C8CE /* QRSignInDelegate.h */,
+				4C342D361AB1C15C0064C8CE /* ShakeIt */,
+				4C342D351AB1C14C0064C8CE /* QRSignIn */,
 			);
 			name = Find;
 			sourceTree = "<group>";
@@ -669,8 +677,31 @@
 		4C342D2F1AB1A7C80064C8CE /* Cengke */ = {
 			isa = PBXGroup;
 			children = (
+				4C342D301AB1BA180064C8CE /* ShakeItViewController.h */,
+				4C342D311AB1BA180064C8CE /* ShakeItViewController.m */,
+				4C342D321AB1BA180064C8CE /* ShakeItViewController.xib */,
 			);
 			name = Cengke;
+			sourceTree = "<group>";
+		};
+		4C342D351AB1C14C0064C8CE /* QRSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				4C342D261AB174990064C8CE /* QRSignInBL.h */,
+				4C342D271AB174990064C8CE /* QRSignInBL.m */,
+				4C342D291AB174B00064C8CE /* QRSignInDelegate.h */,
+			);
+			name = QRSignIn;
+			sourceTree = "<group>";
+		};
+		4C342D361AB1C15C0064C8CE /* ShakeIt */ = {
+			isa = PBXGroup;
+			children = (
+				4C342D371AB1C18B0064C8CE /* ShakeItBL.h */,
+				4C342D381AB1C18B0064C8CE /* ShakeItBL.m */,
+				4C342D3A1AB1C19D0064C8CE /* ShakeItDelegate.h */,
+			);
+			name = ShakeIt;
 			sourceTree = "<group>";
 		};
 		4C48D74D1AA98C6B00C9DE52 /* AlterView */ = {
@@ -980,6 +1011,7 @@
 				4C213DBF1A7688E3008CD12B /* img01.jpg in Resources */,
 				4C4A17A01A7FC4220027F303 /* background.jpg in Resources */,
 				4C342D031AB065D60064C8CE /* zbar-helpicons.png in Resources */,
+				4C342D341AB1BA180064C8CE /* ShakeItViewController.xib in Resources */,
 				4C342D211AB07B870064C8CE /* pic_find_countdown@2x.png in Resources */,
 				4C342CDE1AB01DFF0064C8CE /* pic_tabbar_setting_selected@2x.png in Resources */,
 				4C342D141AB06E670064C8CE /* pic_find_treehole@2x.png in Resources */,
@@ -1031,6 +1063,7 @@
 				4C5CA8101A7A59DC00627BB9 /* MJIvar.m in Sources */,
 				4C282FF61A77A1D100B36D47 /* AboutMeViewController.m in Sources */,
 				4C12C4C21A77DA1000BE6775 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
+				4C342D331AB1BA180064C8CE /* ShakeItViewController.m in Sources */,
 				4C342D2D1AB1806D0064C8CE /* QRSignInViewController.m in Sources */,
 				4C49866E1A79327E00F2CA42 /* UserInfoModel.m in Sources */,
 				4C213DC31A769DA1008CD12B /* BaseRequestUrl.m in Sources */,
@@ -1054,6 +1087,7 @@
 				4C1F6E271AA5E1B0001DC576 /* DaiDodgeKeyboard+AccessObject.m in Sources */,
 				4C1F6E281AA5E1B0001DC576 /* DaiDodgeKeyboard+Animation.m in Sources */,
 				4C5CA8141A7A59DC00627BB9 /* NSObject+MJKeyValue.m in Sources */,
+				4C342D391AB1C18B0064C8CE /* ShakeItBL.m in Sources */,
 				4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */,
 				4C5CA8801A7B988A00627BB9 /* KVNProgress.m in Sources */,
 				4C5CA87E1A7B988A00627BB9 /* UIImage+KVNEmpty.m in Sources */,

@@ -12,11 +12,7 @@
 //static MyRequest* sharedManager = nil;
 
 -(MyRequest*) init{
-//    static dispatch_once_t once;
-//    dispatch_once(&once,^{
-//        sharedManager = [[self alloc] init];
-//    });
-//    return sharedManager;
+
     
     self = [super init]; //首先子类要继承父类的属性和方法
     
