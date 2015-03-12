@@ -71,6 +71,9 @@
 		4C342D1F1AB07AF20064C8CE /* pic_find_robot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D1E1AB07AF20064C8CE /* pic_find_robot@2x.png */; };
 		4C342D211AB07B870064C8CE /* pic_find_countdown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D201AB07B870064C8CE /* pic_find_countdown@2x.png */; };
 		4C342D241AB07FBE0064C8CE /* pic_main_course_week_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D231AB07FBE0064C8CE /* pic_main_course_week_bg.png */; };
+		4C342D281AB174990064C8CE /* QRSignInBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342D271AB174990064C8CE /* QRSignInBL.m */; };
+		4C342D2D1AB1806D0064C8CE /* QRSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342D2B1AB1806D0064C8CE /* QRSignInViewController.m */; };
+		4C342D2E1AB1806D0064C8CE /* QRSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C342D2C1AB1806D0064C8CE /* QRSignInViewController.xib */; };
 		4C49866E1A79327E00F2CA42 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49866D1A79327E00F2CA42 /* UserInfoModel.m */; };
 		4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986741A7937F100F2CA42 /* MyRequest.m */; };
 		4C49867A1A79447D00F2CA42 /* LoginAndRegisterBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986791A79447D00F2CA42 /* LoginAndRegisterBusiness.m */; };
@@ -230,6 +233,12 @@
 		4C342D1E1AB07AF20064C8CE /* pic_find_robot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_find_robot@2x.png"; sourceTree = "<group>"; };
 		4C342D201AB07B870064C8CE /* pic_find_countdown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_find_countdown@2x.png"; sourceTree = "<group>"; };
 		4C342D231AB07FBE0064C8CE /* pic_main_course_week_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_main_course_week_bg.png; sourceTree = "<group>"; };
+		4C342D261AB174990064C8CE /* QRSignInBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRSignInBL.h; sourceTree = "<group>"; };
+		4C342D271AB174990064C8CE /* QRSignInBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRSignInBL.m; sourceTree = "<group>"; };
+		4C342D291AB174B00064C8CE /* QRSignInDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRSignInDelegate.h; sourceTree = "<group>"; };
+		4C342D2A1AB1806D0064C8CE /* QRSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRSignInViewController.h; sourceTree = "<group>"; };
+		4C342D2B1AB1806D0064C8CE /* QRSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRSignInViewController.m; sourceTree = "<group>"; };
+		4C342D2C1AB1806D0064C8CE /* QRSignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRSignInViewController.xib; sourceTree = "<group>"; };
 		4C49866C1A79327E00F2CA42 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
 		4C49866D1A79327E00F2CA42 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
 		4C4986721A7936DB00F2CA42 /* RequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = "<group>"; };
@@ -510,10 +519,10 @@
 		4C282FF21A77A1B000B36D47 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				4C342D2F1AB1A7C80064C8CE /* Cengke */,
 				4C342D1B1AB0740C0064C8CE /* MyDIYButton.h */,
 				4C342D1C1AB0740C0064C8CE /* MyDIYButton.m */,
 				4C342D0F1AB0673D0064C8CE /* QRSignIn */,
-				4C342CE21AB065D50064C8CE /* ZBarSDK */,
 				4C282FEF1A77A1A800B36D47 /* FindViewController.h */,
 				4C282FF01A77A1A800B36D47 /* FindViewController.m */,
 			);
@@ -619,6 +628,10 @@
 		4C342D0F1AB0673D0064C8CE /* QRSignIn */ = {
 			isa = PBXGroup;
 			children = (
+				4C342CE21AB065D50064C8CE /* ZBarSDK */,
+				4C342D2A1AB1806D0064C8CE /* QRSignInViewController.h */,
+				4C342D2B1AB1806D0064C8CE /* QRSignInViewController.m */,
+				4C342D2C1AB1806D0064C8CE /* QRSignInViewController.xib */,
 			);
 			name = QRSignIn;
 			sourceTree = "<group>";
@@ -641,6 +654,23 @@
 				4C1F79FD1AAEC6E000A9CDCD /* bgImage.png */,
 			);
 			name = background;
+			sourceTree = "<group>";
+		};
+		4C342D251AB174530064C8CE /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				4C342D261AB174990064C8CE /* QRSignInBL.h */,
+				4C342D271AB174990064C8CE /* QRSignInBL.m */,
+				4C342D291AB174B00064C8CE /* QRSignInDelegate.h */,
+			);
+			name = Find;
+			sourceTree = "<group>";
+		};
+		4C342D2F1AB1A7C80064C8CE /* Cengke */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cengke;
 			sourceTree = "<group>";
 		};
 		4C48D74D1AA98C6B00C9DE52 /* AlterView */ = {
@@ -671,6 +701,7 @@
 		4C4986661A791EA500F2CA42 /* BussinessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4C342D251AB174530064C8CE /* Find */,
 				4C1F6E2E1AA6D16E001DC576 /* ImportCourseBL */,
 				4C5CA8151A7A6F7900627BB9 /* CourseBL */,
 				4C4986761A7942F100F2CA42 /* LoginAndRegister */,
@@ -933,6 +964,7 @@
 			files = (
 				4C5CA8341A7B6B8200627BB9 /* 6.png in Resources */,
 				4C342CBD1AAFF97E0064C8CE /* CourseDetailViewController.xib in Resources */,
+				4C342D2E1AB1806D0064C8CE /* QRSignInViewController.xib in Resources */,
 				4C342D041AB065D60064C8CE /* zbar-samples.png in Resources */,
 				4C342CD51AB01DD80064C8CE /* pic_tabbar_course_selected@2x.png in Resources */,
 				4C342CDC1AB01DFF0064C8CE /* pic_tabbar_find_selected@2x.png in Resources */,
@@ -979,6 +1011,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C342D281AB174990064C8CE /* QRSignInBL.m in Sources */,
 				4C5CA8281A7B6B6400627BB9 /* YYAnimationIndicator.m in Sources */,
 				4C282FED1A77A16300B36D47 /* TimetableViewController.m in Sources */,
 				4C12C4C41A77DA1000BE6775 /* MKNetworkEngine.m in Sources */,
@@ -998,6 +1031,7 @@
 				4C5CA8101A7A59DC00627BB9 /* MJIvar.m in Sources */,
 				4C282FF61A77A1D100B36D47 /* AboutMeViewController.m in Sources */,
 				4C12C4C21A77DA1000BE6775 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
+				4C342D2D1AB1806D0064C8CE /* QRSignInViewController.m in Sources */,
 				4C49866E1A79327E00F2CA42 /* UserInfoModel.m in Sources */,
 				4C213DC31A769DA1008CD12B /* BaseRequestUrl.m in Sources */,
 				4C5CA80E1A7A59DC00627BB9 /* MJConst.m in Sources */,

@@ -24,3 +24,5 @@
 #define kGetVerifyPath @"/timetable/getVerification/v1"//获取课程表第一步
 #define kCheckVerifyPath @"/timetable/checkVerification/v1"//获取课程表第二步
 #define kRegisterPath @"/user/register/v1"//注册
+#define kQRSignInPath @"/find/sign_in/v1"//二维码签到
+#define kCengkePath @"/find_cengke/v1"//摇一摇蹭课

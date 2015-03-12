@@ -12,6 +12,7 @@
 @required
 -(void)requestBegin;
 -(void)requestSuccess:(NSDictionary*) dic;
--(void)requestSuccessWithMsg:(NSString*) msg;
 -(void)requestFailed:(NSError*) error;
+@optional
+-(void)requestSuccessWithMsg:(NSString*) msg;
 @end

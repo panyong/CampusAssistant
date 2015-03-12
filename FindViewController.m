@@ -9,6 +9,7 @@
 #import "FindViewController.h"
 #import "MyDIYButton.h"
 #import "ImageConfig.h"
+#import "QRSignInViewController.h"
 
 @interface FindViewController ()
 
@@ -42,7 +43,7 @@
     [cengkeBtn addTarget:self action:@selector(cengke:) forControlEvents:UIControlEventTouchUpInside];
     
     MyDIYButton *qrSignInBtn = [self getDIYButtonByImageName:kFind_qr_sign_in_icon title:@"二维码签到" index:3];
-    [cengkeBtn addTarget:self action:@selector(qrSignIn:) forControlEvents:UIControlEventTouchUpInside];
+    [qrSignInBtn addTarget:self action:@selector(qrSignIn:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:talkAfterClassBtn];
     [self.view addSubview:cengkeBtn];
@@ -55,17 +56,20 @@
 
 #pragma mark - 下课聊响应函数
 -(void)talkAfterClass:(id)sender{
-    
+    NSLog(@"树洞私密聊");
 }
 
 #pragma mark - 摇一摇蹭课响应函数
 -(void)cengke:(id)sender{
-    
+    NSLog(@"摇一摇蹭课");
 }
 
 #pragma mark - 二维码签到响应函数
 -(void)qrSignIn:(id)sender{
+    NSLog(@"二维码签到");
+    QRSignInViewController *qrSignInVC = [[QRSignInViewController alloc] init];
     
+    [self.navigationController pushViewController:qrSignInVC animated:YES];
 }
 
 #pragma mark - 获取自定义按钮的位置等

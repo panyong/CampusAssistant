@@ -14,7 +14,7 @@
 @implementation ImportCourseBL
 
 
-static ImportCourseBL* sharedManager;
+//static ImportCourseBL* sharedManager;
 
 -(ImportCourseBL*) init{
 //    static dispatch_once_t once;
