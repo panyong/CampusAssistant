@@ -8,7 +8,7 @@
 
 
 #pragma mark - 图片的定义
-#define kTimetable_background_image @"pic_main_course_week_bg.png" 
+#define kTimetable_background_image @"pic_main_course_week_bg@2x.png"
 #define kFind_background_image @"bgImage.png"
 #define kTabbar_course_detail_icon @"pic_tabbar_course@2x.png"
 #define kTabbar_course_detail_selected_icon @"pic_tabbar_course_selected@2x.png"
@@ -22,4 +22,9 @@
 #define kFind_cengke_icon @"pic_find_robot@2x.png"
 #define kFind_qr_sign_in_icon @"pic_find_countdown@2x.png"
 
+
+#define kFind_shake_teacher_icon @"pic_main_course_teacher.png"
+#define kFind_shake_classroom_icon @"pic_main_course_classroom.png"
+#define kFind_shake_section_icon @"pic_main_course_section.png"
+#define kFind_shake_week_icon @"pic_main_course_week.png"
 

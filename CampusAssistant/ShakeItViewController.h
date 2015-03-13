@@ -15,7 +15,7 @@
 
 
 @property(strong,nonatomic) ShakeItBL *shakeItBl;
-@property(weak,nonatomic) UITableView *courseTabel;
+
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 @end

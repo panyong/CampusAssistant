@@ -41,9 +41,11 @@
     self.courseBL.delegate = self;
     
     //设置背景图
-    NSString *imageName = kTimetable_background_image;
-    UIImage *backgroundImage = [UIImage imageNamed:imageName];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundImage]];
+    UIImageView *backgroungImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    backgroungImageView.image = [UIImage imageNamed:kTimetable_background_image];
+//    [backgroungImageView setContentMode:UIViewContentModeScaleAspectFit];
+    
+    [self.view addSubview:backgroungImageView];
 
     
     //初始化drawer
@@ -152,8 +154,8 @@
 -(void) courseLabelEvent:(UITapGestureRecognizer *)sender{
     if (sender.numberOfTapsRequired) {
         UILabel *tapLabel =  (UILabel *)sender.view;
-        int labelTag = tapLabel.tag;
-        CourseModel *course = [self.tag4CourseDictionary objectForKey:[NSString stringWithFormat:@"%i",labelTag]];
+        NSInteger labelTag = tapLabel.tag;
+        CourseModel *course = [self.tag4CourseDictionary objectForKey:[NSString stringWithFormat:@"%ld",(long)labelTag]];
         
         CourseDetailViewController *courseDetailVC = [[CourseDetailViewController alloc] initWithNibName:@"CourseDetailViewController" bundle:nil course:course];
         

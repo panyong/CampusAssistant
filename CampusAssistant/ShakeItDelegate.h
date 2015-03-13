@@ -14,4 +14,6 @@
 @required
 -(void)getCoursesBegin;
 -(void)getCoursesFailed:(NSString*)msg;
--(void)getCoursesSuccess:(NSMutableArray*)courseList andCount:(int) count;
+-(void)getCoursesSuccess:(NSArray*)courseList andCount:(int) count;
+
+@end

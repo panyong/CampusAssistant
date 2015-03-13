@@ -2,17 +2,9 @@
 //  ShakeItBL.h
 //  CampusAssistant
 //
-//  Created by 潘勇 on 15-3-12.
+//  Created by 潘勇 on 15-3-13.
 //  Copyright (c) 2015年 SHIEP. All rights reserved.
 //
-
-
-
-
-
-
-
-
 
 #import <Foundation/Foundation.h>
 #import "ShakeItDelegate.h"
@@ -20,10 +12,13 @@
 #import "RequestDelegate.h"
 
 @interface ShakeItBL : NSObject<RequestDelegate>
+
 @property(weak,nonatomic) id<ShakeItDelegate> delegate;
+
 @property(strong,nonatomic) MyRequest *request;
 
 -(instancetype)init;
 
 -(void) getCourseList;
+
 @end

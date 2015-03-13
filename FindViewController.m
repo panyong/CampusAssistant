@@ -10,6 +10,7 @@
 #import "MyDIYButton.h"
 #import "ImageConfig.h"
 #import "QRSignInViewController.h"
+#import "ShakeItViewController.h"
 
 @interface FindViewController ()
 
@@ -61,6 +62,11 @@
 
 #pragma mark - 摇一摇蹭课响应函数
 -(void)cengke:(id)sender{
+    
+    ShakeItViewController *shakeItVC = [[ShakeItViewController alloc] initWithNibName:@"ShakeItViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:shakeItVC animated:YES];
+    
     NSLog(@"摇一摇蹭课");
 }
 

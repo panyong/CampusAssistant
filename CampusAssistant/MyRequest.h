@@ -12,6 +12,7 @@
 #import "NetConfig.h"
 
 @interface MyRequest : NSObject
+
 @property(weak,nonatomic) id<RequestDelegate> delegate;
 
 //不能使用单例模式，否则连续调用该类的实例时会覆盖其delega

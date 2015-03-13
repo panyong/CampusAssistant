@@ -23,7 +23,7 @@
     ObjectFileManager *manager = [[ObjectFileManager alloc]init];
     
     //如果已经登录则将rootVC设置为主VC，否则设置为LoginVC   [manager checkLoginInfo]
-    if (YES) {
+    if ([manager checkLoginInfo]) {
         
 #pragma  mark -- 用代码初始化tabbarController
         UITabBarController *tabBarController = [[UITabBarController alloc] init];

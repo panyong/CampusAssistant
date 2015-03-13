@@ -2,7 +2,7 @@
 //  ShakeItBL.m
 //  CampusAssistant
 //
-//  Created by 潘勇 on 15-3-12.
+//  Created by 潘勇 on 15-3-13.
 //  Copyright (c) 2015年 SHIEP. All rights reserved.
 //
 
@@ -42,13 +42,11 @@
     
     NSString *count = [dic objectForKey:@"count"];
     
-    NSMutableArray *courseList = [[NSMutableArray alloc] init];
+    NSArray *courseArray = [dic objectForKeyedSubscript:@"courseList"];
     
-    for (int i = 0; i < [dic count]; i++) {
-        NSDictionary *courseDic = [dic objectForKey:[NSString stringWithFormat:@"%i",i]];
-        CourseModel *course = [CourseModel objectWithKeyValues:courseDic];
-        [courseList addObject:course];
-    }
+    
+    NSArray *courseList = [CourseModel objectArrayWithKeyValuesArray:courseArray];
+    
     
     [self.delegate getCoursesSuccess:courseList andCount:count.intValue];
 }

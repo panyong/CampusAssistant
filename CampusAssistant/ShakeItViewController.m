@@ -8,6 +8,8 @@
 
 #import "ShakeItViewController.h"
 #import "KVNProgress.h"
+#import "CourseViewController.h"
+
 @interface ShakeItViewController ()
 
 @end
@@ -40,7 +42,7 @@
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     NSLog(@"摇动开始");
     
-    [KVNProgress showProgress:1.0 status:@"正在查询课程..."];
+    [KVNProgress showWithStatus: @"正在查询课程..."];
     
 }
 
@@ -58,22 +60,29 @@
 
 #pragma mark - ShakeItDelegate要求实现的方法
 -(void)getCoursesBegin{
-    
+    [KVNProgress dismiss];
 }
 
 -(void)getCoursesFailed:(NSString *)msg{
     [KVNProgress showErrorWithStatus:msg];
 }
 
--(void)getCoursesSuccess:(NSMutableArray *)courseList andCount:(int)count{
+-(void)getCoursesSuccess:(NSArray *)courseList andCount:(int)count{
     NSString *wowStr = [NSString stringWithFormat:@"哇，摇到了%i门可以蹭的课程呢",count];
     self.tipLabel.text = wowStr;
+    
+    CourseViewController *courseVC = [[CourseViewController alloc] init:courseList];
+    
+    [self.navigationController pushViewController:courseVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 /*
 #pragma mark - Navigation

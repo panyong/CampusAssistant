@@ -84,7 +84,7 @@
     [self.delegate readBegin];
     
     //获取用户信息并写入到Dic中
-    NSString *filePath = [self applicationDocumentsDirectoryFile:@"LoginInfo.plist"];
+    NSString *filePath = [self applicationDocumentsDirectoryFile:@"LoginInfo.plists"];
     NSDictionary *infoDic = [NSDictionary dictionaryWithContentsOfFile:filePath];
     
     NSString *userToken = [infoDic objectForKey:@"userToken"];//获取userToken
