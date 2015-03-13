@@ -79,7 +79,15 @@
     }else{
 
         [self.delegate step2RequestSuccess];
+        
+//        NSDictionary *courseDic = [dic objectForKey:@"courseList"];
+        
         [self.objectManager writeDictionary:dic IntoFile:kCourseFileName];
+        
+        NSDictionary *semesterDic = [dic objectForKey:@"semester"];
+        
+        Semester *semester = [Semester objectWithKeyValues:semesterDic];
+        [self.objectManager setSemester:semester];
         
     }
 }

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UserInfoModel.h"
 #import "ObjectFileDelegate.h"
+#import "Semester.h"
 
 @interface ObjectFileManager : NSObject
 @property(weak,nonatomic) id<ObjectFileDelegate> delegate;
@@ -20,4 +21,10 @@
 
 -(BOOL) writeDictionary:(NSDictionary*) dic IntoFile:(NSString*) fileName;
 -(BOOL) readDictionaryFromFile:(NSString*) fileName;
+
+-(void) removeAllFile;
+
+-(NSString*)getNickname;
+-(Semester*)getSemesterInfo;
+-(void)setSemester:(Semester*)semester;
 @end

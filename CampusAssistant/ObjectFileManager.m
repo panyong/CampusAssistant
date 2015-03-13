@@ -8,6 +8,9 @@
 
 #import "ObjectFileManager.h"
 #import "MJExtension/MJExtension.h"
+#import "CourseConfig.h"
+
+#define kUserInfoFileName @"LoginInfo.plist"
 
 @implementation ObjectFileManager
 
@@ -28,6 +31,52 @@
     return  self;
 }
 
+#pragma mark-删除所有的存储文件
+-(void)removeAllFile{
+    NSFileManager *fileManager=[NSFileManager defaultManager];//获取单例的文件管理器实例
+    
+    NSString *uerInfoFile = [self applicationDocumentsDirectoryFile:kUserInfoFileName];
+    NSString *semesterFile = [self applicationDocumentsDirectoryFile:kSemesterFileName];
+    NSString *courseInfoFile = [self applicationDocumentsDirectoryFile:kCourseFileName];
+    
+    [fileManager removeItemAtPath:uerInfoFile error:nil];
+    [fileManager removeItemAtPath:semesterFile error:nil];
+    [fileManager removeItemAtPath:courseInfoFile error:nil];
+}
+
+
+#pragma mark - 读取用户昵称
+-(NSString *)getNickname{
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kUserInfoFileName];
+    NSDictionary *infoDic = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    
+    NSString *userNickname = [infoDic objectForKey:@"userNickname"];
+    
+    return userNickname;
+}
+
+
+#pragma mark - 获取学期信息
+-(Semester*)getSemesterInfo{
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kSemesterFileName];
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    
+    Semester *semester = [Semester objectWithKeyValues:dic];
+    
+    return semester;
+}
+
+#pragma mark - 设置学期信息
+-(void)setSemester:(Semester *)semester{
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kSemesterFileName];
+    
+    NSDictionary *dic = semester.keyValues;
+    
+    [dic writeToFile:filePath atomically:YES];
+}
+
+
 #pragma  将字典数据写入相应的文件
 -(BOOL)writeDictionary:(NSDictionary *)dic IntoFile:(NSString *)fileName{
     [self.delegate writeBegin];
@@ -36,7 +85,7 @@
     
     NSString *filePath = [self applicationDocumentsDirectoryFile:fileName];
     
-    BOOL flag = [dic writeToFile:filePath atomically:NO];
+    BOOL flag = [dic writeToFile:filePath atomically:YES];
     
     if (flag) {
         [self.delegate writeSuccess];
@@ -84,7 +133,7 @@
     [self.delegate readBegin];
     
     //获取用户信息并写入到Dic中
-    NSString *filePath = [self applicationDocumentsDirectoryFile:@"LoginInfo.plists"];
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kUserInfoFileName];
     NSDictionary *infoDic = [NSDictionary dictionaryWithContentsOfFile:filePath];
     
     NSString *userToken = [infoDic objectForKey:@"userToken"];//获取userToken
@@ -100,7 +149,7 @@
 
 //将用户信息写入到属性列表中
 -(BOOL) writeUserInfo:(UserInfoModel*) user{
-    NSString *filePath = [self applicationDocumentsDirectoryFile:@"LoginInfo.plist"];
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kUserInfoFileName];
     
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
     [dic setObject:user.userName forKey:@"userName"];
@@ -108,15 +157,15 @@
     [dic setObject:user.userNickname forKey:@"userNickname"];
     [dic setObject:user.userToken forKey:@"userToken"];
     
-    return [dic writeToFile:filePath atomically:NO];
+    return [dic writeToFile:filePath atomically:YES];
 }
 
 -(BOOL) writeUserInfoWithDic:(NSDictionary*) dic{
     [self.delegate writeBegin];
     
-    NSString *filePath = [self applicationDocumentsDirectoryFile:@"LoginInfo.plists"];
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kUserInfoFileName];
     
-    BOOL flag =  [dic writeToFile:filePath atomically:NO];
+    BOOL flag =  [dic writeToFile:filePath atomically:YES];
     
     if (flag) {
         [self.delegate writeSuccess];
@@ -151,6 +200,9 @@
 {
     NSString *documentDirectory=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *path=[documentDirectory stringByAppendingPathComponent:fileName];
+    
+//    NSFileManager *fileManager=[NSFileManager defaultManager];//获取单例的文件管理器实例
+//    [fileManager removeItemAtPath:path error:nil];
     
     return path;
 }

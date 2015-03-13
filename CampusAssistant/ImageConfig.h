@@ -28,3 +28,11 @@
 #define kFind_shake_section_icon @"pic_main_course_section.png"
 #define kFind_shake_week_icon @"pic_main_course_week.png"
 
+
+
+#define kAboutme_nickname_icon @"pic_super_account@2x.png"
+#define kAboutme_term_icon @"pic_setting_change_term_img@2x.png"
+#define kAboutme_max_count_icon @"pic_setting_maxcount_img@2x.png"
+#define kAboutme_now_week_icon @"pic_setting_now_week_img@2x.png"
+#define kAboutme_logout_icon @"pic_setting_logout_img@2x.png"
+

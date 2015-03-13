@@ -22,6 +22,13 @@
 		4C12C4C61A77DA1000BE6775 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C4BC1A77DA1000BE6775 /* Reachability.m */; };
 		4C153CD91A78A8FA00B36695 /* LoginInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C153CD81A78A8FA00B36695 /* LoginInfo.plist */; };
 		4C153CDD1A78F37800B36695 /* MyResponseDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C153CDC1A78F37800B36695 /* MyResponseDto.m */; };
+		4C16367A1AB3341500AE29E4 /* AboutMe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1636791AB3341500AE29E4 /* AboutMe.xib */; };
+		4C16367D1AB33ABF00AE29E4 /* pic_super_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C16367C1AB33ABF00AE29E4 /* pic_super_account@2x.png */; };
+		4C16367F1AB33B6600AE29E4 /* pic_setting_change_term_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C16367E1AB33B6600AE29E4 /* pic_setting_change_term_img@2x.png */; };
+		4C1636811AB33B6E00AE29E4 /* pic_setting_logout_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1636801AB33B6E00AE29E4 /* pic_setting_logout_img@2x.png */; };
+		4C1636831AB33B8200AE29E4 /* pic_setting_now_week_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1636821AB33B8200AE29E4 /* pic_setting_now_week_img@2x.png */; };
+		4C1636851AB33B8900AE29E4 /* pic_setting_maxcount_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1636841AB33B8900AE29E4 /* pic_setting_maxcount_img@2x.png */; };
+		4C1636881AB3443E00AE29E4 /* Semester.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1636871AB3443E00AE29E4 /* Semester.m */; };
 		4C17EBBE1AB2871F00F1C27B /* ShakeItBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17EBBD1AB2871F00F1C27B /* ShakeItBL.m */; };
 		4C17EBC01AB297CE00F1C27B /* pic_main_course_week_bg_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C17EBBF1AB297CE00F1C27B /* pic_main_course_week_bg_thumb@2x.png */; };
 		4C17EBC41AB2A0C200F1C27B /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C17EBC21AB2A0C200F1C27B /* MyCell.m */; };
@@ -160,6 +167,14 @@
 		4C153CDA1A78EE7700B36695 /* NetConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetConfig.h; sourceTree = "<group>"; };
 		4C153CDB1A78F37800B36695 /* MyResponseDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyResponseDto.h; sourceTree = "<group>"; };
 		4C153CDC1A78F37800B36695 /* MyResponseDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyResponseDto.m; sourceTree = "<group>"; };
+		4C1636791AB3341500AE29E4 /* AboutMe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutMe.xib; sourceTree = "<group>"; };
+		4C16367C1AB33ABF00AE29E4 /* pic_super_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_super_account@2x.png"; sourceTree = "<group>"; };
+		4C16367E1AB33B6600AE29E4 /* pic_setting_change_term_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_setting_change_term_img@2x.png"; sourceTree = "<group>"; };
+		4C1636801AB33B6E00AE29E4 /* pic_setting_logout_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_setting_logout_img@2x.png"; sourceTree = "<group>"; };
+		4C1636821AB33B8200AE29E4 /* pic_setting_now_week_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_setting_now_week_img@2x.png"; sourceTree = "<group>"; };
+		4C1636841AB33B8900AE29E4 /* pic_setting_maxcount_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_setting_maxcount_img@2x.png"; sourceTree = "<group>"; };
+		4C1636861AB3443E00AE29E4 /* Semester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Semester.h; sourceTree = "<group>"; };
+		4C1636871AB3443E00AE29E4 /* Semester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Semester.m; sourceTree = "<group>"; };
 		4C17EBBC1AB2871F00F1C27B /* ShakeItBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeItBL.h; sourceTree = "<group>"; };
 		4C17EBBD1AB2871F00F1C27B /* ShakeItBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeItBL.m; sourceTree = "<group>"; };
 		4C17EBBF1AB297CE00F1C27B /* pic_main_course_week_bg_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_main_course_week_bg_thumb@2x.png"; sourceTree = "<group>"; };
@@ -410,6 +425,18 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		4C16367B1AB339F500AE29E4 /* aboutme */ = {
+			isa = PBXGroup;
+			children = (
+				4C1636841AB33B8900AE29E4 /* pic_setting_maxcount_img@2x.png */,
+				4C1636821AB33B8200AE29E4 /* pic_setting_now_week_img@2x.png */,
+				4C1636801AB33B6E00AE29E4 /* pic_setting_logout_img@2x.png */,
+				4C16367C1AB33ABF00AE29E4 /* pic_super_account@2x.png */,
+				4C16367E1AB33B6600AE29E4 /* pic_setting_change_term_img@2x.png */,
+			);
+			name = aboutme;
+			sourceTree = "<group>";
+		};
 		4C17EBC61AB2AEDD00F1C27B /* shakeIt */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +611,7 @@
 			children = (
 				4C282FF41A77A1D100B36D47 /* AboutMeViewController.h */,
 				4C282FF51A77A1D100B36D47 /* AboutMeViewController.m */,
+				4C1636791AB3341500AE29E4 /* AboutMe.xib */,
 			);
 			name = AboutMe;
 			sourceTree = "<group>";
@@ -591,6 +619,7 @@
 		4C33BAF21AAEBE20009965AC /* imageAndicon */ = {
 			isa = PBXGroup;
 			children = (
+				4C16367B1AB339F500AE29E4 /* aboutme */,
 				4C342D221AB07FA40064C8CE /* background */,
 				4C342D151AB06E6F0064C8CE /* find */,
 				4C342CBF1AB01B070064C8CE /* tabbar */,
@@ -870,6 +899,8 @@
 			children = (
 				4C5CA81A1A7A700D00627BB9 /* CourseModel.h */,
 				4C5CA81B1A7A700D00627BB9 /* CourseModel.m */,
+				4C1636861AB3443E00AE29E4 /* Semester.h */,
+				4C1636871AB3443E00AE29E4 /* Semester.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1059,23 +1090,29 @@
 				4C1F79FE1AAEC6E000A9CDCD /* bgImage.png in Resources */,
 				4C5CA8311A7B6B8200627BB9 /* 3.png in Resources */,
 				4C213DBF1A7688E3008CD12B /* img01.jpg in Resources */,
+				4C16367A1AB3341500AE29E4 /* AboutMe.xib in Resources */,
 				4C4A17A01A7FC4220027F303 /* background.jpg in Resources */,
 				4C342D031AB065D60064C8CE /* zbar-helpicons.png in Resources */,
 				4C342D341AB1BA180064C8CE /* ShakeItViewController.xib in Resources */,
 				4C342D211AB07B870064C8CE /* pic_find_countdown@2x.png in Resources */,
+				4C16367F1AB33B6600AE29E4 /* pic_setting_change_term_img@2x.png in Resources */,
 				4C342CDE1AB01DFF0064C8CE /* pic_tabbar_setting_selected@2x.png in Resources */,
 				4C17EBCA1AB2AF3A00F1C27B /* pic_main_course_teacher.png in Resources */,
 				4C17EBD51AB2AF8200F1C27B /* pic_main_course_week.png in Resources */,
 				4C342D141AB06E670064C8CE /* pic_find_treehole@2x.png in Resources */,
+				4C16367D1AB33ABF00AE29E4 /* pic_super_account@2x.png in Resources */,
 				4C342D011AB065D60064C8CE /* zbar-back.png in Resources */,
 				4C17EBC51AB2A0C200F1C27B /* MyCell.xib in Resources */,
+				4C1636851AB33B8900AE29E4 /* pic_setting_maxcount_img@2x.png in Resources */,
 				4C17EBCE1AB2AF5E00F1C27B /* pic_main_course_classroom@2x.png in Resources */,
+				4C1636831AB33B8200AE29E4 /* pic_setting_now_week_img@2x.png in Resources */,
 				4C342CDF1AB01DFF0064C8CE /* pic_tabbar_setting@2x.png in Resources */,
 				4C17EBC01AB297CE00F1C27B /* pic_main_course_week_bg_thumb@2x.png in Resources */,
 				4C5CA82F1A7B6B8200627BB9 /* 1.png in Resources */,
 				4C213D9D1A7680DE008CD12B /* Main.storyboard in Resources */,
 				4C342CD71AB01DF20064C8CE /* pic_tabbar_course@2x.png in Resources */,
 				4C342CDD1AB01DFF0064C8CE /* pic_tabbar_find@2x.png in Resources */,
+				4C1636811AB33B6E00AE29E4 /* pic_setting_logout_img@2x.png in Resources */,
 				4C17EBC81AB2AEEB00F1C27B /* pic_main_course_teacher@2x.png in Resources */,
 				4C342D021AB065D60064C8CE /* zbar-help.html in Resources */,
 				4C17EBD61AB2AF8200F1C27B /* pic_main_course_week@2x.png in Resources */,
@@ -1118,6 +1155,7 @@
 				4C5CA87F1A7B988A00627BB9 /* UIImage+KVNImageEffects.m in Sources */,
 				4C5CA88B1A7B9B2400627BB9 /* DrawLabelAndButton.m in Sources */,
 				4C213D9A1A7680DE008CD12B /* AppDelegate.m in Sources */,
+				4C1636881AB3443E00AE29E4 /* Semester.m in Sources */,
 				4C282FF11A77A1A800B36D47 /* FindViewController.m in Sources */,
 				4C12C4C11A77DA1000BE6775 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				4C5CA8101A7A59DC00627BB9 /* MJIvar.m in Sources */,

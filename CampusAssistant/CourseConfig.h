@@ -8,6 +8,7 @@
 
 #pragma Course相关常量
 #define kCourseFileName  @"CourseInfo.plist"
+#define kSemesterFileName  @"SemesterInfo.plist"
 #define kMon @"周一"
 #define kTue @"周二"
 #define kWed @"周三"

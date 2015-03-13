@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ObjectFileManager.h"
 
-@interface AboutMeViewController : UIViewController
+@interface AboutMeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property ObjectFileManager *manager;
+
+@property(strong,nonatomic) UITableView *tableView;
+@property NSArray *contentArray;
+@property NSArray *imageArray;
+
+-(instancetype)init;
 @end
