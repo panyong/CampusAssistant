@@ -198,6 +198,8 @@
     [KVNProgress showErrorWithStatus:msg];
     
     UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 160, 200, 30)];
+    [tipLabel setAdjustsFontSizeToFitWidth:YES];
+    [tipLabel setNumberOfLines:0];
     [tipLabel setText:@"还没有课程哦，点击右上角按钮去添加吧~"];
     [self.view addSubview:tipLabel];
     

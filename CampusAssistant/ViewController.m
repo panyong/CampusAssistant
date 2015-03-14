@@ -151,29 +151,27 @@
 
 
 #pragma 下列代码可以用于当键盘遮挡控件时，ScrollView的滚动
-//当试图即将加载时调用该方法
--(void)viewWillAppear:(BOOL)animated{
-    //注册键盘出现通知，并在相应的selector里对该通知做出响应
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    //注册键盘隐藏通知，并在相应的selector里对该通知做出响应
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+//开始编辑输入框的时候，软键盘出现，执行此事件
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    CGRect frame = textField.frame;
+    int offset = frame.origin.y + 32 - (self.view.frame.size.height - 216.0);//键盘高度216
     
-    [super viewWillAppear:animated];
+    NSTimeInterval animationDuration = 0.30f;
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    
+    //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
+    if(offset > 0)
+        self.view.frame = CGRectMake(0.0f, -offset-36, self.view.frame.size.width, self.view.frame.size.height);
+    
+    [UIView commitAnimations];
 }
 
-//当试图即将消失时调用该方法
--(void)viewWillDisappear:(BOOL)animated{
-    //解除键盘出现通知
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
-    //解除键盘隐藏通知
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
-}
 
--(void) keyboardDidShow:(NSNotification*) notify{
-    
-}
-
--(void) keyboardDidHide:(NSNotification*) notify{
-    
+//输入框编辑完成以后，将视图恢复到原始状态
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.view.frame =CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 }
 @end
