@@ -135,6 +135,10 @@
     if (row == 4) {
         NSLog(@"清除登录数据，并跳转到登录界面");
         
+//        UIAlertView *alterView = [[UIAlertView alloc] initWithTitle:@"确认" message:@"切换账号后所有数据都会清空，是否确认切换" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+//        alterView.delegate =self;
+//        [alterView show];
+        
         [_manager removeAllFile];
         
         //实例化导航控制器
@@ -146,6 +150,23 @@
     }
     
 }
+
+#pragma mark - uialterviewdelegate方法
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+//        [alertView dismissWithClickedButtonIndex:0 animated:YES];
+        return;
+    }
+    
+    [_manager removeAllFile];
+    
+    //实例化导航控制器
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *loginVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    [UIApplication sharedApplication].keyWindow.rootViewController = nav;
+}
+
 
 #pragma mark - setNowWeekDelegate要求实现的方法
 -(void)setnowWeekCompile:(NSString *)nowWeek{

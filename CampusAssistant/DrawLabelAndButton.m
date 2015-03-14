@@ -40,9 +40,50 @@
 #pragma mark - 初始化week和section数组
 //初始化week和section数组
 -(void) initParams{
-    self.weeksArray = [[NSArray alloc] initWithObjects:kMon,kTue,kWed,kThu,kFir,kSat,kSun,nil];
+
+  
+//    int hour = [dateComponent hour];
+//    int minute = [dateComponent minute];
+//    int second = [dateComponent second];
+    
+    NSArray *array = [self getMonthAndDay];
+    NSString *dayStr = [array objectAtIndex:1];
+    int day = dayStr.intValue;
+    
+    NSString *mon = [NSString stringWithFormat:@"%i\n%@",day,kMon];
+    NSString *tue = [NSString stringWithFormat:@"%i\n%@",day+1,kThu];
+    NSString *wed = [NSString stringWithFormat:@"%i\n%@",day+2,kWed];
+    NSString *thu = [NSString stringWithFormat:@"%i\n%@",day+3,kThu];
+    NSString *fir = [NSString stringWithFormat:@"%i\n%@",day+4,kFir];
+    NSString *sat = [NSString stringWithFormat:@"%i\n%@",day+5,kSat];
+    NSString *sun = [NSString stringWithFormat:@"%i\n%@",day+6,kSun];
+    
+    self.weeksArray = [[NSArray alloc] initWithObjects:mon,tue,wed,thu,fir,sat,sun,nil];
     self.sectionsArray = [[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
 
+}
+
+
+#pragma mark - 计算时间
+-(NSArray*)getMonthAndDay{
+    //获取当前时间
+    NSDate *now = [NSDate date];
+    NSLog(@"当前时间：%@",now);
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    
+    //    int year = [dateComponent year];
+    int month = [dateComponent month];
+    int day = [dateComponent day];
+    
+    NSString *monthStr = [NSString stringWithFormat:@"%i",month];
+    NSString *dayStr = [NSString stringWithFormat:@"%i",day];
+    
+    NSArray *array = [[NSArray alloc] initWithObjects:monthStr,dayStr, nil];
+    
+    return array;
 }
 
 //计算主要的数据
@@ -53,20 +94,12 @@
     //获取weekLabel的原点
     self.point = mainViewFrame.origin;
     
-    //获取sectionLabel的原点
-//    float x = scrollViewFrame.origin.x;
-//    float y = scrollViewFrame.origin.y;
-//    self.sectionPoint = CGPointMake(x, y);
-    
-    
     //目前先设定这些
     self.weekHeight = 30;
     self.sectionWidth = 20;
     
     self.weekWidth = (frmWidth - self.sectionWidth) / 7;
     self.sectionHeight = 46;
-    
-//    self.contentSizeHeight = self.sectionHeight * 13 - 20;
 
 }
 
@@ -88,8 +121,13 @@
     NSMutableArray *labelArray = [[NSMutableArray alloc] init];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(self.point.x, 0, self.sectionWidth, self.weekHeight)];
-    [label setText:@"..."];
+    
+    NSArray *array = [self getMonthAndDay];
+    NSString *month = [NSString stringWithFormat:@"%@月",[array objectAtIndex:0]];
+    [label setText:month];
+    [label setAdjustsFontSizeToFitWidth:YES];
     label.layer.borderWidth = 0.5;
+    [label setTextColor:[self colorWithHexNumber:0x858CB alpha:0.6]];
     
     [labelArray addObject:label];
     
@@ -102,7 +140,11 @@
         
         [label setText:[self.weeksArray objectAtIndex:i]];
         
-        [label setTextColor:[UIColor blueColor]];
+        [label setAdjustsFontSizeToFitWidth:YES];
+        [label setNumberOfLines:0];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        
+        [label setTextColor:[self colorWithHexNumber:0x858CB alpha:0.6]];
         
         label.layer.borderWidth = 0.3;
         
@@ -111,6 +153,15 @@
     
     return labelArray;
 }
+
+#pragma mark - 获取十六进制的color
+- (UIColor*)colorWithHexNumber:(NSUInteger)hexColor alpha:(CGFloat)alpha{
+    float r = ((hexColor>>16) & 0xFF) / 255.0f;
+    float g = ((hexColor>>8) & 0xFF) / 255.0f;
+    float b = (hexColor & 0xFF) / 255.0f;
+    return [UIColor colorWithRed:r green:g blue:b alpha:alpha];
+}
+
 
 //获得sectionLabel的frame
 -(NSMutableArray *)getSectionLabelsFrame{
@@ -130,6 +181,7 @@
         
         label.layer.borderWidth = 0.3;
 
+        [label setTextColor:[self colorWithHexNumber:0x858CB alpha:0.6]];
         
         [labelArray addObject:label];
     }

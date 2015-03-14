@@ -10,7 +10,7 @@
 #import "ObjectFileManager.h"
 #import "SetNowWeekViewController.h"
 
-@interface AboutMeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SetNowWeekDelegate>
+@interface AboutMeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SetNowWeekDelegate,UIAlertViewDelegate>
 
 @property ObjectFileManager *manager;
 @property SetNowWeekViewController *setNowWeelVC;

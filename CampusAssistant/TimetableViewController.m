@@ -34,7 +34,11 @@
     
     NSLog(@"TimetableViewController viewDidLoad!");
     
-    self.title = @"课程表";
+    //设置标题
+    ObjectFileManager *manager = [[ObjectFileManager alloc] init];
+    Semester *semester = [manager getSemesterInfo];
+    NSString *nowWeek = semester.nowWeek;
+    self.title = [NSString stringWithFormat:@"第%@周",nowWeek];
     
     //设置右上角按钮
     UIImage *addImage = [UIImage imageNamed:kTimetable_addCourse_icon];
