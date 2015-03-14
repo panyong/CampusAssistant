@@ -9,6 +9,7 @@
 #import "TimetableViewController.h"
 #import "CourseDetailViewController.h"
 #import "ImageConfig.h"
+#import "ImportCourseStep1VC.h"
 
 @interface TimetableViewController ()
 
@@ -34,6 +35,12 @@
     NSLog(@"TimetableViewController viewDidLoad!");
     
     self.title = @"课程表";
+    
+    //设置右上角按钮
+    UIImage *addImage = [UIImage imageNamed:kTimetable_addCourse_icon];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:addImage style:UIBarButtonItemStylePlain target:self action:@selector(addCourse:)];
+    [self.navigationItem setRightBarButtonItem:rightBarButton animated:YES];
+    
     
     //实例化业务类，并调用其加载课程表的方法
     self.courseBL = [[CourseBL alloc]init];
@@ -70,33 +77,13 @@
     
 }
 
-
--(void)viewDidLayoutSubviews
-{
-//    // 设置frame
-//    [super viewDidLayoutSubviews];
-//    
-//    //初始化drawer
-//    self.drawer = [[DrawLabelAndButton alloc]initWithMainViewFrame:self.view.frame];
-//    
-//    
-//    //初始化scrollView
-//    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 30, self.view.frame.size.width, self.view.frame.size.height)];
-//    [self.scrollView setBackgroundColor:[UIColor clearColor]];
-//    [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, [self.drawer getContentSizeHeight])];
-//    self.scrollView.bounces = NO;
-//    [self.view addSubview:self.scrollView];
-//    
-//    
-//    
-//    
-//    //调用draw方法，进行两类Label的绘制
-//    [self drawWeekAndSectionLabel];
-//    
-//    [self.courseBL readCourseArray];
-//    NSLog(@"..:%@", NSStringFromCGRect(self.view.frame));
+#pragma mark - 右上角按钮响应事件
+-(void)addCourse:(id)sender{
+    UIStoryboard *mainStoreboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-   
+    ImportCourseStep1VC *importS1VC = [mainStoreboard instantiateViewControllerWithIdentifier:@"importCourseStep1"];
+    
+    [self.navigationController pushViewController:importS1VC animated:YES];
 }
 
 #pragma 以下是加载课程表的方法
@@ -209,6 +196,10 @@
 -(void)readCourseFailed:(NSString *)msg{
     NSLog(@"VIEW:readCourseFailed");
     [KVNProgress showErrorWithStatus:msg];
+    
+    UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 160, 200, 30)];
+    [tipLabel setText:@"还没有课程哦，点击右上角按钮去添加吧~"];
+    [self.view addSubview:tipLabel];
     
 //    [self performSelector:@selector(delayView) withObject:nil afterDelay:1.5];
 }

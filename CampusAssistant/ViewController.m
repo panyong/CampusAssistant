@@ -13,6 +13,7 @@
 #import "FindViewController.h"
 #import "AboutMeViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -29,10 +30,11 @@
     self.bl = [[LoginAndRegisterBusiness alloc]init];
     self.bl.delegate = self;
     
-    
-//    self.loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    self.loginBtn.layer.cornerRadius = 50;
-//    self.loginBtn.layer.masksToBounds = YES;
+
+    [_accountImage setImage:[UIImage imageNamed:@"pic_super_account@2x.png"]];
+    [_passwordImage setImage:[UIImage imageNamed:@"ic_register_password@2x.png"]];
+    [_backgroundImage setImage:[UIImage imageNamed:@"ic_register_background@2x.png"]];
+    [_iconImage setImage:[UIImage imageNamed:@"ic_register_login_top@2x.png"]];
     
     //自定义手势，当前VIEW接收到该手势后触发keyboardHide：方法，进行键盘的隐藏
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
@@ -66,8 +68,7 @@
     NSString *pwdString = self.pwdField.text;
     
     if (userNameString == nil || userNameString.length == 0 || pwdString == nil || pwdString.length == 0) {
-        UIAlertView * nameOrPwdNull = [[UIAlertView alloc] initWithTitle:@"登录" message:@"请输入用户名和密码" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [nameOrPwdNull show];
+        [KVNProgress showErrorWithStatus:@"请正确填写用户名和密码~"];
         return;
         
     }
@@ -79,26 +80,15 @@
 
 #pragma 以下是LoginAndRegisterDelegate要实现的方法
 -(void)loginBegin{
-    self.activity = [[YYAnimationIndicator alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width/4, self.view.frame.size.height/4)];//指定进度轮的大小
-    
-    [self.activity setCenter:CGPointMake(160, 140)];//指定进度轮中心点
-    
-    [self.activity setLoadText:@"拼命加载ing"];
-    
-    [self.view addSubview:self.activity];
+    [KVNProgress showProgress:1.0 status:@"登录ing..."];
     
 //    [self.activity startAnimation];
 }
 
 -(void)loginSuccess{
+    [KVNProgress dismiss];
     
-    [self.activity stopAnimationWithLoadText:@"登陆成功~" withType:YES];
-    
-//    //用storyboard初始化
-//    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    UITabBarController* mainTabBarController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-//    
-//    [self presentViewController:mainTabBarController animated:YES completion:nil];
+    [KVNProgress showSuccessWithStatus:@"登录成功~"];
     
 #pragma  mark -- 用代码初始化tabbarController
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
@@ -131,18 +121,19 @@
 
 -(void)loginSuccessWithMsg:(NSString *)msg{
     
-    [self.activity stopAnimationWithLoadText:@"咦~网络开小差了哦~" withType:YES];
+    [KVNProgress dismiss];
     
-    UIAlertView * nameOrPwdNull = [[UIAlertView alloc] initWithTitle:@"登录失败" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [nameOrPwdNull show];
+    [KVNProgress showErrorWithStatus:@"咦~网络开小差了哦~"];
 }
 
 -(void)loginFailed:(NSError *)error{
-    [self.activity stopAnimationWithLoadText:[error localizedDescription] withType:YES];
+     NSString *msg = [error localizedDescription];
     
-    NSString *msg = [error localizedDescription];
-    UIAlertView * nameOrPwdNull = [[UIAlertView alloc] initWithTitle:@"登录" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [nameOrPwdNull show];
+    [KVNProgress dismiss];
+    
+    [KVNProgress showErrorWithStatus:msg];
+   
+   
 }
 
 //自定义手势触发后的响应方法

@@ -18,21 +18,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  请输入账号(11位手机号)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="x6k-oW-NnC">
-                                <rect key="frame" x="0.0" y="262" width="320" height="43"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="frame" x="30" y="317" width="290" height="43"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Ie-pQ-16A">
-                                <rect key="frame" x="0.0" y="304" width="320" height="43"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="frame" x="30" y="359" width="290" height="43"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCw-i4-cQ5">
-                                <rect key="frame" x="3" y="360" width="314" height="35"/>
+                                <rect key="frame" x="3" y="415" width="314" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.61684782608695654" blue="5.0590474503929016e-05" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="登录">
                                     <color key="titleColor" red="0.96051442740000004" green="0.93089311590000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,20 +62,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="使用校园助手账号登陆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZk-dj-VK2">
-                                <rect key="frame" x="82" y="403" width="156" height="21"/>
+                                <rect key="frame" x="82" y="458" width="156" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c2Y-jk-oBu">
-                                <rect key="frame" x="0.0" y="62" width="320" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMr-qm-Qut">
+                                <rect key="frame" x="0.0" y="368" width="31" height="26"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vni-zh-7qw">
+                                <rect key="frame" x="0.0" y="62" width="320" height="255"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2Q-by-d23">
+                                <rect key="frame" x="61" y="113" width="192" height="153"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybs-13-6jd">
+                                <rect key="frame" x="0.0" y="325" width="31" height="26"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90287166274980468" green="0.87239631034723553" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="hKR-Xa-Fgf"/>
                     <keyCommands/>
                     <connections>
+                        <outlet property="accountImage" destination="Ybs-13-6jd" id="MvZ-7v-NiQ"/>
+                        <outlet property="backgroundImage" destination="Vni-zh-7qw" id="mGK-ws-tad"/>
+                        <outlet property="iconImage" destination="V2Q-by-d23" id="W12-Ch-pFL"/>
+                        <outlet property="passwordImage" destination="lMr-qm-Qut" id="aDp-ic-fbX"/>
                         <outlet property="pwdField" destination="4Ie-pQ-16A" id="M8a-9n-EWz"/>
                         <outlet property="userNameField" destination="x6k-oW-NnC" id="nlY-ev-jWU"/>
                     </connections>
@@ -97,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  请输入账号(11位手机号)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Bvf-bB-DAJ">
-                                <rect key="frame" x="0.0" y="263" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="317" width="320" height="43"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -107,7 +120,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  请输入密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wC6-NQ-k5H">
-                                <rect key="frame" x="0.0" y="305" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="359" width="320" height="43"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -117,7 +130,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  请重复密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dZz-EG-3gE">
-                                <rect key="frame" x="0.0" y="348" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="402" width="320" height="43"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -127,7 +140,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  请输入昵称" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ISM-Rv-4aB">
-                                <rect key="frame" x="0.0" y="391" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="445" width="320" height="43"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -137,7 +150,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvn-N8-0mf">
-                                <rect key="frame" x="3" y="452" width="314" height="35"/>
+                                <rect key="frame" x="3" y="506" width="314" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.6168478261" blue="5.0590474500000003e-05" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="注册">
                                     <color key="titleColor" red="0.96051442740000004" green="0.93089311590000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -146,14 +159,19 @@
                                     <action selector="register:" destination="gBA-37-KLD" eventType="touchUpInside" id="IkB-2i-EHO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-O8-la8">
-                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVF-pW-t90">
+                                <rect key="frame" x="0.0" y="63" width="320" height="255"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-m2-tmd">
+                                <rect key="frame" x="61" y="114" width="192" height="153"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90287166269999997" green="0.87239631029999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="nfD-v7-t30"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="hVF-pW-t90" id="54V-T7-GCa"/>
+                        <outlet property="iconImage" destination="vD1-m2-tmd" id="8yR-yj-h02"/>
                         <outlet property="userName" destination="Bvf-bB-DAJ" id="mqS-k6-Pjw"/>
                         <outlet property="userNickname" destination="ISM-Rv-4aB" id="5hE-Ck-btW"/>
                         <outlet property="userPwd" destination="wC6-NQ-k5H" id="Fgu-HA-v1a"/>
@@ -354,9 +372,6 @@
             <point key="canvasLocation" x="1577" y="184"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="img01.jpg" width="640" height="400"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

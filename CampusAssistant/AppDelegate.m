@@ -22,7 +22,7 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ObjectFileManager *manager = [[ObjectFileManager alloc]init];
     
-    [manager removeAllFile];
+//    [manage removeAllFile];
     
     //如果已经登录则将rootVC设置为主VC，否则设置为LoginVC   [manager checkLoginInfo]
     if ([manager checkLoginInfo]) {

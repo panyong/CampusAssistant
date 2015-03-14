@@ -19,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *userNickname;
 @property (weak, nonatomic) IBOutlet UITextField *userPwd2;
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+
 - (IBAction)register:(id)sender;
 
 @end

@@ -10,18 +10,20 @@
 #import "LoginAndRegisterDelegate.h"
 #import "LoginAndRegisterBusiness.h"
 #import "ObjectFileDelegate.h"
-#import "YYAnimationIndicator.h"
 
 @interface ViewController : UIViewController<UITextFieldDelegate,LoginAndRegisterDelegate,ObjectFileDelegate>
 {
     BOOL keyboardVisible;
 }
-@property(strong,nonatomic) YYAnimationIndicator *activity;
 @property(strong,nonatomic) LoginAndRegisterBusiness* bl;
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;
-@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+
 - (IBAction)presentRegisterView:(id)sender;
 - (IBAction)login:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIImageView *accountImage;
+@property (weak, nonatomic) IBOutlet UIImageView *passwordImage;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @end
