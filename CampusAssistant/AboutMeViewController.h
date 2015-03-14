@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "ObjectFileManager.h"
+#import "SetNowWeekViewController.h"
 
-@interface AboutMeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface AboutMeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SetNowWeekDelegate>
 
 @property ObjectFileManager *manager;
+@property SetNowWeekViewController *setNowWeelVC;
 
 @property(strong,nonatomic) UITableView *tableView;
-@property NSArray *contentArray;
+
+@property NSArray *titleArray;
+@property NSArray *detailArray;
 @property NSArray *imageArray;
 
 -(instancetype)init;

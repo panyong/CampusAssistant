@@ -124,6 +124,8 @@
 		4C5CA8871A7B988A00627BB9 /* KVNProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C5CA87C1A7B988A00627BB9 /* KVNProgressView.xib */; };
 		4C5CA88B1A7B9B2400627BB9 /* DrawLabelAndButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5CA88A1A7B9B2400627BB9 /* DrawLabelAndButton.m */; };
 		4C9841731A81033000C12DF1 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9841721A81033000C12DF1 /* RegisterViewController.m */; };
+		4CBA4DCB1AB4077800B6B71D /* SetNowWeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA4DC91AB4077800B6B71D /* SetNowWeekViewController.m */; };
+		4CBA4DCC1AB4077800B6B71D /* SetNowWeekViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA4DCA1AB4077800B6B71D /* SetNowWeekViewController.xib */; };
 		4CDB93051AAD7727005625BF /* ImportCourseStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB93031AAD7727005625BF /* ImportCourseStep2VC.m */; };
 		4CDB93061AAD7727005625BF /* ImportCourseStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB93041AAD7727005625BF /* ImportCourseStep2VC.xib */; };
 /* End PBXBuildFile section */
@@ -343,6 +345,10 @@
 		4C5CA88A1A7B9B2400627BB9 /* DrawLabelAndButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLabelAndButton.m; sourceTree = "<group>"; };
 		4C9841711A81033000C12DF1 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		4C9841721A81033000C12DF1 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		4CBA4DC81AB4077800B6B71D /* SetNowWeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNowWeekViewController.h; sourceTree = "<group>"; };
+		4CBA4DC91AB4077800B6B71D /* SetNowWeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNowWeekViewController.m; sourceTree = "<group>"; };
+		4CBA4DCA1AB4077800B6B71D /* SetNowWeekViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetNowWeekViewController.xib; sourceTree = "<group>"; };
+		4CBA4DCD1AB409A400B6B71D /* SetNowWeekDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetNowWeekDelegate.h; sourceTree = "<group>"; };
 		4CDB93021AAD7727005625BF /* ImportCourseStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportCourseStep2VC.h; sourceTree = "<group>"; };
 		4CDB93031AAD7727005625BF /* ImportCourseStep2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportCourseStep2VC.m; sourceTree = "<group>"; };
 		4CDB93041AAD7727005625BF /* ImportCourseStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportCourseStep2VC.xib; sourceTree = "<group>"; };
@@ -612,6 +618,10 @@
 				4C282FF41A77A1D100B36D47 /* AboutMeViewController.h */,
 				4C282FF51A77A1D100B36D47 /* AboutMeViewController.m */,
 				4C1636791AB3341500AE29E4 /* AboutMe.xib */,
+				4CBA4DC81AB4077800B6B71D /* SetNowWeekViewController.h */,
+				4CBA4DC91AB4077800B6B71D /* SetNowWeekViewController.m */,
+				4CBA4DCA1AB4077800B6B71D /* SetNowWeekViewController.xib */,
+				4CBA4DCD1AB409A400B6B71D /* SetNowWeekDelegate.h */,
 			);
 			name = AboutMe;
 			sourceTree = "<group>";
@@ -1084,6 +1094,7 @@
 				4C5CA8321A7B6B8200627BB9 /* 4.png in Resources */,
 				4CDB93061AAD7727005625BF /* ImportCourseStep2VC.xib in Resources */,
 				4C5CA8331A7B6B8200627BB9 /* 5.png in Resources */,
+				4CBA4DCC1AB4077800B6B71D /* SetNowWeekViewController.xib in Resources */,
 				4C213DA21A7680DE008CD12B /* Images.xcassets in Resources */,
 				4C213D941A7680DE008CD12B /* InfoPlist.strings in Resources */,
 				4C5CA8301A7B6B8200627BB9 /* 2.png in Resources */,
@@ -1159,6 +1170,7 @@
 				4C282FF11A77A1A800B36D47 /* FindViewController.m in Sources */,
 				4C12C4C11A77DA1000BE6775 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				4C5CA8101A7A59DC00627BB9 /* MJIvar.m in Sources */,
+				4CBA4DCB1AB4077800B6B71D /* SetNowWeekViewController.m in Sources */,
 				4C282FF61A77A1D100B36D47 /* AboutMeViewController.m in Sources */,
 				4C12C4C21A77DA1000BE6775 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				4C342D331AB1BA180064C8CE /* ShakeItViewController.m in Sources */,
