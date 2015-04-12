@@ -14,7 +14,7 @@
 @optional
 -(void)getTopicListBegin;
 -(void)getTopicListFailed:(NSString*)msg;
--(void)getTopicListSuccess:(NSArray*)courseList andCount:(int) count;
+-(void)getTopicListSuccess:(NSArray*)topicList andCount:(int) count;
 -(void)getTopicListSuccessWithMsg:(NSString*)msg;
 
 @end

@@ -24,6 +24,8 @@
 #define kFind_shake_classroom_icon @"pic_main_course_classroom.png"
 #define kFind_shake_section_icon @"pic_main_course_section.png"
 #define kFind_shake_week_icon @"pic_main_course_week.png"
+#define kFind_topic_zan_icon @"pic_th_icon_hehe@2x.png"
+#define kFind_topic_comment_icon @"pic_th_comment@2x.png"
 
 
 

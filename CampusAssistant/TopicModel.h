@@ -11,7 +11,8 @@
 @interface TopicModel : NSObject
 @property NSString* nickName;
 @property NSString* content;
+@property NSString* publishTime;
 @property NSInteger* topicId;
-@property NSInteger* commentCount;
-@property NSInteger* zanCount;
+@property int commentCount;
+@property int zanCount;
 @end

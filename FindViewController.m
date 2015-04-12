@@ -11,6 +11,7 @@
 #import "ImageConfig.h"
 #import "QRSignInViewController.h"
 #import "ShakeItViewController.h"
+#import "TopicVC.h"
 
 @interface FindViewController ()
 
@@ -58,6 +59,9 @@
 #pragma mark - 下课聊响应函数
 -(void)talkAfterClass:(id)sender{
     NSLog(@"树洞私密聊");
+    TopicVC *topicVC = [[TopicVC alloc] initWithNibName:nil bundle:nil];
+        
+    [self.navigationController pushViewController:topicVC animated:YES];
 }
 
 #pragma mark - 摇一摇蹭课响应函数
