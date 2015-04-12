@@ -93,7 +93,7 @@
                 <outlet property="teacherImage" destination="4j5-LK-atf" id="bua-qh-VVZ"/>
                 <outlet property="weekImage" destination="e7N-6f-cT8" id="xx5-cW-6NJ"/>
             </connections>
-            <point key="canvasLocation" x="197" y="232.5"/>
+            <point key="canvasLocation" x="123" y="141.5"/>
         </tableViewCell>
     </objects>
 </document>

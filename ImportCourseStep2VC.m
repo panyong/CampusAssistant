@@ -21,8 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString* picStr = self.picData.pic;
     
-    UIImage *image = [UIImage imageWithData:self.picData];
+    NSData *picData = [[NSData alloc] initWithBase64EncodedString:picStr options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    
+    UIImage *image = [UIImage imageWithData:picData];
     self.verifyCodeImage.image = image;
     
     self.bl = [[ImportCourseBL alloc]init];
@@ -41,7 +44,7 @@
         // Do any additional setup after loading the view from its nib.
 }
 
--(ImportCourseStep2VC *)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)bundle picData:(NSData *)picData{
+-(ImportCourseStep2VC *)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)bundle picData:(PictureModel *)picData{
     self = [super initWithNibName:nibNameOrNil bundle:bundle];
     if (self) {
         self.picData = picData;
@@ -73,7 +76,7 @@
         return;
     }
     
-    [self.bl beginStep2RequestWithVerifyCode:verifyCode];
+    [self.bl beginStep2RequestWithVerifyCode:verifyCode andImgName:self.picData.imgName andTimetableId:[NSString stringWithFormat:@"%i",self.picData.timetableId]];
 }
 
 - (IBAction)cancleStep:(id)sender {
@@ -93,6 +96,10 @@
 
 -(void)step2RequestFailedWithMsg:(NSString *)msg{
     [KVNProgress showErrorWithStatus:@"网络在开小差，请重试~"];
+}
+
+-(void)step2RequestSuccessWithMsg:(NSString *)msg{
+    [KVNProgress showWithStatus:msg];
 }
 
 -(void)writeBegin{

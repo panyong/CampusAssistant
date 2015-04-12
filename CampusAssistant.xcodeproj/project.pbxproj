@@ -97,6 +97,8 @@
 		4C49867A1A79447D00F2CA42 /* LoginAndRegisterBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4986791A79447D00F2CA42 /* LoginAndRegisterBusiness.m */; };
 		4C49867D1A794AAA00F2CA42 /* ObjectFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49867C1A794AAA00F2CA42 /* ObjectFileManager.m */; };
 		4C4A17A01A7FC4220027F303 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A179F1A7FC4220027F303 /* background.jpg */; };
+		4C5317701ADA98DF004644EB /* TopicBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C53176F1ADA98DF004644EB /* TopicBL.m */; };
+		4C5317751ADA9B54004644EB /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5317741ADA9B54004644EB /* TopicModel.m */; };
 		4C5CA80E1A7A59DC00627BB9 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5CA8001A7A59DC00627BB9 /* MJConst.m */; };
 		4C5CA80F1A7A59DC00627BB9 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5CA8031A7A59DC00627BB9 /* MJFoundation.m */; };
 		4C5CA8101A7A59DC00627BB9 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5CA8051A7A59DC00627BB9 /* MJIvar.m */; };
@@ -123,6 +125,7 @@
 		4CBA4DE01AB4946000B6B71D /* pic_course_detail_student@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA4DDF1AB4946000B6B71D /* pic_course_detail_student@2x.png */; };
 		4CBA4DE31AB4946A00B6B71D /* pic_course_detail_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA4DE11AB4946A00B6B71D /* pic_course_detail_like@2x.png */; };
 		4CBA4DE41AB4946A00B6B71D /* pic_course_detail_unlike@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBA4DE21AB4946A00B6B71D /* pic_course_detail_unlike@2x.png */; };
+		4CBA6C591ADA76CC00AD5DB2 /* PictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6C581ADA76CC00AD5DB2 /* PictureModel.m */; };
 		4CDB93051AAD7727005625BF /* ImportCourseStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB93031AAD7727005625BF /* ImportCourseStep2VC.m */; };
 		4CDB93061AAD7727005625BF /* ImportCourseStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB93041AAD7727005625BF /* ImportCourseStep2VC.xib */; };
 /* End PBXBuildFile section */
@@ -291,6 +294,11 @@
 		4C49867B1A794AAA00F2CA42 /* ObjectFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectFileManager.h; sourceTree = "<group>"; };
 		4C49867C1A794AAA00F2CA42 /* ObjectFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectFileManager.m; sourceTree = "<group>"; };
 		4C4A179F1A7FC4220027F303 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../background.jpg; sourceTree = "<group>"; };
+		4C53176E1ADA98DF004644EB /* TopicBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicBL.h; sourceTree = "<group>"; };
+		4C53176F1ADA98DF004644EB /* TopicBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicBL.m; sourceTree = "<group>"; };
+		4C5317711ADA9901004644EB /* TopicDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicDelegate.h; sourceTree = "<group>"; };
+		4C5317731ADA9B54004644EB /* TopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicModel.h; sourceTree = "<group>"; };
+		4C5317741ADA9B54004644EB /* TopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicModel.m; sourceTree = "<group>"; };
 		4C5CA7FD1A79FF7700627BB9 /* ObjectFileDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectFileDelegate.h; sourceTree = "<group>"; };
 		4C5CA7FF1A7A59DC00627BB9 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
 		4C5CA8001A7A59DC00627BB9 /* MJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst.m; sourceTree = "<group>"; };
@@ -337,6 +345,8 @@
 		4CBA4DDF1AB4946000B6B71D /* pic_course_detail_student@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_course_detail_student@2x.png"; sourceTree = "<group>"; };
 		4CBA4DE11AB4946A00B6B71D /* pic_course_detail_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_course_detail_like@2x.png"; sourceTree = "<group>"; };
 		4CBA4DE21AB4946A00B6B71D /* pic_course_detail_unlike@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_course_detail_unlike@2x.png"; sourceTree = "<group>"; };
+		4CBA6C571ADA76CC00AD5DB2 /* PictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureModel.h; sourceTree = "<group>"; };
+		4CBA6C581ADA76CC00AD5DB2 /* PictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureModel.m; sourceTree = "<group>"; };
 		4CDB93021AAD7727005625BF /* ImportCourseStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportCourseStep2VC.h; sourceTree = "<group>"; };
 		4CDB93031AAD7727005625BF /* ImportCourseStep2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportCourseStep2VC.m; sourceTree = "<group>"; };
 		4CDB93041AAD7727005625BF /* ImportCourseStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportCourseStep2VC.xib; sourceTree = "<group>"; };
@@ -449,6 +459,7 @@
 		4C1F6E2E1AA6D16E001DC576 /* ImportCourseBL */ = {
 			isa = PBXGroup;
 			children = (
+				4CBA6C561ADA76AD00AD5DB2 /* model */,
 				4C1F6E311AA6D216001DC576 /* ImportCourseBL.h */,
 				4C1F6E321AA6D216001DC576 /* ImportCourseBL.m */,
 				4C1F6E341AA6D2AD001DC576 /* ImportCourseDelegate.h */,
@@ -574,6 +585,7 @@
 		4C282FF21A77A1B000B36D47 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				4C5317771ADAA228004644EB /* Topic */,
 				4C342D2F1AB1A7C80064C8CE /* Cengke */,
 				4C342D1B1AB0740C0064C8CE /* MyDIYButton.h */,
 				4C342D1C1AB0740C0064C8CE /* MyDIYButton.m */,
@@ -724,6 +736,7 @@
 		4C342D251AB174530064C8CE /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				4C53176D1ADA989D004644EB /* Topic */,
 				4C342D361AB1C15C0064C8CE /* ShakeIt */,
 				4C342D351AB1C14C0064C8CE /* QRSignIn */,
 			);
@@ -797,10 +810,10 @@
 		4C4986671A791EB400F2CA42 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4C282FF21A77A1B000B36D47 /* Find */,
 				4C5CA8251A7B69BF00627BB9 /* OtherView */,
 				4C4986681A791F1000F2CA42 /* LoginAndRegister */,
 				4C282FF31A77A1BC00B36D47 /* AboutMe */,
-				4C282FF21A77A1B000B36D47 /* Find */,
 				4C282FEE1A77A17200B36D47 /* Timetable */,
 			);
 			name = PresentationLayer;
@@ -836,6 +849,33 @@
 				4C4986791A79447D00F2CA42 /* LoginAndRegisterBusiness.m */,
 			);
 			name = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		4C53176D1ADA989D004644EB /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				4C5317721ADA9B40004644EB /* model */,
+				4C53176E1ADA98DF004644EB /* TopicBL.h */,
+				4C53176F1ADA98DF004644EB /* TopicBL.m */,
+				4C5317711ADA9901004644EB /* TopicDelegate.h */,
+			);
+			name = Topic;
+			sourceTree = "<group>";
+		};
+		4C5317721ADA9B40004644EB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4C5317731ADA9B54004644EB /* TopicModel.h */,
+				4C5317741ADA9B54004644EB /* TopicModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		4C5317771ADAA228004644EB /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Topic;
 			sourceTree = "<group>";
 		};
 		4C5CA7FE1A7A59DC00627BB9 /* MJExtension */ = {
@@ -967,6 +1007,15 @@
 				4CBA4DD21AB436DD00B6B71D /* ic_register_login_top@2x.png */,
 			);
 			name = login_register;
+			sourceTree = "<group>";
+		};
+		4CBA6C561ADA76AD00AD5DB2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4CBA6C571ADA76CC00AD5DB2 /* PictureModel.h */,
+				4CBA6C581ADA76CC00AD5DB2 /* PictureModel.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1121,10 +1170,12 @@
 				4C5CA81C1A7A700D00627BB9 /* CourseModel.m in Sources */,
 				4C17EBC41AB2A0C200F1C27B /* MyCell.m in Sources */,
 				4C17EBD91AB2C7B000F1C27B /* CourseViewController.m in Sources */,
+				4CBA6C591ADA76CC00AD5DB2 /* PictureModel.m in Sources */,
 				4C49867D1A794AAA00F2CA42 /* ObjectFileManager.m in Sources */,
 				4C12C4C51A77DA1000BE6775 /* MKNetworkOperation.m in Sources */,
 				4C342CBC1AAFF97E0064C8CE /* CourseDetailViewController.m in Sources */,
 				4C213DA01A7680DE008CD12B /* ViewController.m in Sources */,
+				4C5317751ADA9B54004644EB /* TopicModel.m in Sources */,
 				4C12C4BE1A77DA1000BE6775 /* NSData+MKBase64.m in Sources */,
 				4C12C4BF1A77DA1000BE6775 /* NSDate+RFC1123.m in Sources */,
 				4C1F6E331AA6D216001DC576 /* ImportCourseBL.m in Sources */,
@@ -1159,6 +1210,7 @@
 				4C5CA8131A7A59DC00627BB9 /* NSObject+MJIvar.m in Sources */,
 				4C5CA8141A7A59DC00627BB9 /* NSObject+MJKeyValue.m in Sources */,
 				4C17EBBE1AB2871F00F1C27B /* ShakeItBL.m in Sources */,
+				4C5317701ADA98DF004644EB /* TopicBL.m in Sources */,
 				4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */,
 				4C5CA8801A7B988A00627BB9 /* KVNProgress.m in Sources */,
 				4C5CA87E1A7B988A00627BB9 /* UIImage+KVNEmpty.m in Sources */,

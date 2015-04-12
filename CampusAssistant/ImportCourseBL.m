@@ -38,24 +38,28 @@
     return  self;
 }
 
--(void)beginStep1RequestWithStuNo:(NSString *)stuNo andStuPwd:(NSString *)stuPwd{
+-(void)beginStep1RequestWithStuNo:(NSString *)stuNo andStuPwd:(NSString *)stuPwd andClassNo:(NSString *)classNo andUserId:(NSString*)userId{
     self.flag = YES;
     
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
     
-    [param setObject:stuPwd forKey:@"stuNum"];
+    [param setObject:stuNo forKey:@"stuNum"];
     [param setObject:stuPwd forKey:@"stuPassword"];
+    [param setObject:classNo forKey:@"stuClassNo"];
+    [param setObject:userId forKey:@"userId"];
     
     [self.myRequest sendRequestWithPath:kGetVerifyPath andParams:param forMethod:kGet];
 }
 
 
--(void) beginStep2RequestWithVerifyCode:(NSString*) verifyCode{
+-(void) beginStep2RequestWithVerifyCode:(NSString*) verifyCode andImgName:(NSString *)imgName andTimetableId:(NSString*)timetableId{
     self.flag = NO;
     
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
     
     [param setObject:verifyCode forKey:@"verifyCode"];
+    [param setObject:imgName forKey:@"imgName"];
+    [param setObject:timetableId forKey:@"timetableId"];
     
     [self.myRequest sendRequestWithPath:kCheckVerifyPath andParams:param forMethod:kGet];
 }
@@ -71,11 +75,11 @@
 
 -(void)requestSuccess:(NSDictionary *)dic{
     if (self.flag) {
-        NSString *picStr = [dic objectForKey:@"pic"];
+//        NSDictionary *picDic = [dic objectForKey:@"pic"];
         
-        NSData *picData = [[NSData alloc] initWithBase64EncodedString:picStr options:NSDataBase64DecodingIgnoreUnknownCharacters];
+        PictureModel *pic = [PictureModel objectWithKeyValues:dic];
         
-        [self.delegate step1RequestSuccessWithPicData:picData];
+        [self.delegate step1RequestSuccessWithPicData:pic];
     }else{
 
         [self.delegate step2RequestSuccess];
@@ -93,7 +97,11 @@
 }
 
 -(void)requestSuccessWithMsg:(NSString *)msg{
-    NSLog(@"do nothing");
+    if (self.flag) {
+        [self.delegate step1RequestSuccessWithMsg:msg];
+    }else{
+        [self.delegate step2RequestSuccessWithMsg:msg];
+    }
     
 }
 

@@ -13,12 +13,12 @@
 @interface ImportCourseStep2VC : UIViewController<UITextFieldDelegate,ImportCourseDelegate>
 @property(strong,nonatomic) ImportCourseBL *bl;
 
-@property NSData *picData;
+@property PictureModel *picData;
 @property (weak, nonatomic) IBOutlet UIImageView *verifyCodeImage;
 @property (weak, nonatomic) IBOutlet UITextField *verifyCodeField;
 - (IBAction)nextStep:(id)sender;
 - (IBAction)cancleStep:(id)sender;
 
--(ImportCourseStep2VC*)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*) bundle picData:(NSData*)picData;
+-(ImportCourseStep2VC*)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*) bundle picData:(PictureModel*)picData;
 //-(void) initImageData:(NSData *)pic;
 @end

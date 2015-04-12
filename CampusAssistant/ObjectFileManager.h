@@ -25,6 +25,7 @@
 -(void) removeAllFile;
 
 -(NSString*)getNickname;
+-(UserInfoModel*)getUserInfo;
 -(Semester*)getSemesterInfo;
 -(void)setSemester:(Semester*)semester;
 @end

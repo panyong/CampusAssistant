@@ -15,4 +15,5 @@
 -(void)signInBegin;
 -(void)signInSuccess:(NSString*) msg;
 -(void)signInFailed:(NSString*)msg;
+-(void)signInSuccessWithMsg:(NSString*) msg;
 @end

@@ -51,7 +51,7 @@
     int day = dayStr.intValue;
     
     NSString *mon = [NSString stringWithFormat:@"%i\n%@",day,kMon];
-    NSString *tue = [NSString stringWithFormat:@"%i\n%@",day+1,kThu];
+    NSString *tue = [NSString stringWithFormat:@"%i\n%@",day+1,kTue];
     NSString *wed = [NSString stringWithFormat:@"%i\n%@",day+2,kWed];
     NSString *thu = [NSString stringWithFormat:@"%i\n%@",day+3,kThu];
     NSString *fir = [NSString stringWithFormat:@"%i\n%@",day+4,kFir];

@@ -57,7 +57,7 @@
     [param setObject:nickname forKey:@"nickname"];
     
     
-    [self.request sendRequestWithPath:kLoginPath andParams:param forMethod:kPost];
+    [self.request sendRequestWithPath:kRegisterPath andParams:param forMethod:kPost];
 
 }
 

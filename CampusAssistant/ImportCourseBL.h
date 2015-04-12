@@ -21,6 +21,6 @@
 @property BOOL flag;
 -(ImportCourseBL*) init;
 
--(void) beginStep1RequestWithStuNo:(NSString*) stuNo andStuPwd:(NSString*) stuPwd;
--(void) beginStep2RequestWithVerifyCode:(NSString*) verifyCode;
+-(void) beginStep1RequestWithStuNo:(NSString*) stuNo andStuPwd:(NSString*) stuPwd andClassNo:(NSString*)classNo andUserId:(NSString*)userId;
+-(void) beginStep2RequestWithVerifyCode:(NSString*) verifyCode andImgName:(NSString*)imgName andTimetableId:(NSString*)timetableId;
 @end

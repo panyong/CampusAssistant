@@ -10,9 +10,11 @@
 #import "QRSignInDelegate.h"
 #import "QRSignInBL.h"
 #import "ZBarSDK.h"
+#import "ObjectFileManager.h"
+#import "UserInfoModel.h"
 
 @interface QRSignInViewController : ZBarReaderViewController<QRSignInDelegate,ZBarReaderDelegate>
 @property(strong,nonatomic) QRSignInBL *qrSignInBl;
-
+@property(strong,nonatomic) ObjectFileManager *manager;
 -(instancetype)init;
 @end

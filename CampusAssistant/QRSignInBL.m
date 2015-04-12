@@ -41,6 +41,9 @@
 }
 
 -(void)requestSuccess:(NSDictionary *)dic{
-    [self.delegate signInSuccess:[dic objectForKey:@"msg"]];
+    [self.delegate signInSuccess:@"签到成功!"];
+}
+-(void)requestSuccessWithMsg:(NSString *)msg{
+    [self.delegate signInSuccessWithMsg:msg];
 }
 @end

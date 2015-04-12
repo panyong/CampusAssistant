@@ -38,7 +38,12 @@
     ObjectFileManager *manager = [[ObjectFileManager alloc] init];
     Semester *semester = [manager getSemesterInfo];
     NSString *nowWeek = semester.nowWeek;
-    self.title = [NSString stringWithFormat:@"第%@周",nowWeek];
+    if (nowWeek == nil) {
+        self.navigationItem.title = [NSString stringWithFormat:@"第%@周",@"1"];
+    }else{
+        self.navigationItem.title = [NSString stringWithFormat:@"第%@周",nowWeek];
+    }
+    
     
     //设置右上角按钮
     UIImage *addImage = [UIImage imageNamed:kTimetable_addCourse_icon];

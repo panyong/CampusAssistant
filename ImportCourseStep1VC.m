@@ -27,6 +27,8 @@
     self.bl = [[ImportCourseBL alloc]init];
     self.bl.delegate = self;
     
+    self.manager = [[ObjectFileManager alloc] init];
+    
     //自定义手势，当前VIEW接收到该手势后触发keyboardHide：方法，进行键盘的隐藏
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
@@ -48,7 +50,10 @@
     
     if ([self validateText]) {
         [self keyboardHide];
-        [self.bl beginStep1RequestWithStuNo:self.stuNo.text andStuPwd:self.stuPwd.text];
+        
+        UserInfoModel *user = [self.manager getUserInfo];
+        
+        [self.bl beginStep1RequestWithStuNo:self.stuNo.text andStuPwd:self.stuPwd.text andClassNo:self.stuClassNo.text andUserId:user.userId];
         
         NSLog(@"下一步");
     }
@@ -84,7 +89,7 @@
     [KVNProgress showErrorWithStatus:msg];
 }
 
--(void)step1RequestSuccessWithPicData:(NSData *)pic{
+-(void)step1RequestSuccessWithPicData:(PictureModel *)pic{
 
     ImportCourseStep2VC *importCourseStep2VC = [[ImportCourseStep2VC alloc] initWithNibName:@"ImportCourseStep2VC" bundle:nil picData:pic];
 
@@ -92,6 +97,9 @@
     [self.navigationController addChildViewController:importCourseStep2VC] ;
 }
 
+-(void)step1RequestSuccessWithMsg:(NSString *)msg{
+    [KVNProgress showErrorWithStatus:msg];
+}
 
 
 
@@ -100,11 +108,13 @@
 -(void)keyboardHide:(UITapGestureRecognizer*)tap{
     [self.stuNo resignFirstResponder];
     [self.stuPwd resignFirstResponder];
+    [self.stuClassNo resignFirstResponder];
 }
 
 -(void)keyboardHide{
     [self.stuNo resignFirstResponder];
     [self.stuPwd resignFirstResponder];
+    [self.stuClassNo resignFirstResponder];
 }
 
 //当点击键盘上的“return”按钮时触发

@@ -35,6 +35,8 @@
     
     self.readerDelegate = self;
     
+    self.manager = [[ObjectFileManager alloc] init];
+    
 //    self.view.frame =  CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y , self.view.frame.size.width, self.view.frame.size.height + 20);
     
     [self setOverlayPickerView];
@@ -194,7 +196,9 @@
     
     NSString *courseId = symbol.data;
     
-    [self.qrSignInBl signInWithCourseId:courseId userId:@"20111750"];
+    UserInfoModel *user = [self.manager getUserInfo];
+    
+    [self.qrSignInBl signInWithCourseId:courseId userId:user.userId];
     
     NSLog(@"content:%@",courseId);
 }
@@ -214,7 +218,9 @@
     
     [KVNProgress showSuccessWithStatus:msg];
 }
-
+-(void)signInSuccessWithMsg:(NSString *)msg{
+    [KVNProgress showSuccessWithStatus:msg];
+}
 
 
 - (void)didReceiveMemoryWarning {

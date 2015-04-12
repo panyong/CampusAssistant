@@ -10,13 +10,17 @@
 #import "ImportCourseBL.h"
 #import "ImportCourseDelegate.h"
 #import "KVNProgress.h"
+#import "ObjectFileDelegate.h"
+#import "UserInfoModel.h"
 
 @interface ImportCourseStep1VC : UIViewController<UITextFieldDelegate,ImportCourseDelegate>
 @property(strong,nonatomic) ImportCourseBL *bl;
+@property(strong,nonatomic) ObjectFileManager *manager;
 
 @property(strong,nonatomic) KVNProgress *imgIndicator;
 @property (weak, nonatomic) IBOutlet UITextField *stuNo;
 @property (weak, nonatomic) IBOutlet UITextField *stuPwd;
+@property (weak, nonatomic) IBOutlet UITextField *stuClassNo;
 
 - (IBAction)nextStep:(id)sender;
 @end

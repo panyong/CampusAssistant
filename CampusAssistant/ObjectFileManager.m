@@ -55,6 +55,16 @@
     return userNickname;
 }
 
+#pragma mark - 读取用户信息
+-(UserInfoModel *)getUserInfo{
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kUserInfoFileName];
+    NSDictionary *infoDic = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    
+    UserInfoModel *user = [UserInfoModel objectWithKeyValues:infoDic];
+    
+    return user;
+}
+
 
 #pragma mark - 获取学期信息
 -(Semester*)getSemesterInfo{

@@ -68,9 +68,9 @@
     NSString *termEnd = semester.endSchoolYear;
     NSString *semesterStr =semester.semesterStr;
     
-    NSString *term = [NSString stringWithFormat:@"%@-%@学年 第%@学期",termStart,termEnd,semesterStr];
-    NSString *maxCount = [NSString stringWithFormat:@"%@",semester.maxCount];
-    NSString *nowWeek = [NSString stringWithFormat:@"第%@周",semester.nowWeek];
+    NSString *term = [NSString stringWithFormat:@"%@-%@学年 第%@学期",termStart==nil?@"2014":termStart,termEnd==nil?@"2015":termEnd,semesterStr==nil?@"1":semesterStr];
+    NSString *maxCount = [NSString stringWithFormat:@"%@",semester.maxCount==nil?@"8":semester.maxCount];
+    NSString *nowWeek = [NSString stringWithFormat:@"第%@周",semester.nowWeek==nil?@"1":semester.nowWeek];
     NSString *logout = @"";
     
     
