@@ -12,7 +12,7 @@
 @property NSString* nickName;
 @property NSString* content;
 @property NSString* publishTime;
-@property NSInteger* topicId;
+@property int topicId;
 @property int commentCount;
 @property int zanCount;
 @end

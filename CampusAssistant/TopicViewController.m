@@ -1,30 +1,57 @@
 //
-//  TopicVC.m
+//  TopicViewController.m
 //  CampusAssistant
 //
-//  Created by 潘勇 on 15-4-12.
+//  Created by 潘勇 on 15-4-13.
 //  Copyright (c) 2015年 SHIEP. All rights reserved.
 //
 
-#import "TopicVC.h"
+#import "TopicViewController.h"
 #import "KVNProgress.h"
+#import "MJRefresh/MJRefresh.h"
+#import "PublishTopicViewController.h"
 
-@interface TopicVC ()
+@interface TopicViewController ()
 
 @end
 
-@implementation TopicVC
+@implementation TopicViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"私密聊";
+    
     self.bl = [[TopicBL alloc] init];
     self.bl.delegate = self;
     
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     [self.bl getTopicList];
+    
+    //下拉刷新
+    [self.tableView addLegendHeaderWithRefreshingBlock:^{
+        [self.bl getTopicList];
+    }];
+    
+    
+    
+    //设置右上角按钮
+    UIImage *addImage = [UIImage imageNamed:kTimetable_addCourse_icon];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:addImage style:UIBarButtonItemStylePlain target:self action:@selector(publishTopic:)];
+    [self.navigationItem setRightBarButtonItem:rightBarButton animated:YES];
+    
+//    [self.tableView.legendHeader beginRefreshing];
     // Do any additional setup after loading the view.
 }
 
+
+#pragma mark - 右上角按钮响应事件
+-(void)publishTopic:(id)sender{
+    PublishTopicViewController *publishTopicVC = [[PublishTopicViewController alloc] initWithNibName:@"PublishTopicViewController" bundle:nil];
+    [self.navigationController pushViewController:publishTopicVC animated:YES];
+}
 
 #pragma mark - tableview要求实现的方法
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -53,11 +80,13 @@
     [cell.zanCount setText:[NSString stringWithFormat:@"%i",topic.zanCount]];
     [cell.commentCount setText:[NSString stringWithFormat:@"%i",topic.commentCount]];
     
+    cell.topicId = topic.topicId;
+    
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 120;
+    return 155;
 }
 
 
@@ -69,26 +98,31 @@
 }
 
 -(void)getTopicListFailed:(NSString *)msg{
-    
+    [self.tableView.legendHeader endRefreshing];
     [KVNProgress showErrorWithStatus:msg];
     [KVNProgress dismiss];
 }
 
 -(void)getTopicListSuccess:(NSArray *)topicList andCount:(int)count{
+    [self.tableView.legendHeader endRefreshing];
     self.topicArray = topicList;
     self.count = count;
+    
+    [self.tableView reloadData];
     [KVNProgress dismiss];
 }
 
 -(void)getTopicListSuccessWithMsg:(NSString *)msg{
-    [KVNProgress showWithStatus:msg];
-    [KVNProgress dismiss];
+    [self.tableView.legendHeader endRefreshing];
+    [KVNProgress showErrorWithStatus:msg];
+//    [KVNProgress dismiss];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

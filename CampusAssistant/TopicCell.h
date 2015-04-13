@@ -18,4 +18,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *commentImg;
 @property (weak, nonatomic) IBOutlet UILabel *commentCount;
 
+- (IBAction)zan:(id)sender;
+- (IBAction)publishComment:(id)sender;
+
+
+@property int topicId;
 @end

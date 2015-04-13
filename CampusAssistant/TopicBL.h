@@ -21,4 +21,5 @@
 -(instancetype)init;
 
 -(void) getTopicList;
+-(void) publishTopicWithUserId:(NSString*)userId andContent:(NSString*)content;
 @end

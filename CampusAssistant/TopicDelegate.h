@@ -17,4 +17,10 @@
 -(void)getTopicListSuccess:(NSArray*)topicList andCount:(int) count;
 -(void)getTopicListSuccessWithMsg:(NSString*)msg;
 
+@optional
+-(void)publishTopicBegin;
+-(void)publishTopicFailed:(NSString*)msg;
+-(void)publishTopicSuccess;
+-(void)publishTopicSuccessWithMsg:(NSString*)msg;
+
 @end

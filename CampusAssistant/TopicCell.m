@@ -36,4 +36,11 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)zan:(id)sender {
+    NSLog(@"zan+1 TopicId:%i",self.topicId);
+}
+
+- (IBAction)publishComment:(id)sender {
+    NSLog(@"comment TopicId:%i",self.topicId);
+}
 @end
