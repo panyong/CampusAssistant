@@ -11,8 +11,9 @@
 #import "TopicBL.h"
 #import "TopicCell.h"
 #import "ImageConfig.h"
+#import "TopicDetailViewController.h"
 
-@interface TopicViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,TopicDelegate>
+@interface TopicViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,TopicDelegate,TopicCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

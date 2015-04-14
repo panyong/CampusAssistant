@@ -64,6 +64,17 @@
 		4C282FED1A77A16300B36D47 /* TimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C282FEC1A77A16300B36D47 /* TimetableViewController.m */; };
 		4C282FF11A77A1A800B36D47 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C282FF01A77A1A800B36D47 /* FindViewController.m */; };
 		4C282FF61A77A1D100B36D47 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C282FF51A77A1D100B36D47 /* AboutMeViewController.m */; };
+		4C309DF21ADCC58000FF2690 /* pic_th_btn_LB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C309DF11ADCC58000FF2690 /* pic_th_btn_LB@2x.png */; };
+		4C309DF41ADCC58E00FF2690 /* pic_th_btn_RB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C309DF31ADCC58E00FF2690 /* pic_th_btn_RB@2x.png */; };
+		4C309DF61ADCC5D700FF2690 /* ic_info_is_avator_male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C309DF51ADCC5D700FF2690 /* ic_info_is_avator_male@2x.png */; };
+		4C309DF81ADCC85300FF2690 /* ic_biaobiao_jqr_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C309DF71ADCC85300FF2690 /* ic_biaobiao_jqr_avatar@2x.png */; };
+		4C309DFB1ADCDD1100FF2690 /* ZanBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C309DFA1ADCDD1100FF2690 /* ZanBL.m */; };
+		4C309E011ADCED3800FF2690 /* TopicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C309DFF1ADCED3800FF2690 /* TopicDetailViewController.m */; };
+		4C309E021ADCED3800FF2690 /* TopicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C309E001ADCED3800FF2690 /* TopicDetailViewController.xib */; };
+		4C309E061ADCF3BE00FF2690 /* TopicCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C309E041ADCF3BE00FF2690 /* TopicCommentCell.m */; };
+		4C309E071ADCF3BE00FF2690 /* TopicCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C309E051ADCF3BE00FF2690 /* TopicCommentCell.xib */; };
+		4C309E0D1ADD0EDC00FF2690 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C309E0C1ADD0EDC00FF2690 /* CommentModel.m */; };
+		4C309E101ADD1BC800FF2690 /* CommentBL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C309E0F1ADD1BC800FF2690 /* CommentBL.m */; };
 		4C342CBC1AAFF97E0064C8CE /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C342CBA1AAFF97E0064C8CE /* CourseDetailViewController.m */; };
 		4C342CBD1AAFF97E0064C8CE /* CourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CBB1AAFF97E0064C8CE /* CourseDetailViewController.xib */; };
 		4C342CD51AB01DD80064C8CE /* pic_tabbar_course_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C342CD41AB01DD80064C8CE /* pic_tabbar_course_selected@2x.png */; };
@@ -247,6 +258,25 @@
 		4C282FF01A77A1A800B36D47 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindViewController.m; path = ../FindViewController.m; sourceTree = "<group>"; };
 		4C282FF41A77A1D100B36D47 /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
 		4C282FF51A77A1D100B36D47 /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
+		4C309DF11ADCC58000FF2690 /* pic_th_btn_LB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_th_btn_LB@2x.png"; sourceTree = "<group>"; };
+		4C309DF31ADCC58E00FF2690 /* pic_th_btn_RB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_th_btn_RB@2x.png"; sourceTree = "<group>"; };
+		4C309DF51ADCC5D700FF2690 /* ic_info_is_avator_male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_info_is_avator_male@2x.png"; sourceTree = "<group>"; };
+		4C309DF71ADCC85300FF2690 /* ic_biaobiao_jqr_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_biaobiao_jqr_avatar@2x.png"; sourceTree = "<group>"; };
+		4C309DF91ADCDD1100FF2690 /* ZanBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZanBL.h; sourceTree = "<group>"; };
+		4C309DFA1ADCDD1100FF2690 /* ZanBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZanBL.m; sourceTree = "<group>"; };
+		4C309DFC1ADCDD1F00FF2690 /* ZanDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZanDelegate.h; sourceTree = "<group>"; };
+		4C309DFD1ADCE89B00FF2690 /* TopicCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicCellDelegate.h; sourceTree = "<group>"; };
+		4C309DFE1ADCED3800FF2690 /* TopicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicDetailViewController.h; sourceTree = "<group>"; };
+		4C309DFF1ADCED3800FF2690 /* TopicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicDetailViewController.m; sourceTree = "<group>"; };
+		4C309E001ADCED3800FF2690 /* TopicDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicDetailViewController.xib; sourceTree = "<group>"; };
+		4C309E031ADCF3BE00FF2690 /* TopicCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicCommentCell.h; sourceTree = "<group>"; };
+		4C309E041ADCF3BE00FF2690 /* TopicCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicCommentCell.m; sourceTree = "<group>"; };
+		4C309E051ADCF3BE00FF2690 /* TopicCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicCommentCell.xib; sourceTree = "<group>"; };
+		4C309E0B1ADD0EDC00FF2690 /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		4C309E0C1ADD0EDC00FF2690 /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		4C309E0E1ADD1BC800FF2690 /* CommentBL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentBL.h; sourceTree = "<group>"; };
+		4C309E0F1ADD1BC800FF2690 /* CommentBL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentBL.m; sourceTree = "<group>"; };
+		4C309E111ADD1BDC00FF2690 /* CommentDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentDelegate.h; sourceTree = "<group>"; };
 		4C342CB91AAFF97E0064C8CE /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
 		4C342CBA1AAFF97E0064C8CE /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
 		4C342CBB1AAFF97E0064C8CE /* CourseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseDetailViewController.xib; sourceTree = "<group>"; };
@@ -769,6 +799,10 @@
 		4C342D151AB06E6F0064C8CE /* find */ = {
 			isa = PBXGroup;
 			children = (
+				4C309DF71ADCC85300FF2690 /* ic_biaobiao_jqr_avatar@2x.png */,
+				4C309DF51ADCC5D700FF2690 /* ic_info_is_avator_male@2x.png */,
+				4C309DF31ADCC58E00FF2690 /* pic_th_btn_RB@2x.png */,
+				4C309DF11ADCC58000FF2690 /* pic_th_btn_LB@2x.png */,
 				4C5317851ADAB126004644EB /* pic_th_icon_hehe@2x.png */,
 				4C5317831ADAB0EA004644EB /* pic_th_comment@2x.png */,
 				4C17EBC61AB2AEDD00F1C27B /* shakeIt */,
@@ -916,6 +950,12 @@
 				4C53176E1ADA98DF004644EB /* TopicBL.h */,
 				4C53176F1ADA98DF004644EB /* TopicBL.m */,
 				4C5317711ADA9901004644EB /* TopicDelegate.h */,
+				4C309DF91ADCDD1100FF2690 /* ZanBL.h */,
+				4C309DFA1ADCDD1100FF2690 /* ZanBL.m */,
+				4C309DFC1ADCDD1F00FF2690 /* ZanDelegate.h */,
+				4C309E0E1ADD1BC800FF2690 /* CommentBL.h */,
+				4C309E0F1ADD1BC800FF2690 /* CommentBL.m */,
+				4C309E111ADD1BDC00FF2690 /* CommentDelegate.h */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -925,6 +965,8 @@
 			children = (
 				4C5317731ADA9B54004644EB /* TopicModel.h */,
 				4C5317741ADA9B54004644EB /* TopicModel.m */,
+				4C309E0B1ADD0EDC00FF2690 /* CommentModel.h */,
+				4C309E0C1ADD0EDC00FF2690 /* CommentModel.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -941,6 +983,13 @@
 				4CD5C1951ADBDF6200D87B5B /* PublishTopicViewController.h */,
 				4CD5C1961ADBDF6200D87B5B /* PublishTopicViewController.m */,
 				4CD5C1971ADBDF6200D87B5B /* PublishTopicViewController.xib */,
+				4C309DFD1ADCE89B00FF2690 /* TopicCellDelegate.h */,
+				4C309DFE1ADCED3800FF2690 /* TopicDetailViewController.h */,
+				4C309DFF1ADCED3800FF2690 /* TopicDetailViewController.m */,
+				4C309E001ADCED3800FF2690 /* TopicDetailViewController.xib */,
+				4C309E031ADCF3BE00FF2690 /* TopicCommentCell.h */,
+				4C309E041ADCF3BE00FF2690 /* TopicCommentCell.m */,
+				4C309E051ADCF3BE00FF2690 /* TopicCommentCell.xib */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -1192,6 +1241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C309DF61ADCC5D700FF2690 /* ic_info_is_avator_male@2x.png in Resources */,
 				4C342CBD1AAFF97E0064C8CE /* CourseDetailViewController.xib in Resources */,
 				4C342D2E1AB1806D0064C8CE /* QRSignInViewController.xib in Resources */,
 				4C17EBCD1AB2AF5E00F1C27B /* pic_main_course_classroom.png in Resources */,
@@ -1214,10 +1264,12 @@
 				4C342D341AB1BA180064C8CE /* ShakeItViewController.xib in Resources */,
 				4C342D211AB07B870064C8CE /* pic_find_countdown@2x.png in Resources */,
 				4C5317841ADAB0EA004644EB /* pic_th_comment@2x.png in Resources */,
+				4C309E071ADCF3BE00FF2690 /* TopicCommentCell.xib in Resources */,
 				4C16367F1AB33B6600AE29E4 /* pic_setting_change_term_img@2x.png in Resources */,
 				4CD5C1891ADBD3CC00D87B5B /* MJRefresh.bundle in Resources */,
 				4CD5C1991ADBDF6200D87B5B /* PublishTopicViewController.xib in Resources */,
 				4C342CDE1AB01DFF0064C8CE /* pic_tabbar_setting_selected@2x.png in Resources */,
+				4C309E021ADCED3800FF2690 /* TopicDetailViewController.xib in Resources */,
 				4C5317861ADAB126004644EB /* pic_th_icon_hehe@2x.png in Resources */,
 				4C17EBCA1AB2AF3A00F1C27B /* pic_main_course_teacher.png in Resources */,
 				4C17EBD51AB2AF8200F1C27B /* pic_main_course_week.png in Resources */,
@@ -1234,9 +1286,11 @@
 				4C17EBC01AB297CE00F1C27B /* pic_main_course_week_bg_thumb@2x.png in Resources */,
 				4CBA4DD91AB4377700B6B71D /* ic_register_password@2x.png in Resources */,
 				4C213D9D1A7680DE008CD12B /* Main.storyboard in Resources */,
+				4C309DF81ADCC85300FF2690 /* ic_biaobiao_jqr_avatar@2x.png in Resources */,
 				4C342CD71AB01DF20064C8CE /* pic_tabbar_course@2x.png in Resources */,
 				4CBA4DE31AB4946A00B6B71D /* pic_course_detail_like@2x.png in Resources */,
 				4C342CDD1AB01DFF0064C8CE /* pic_tabbar_find@2x.png in Resources */,
+				4C309DF41ADCC58E00FF2690 /* pic_th_btn_RB@2x.png in Resources */,
 				4C1636811AB33B6E00AE29E4 /* pic_setting_logout_img@2x.png in Resources */,
 				4C17EBC81AB2AEEB00F1C27B /* pic_main_course_teacher@2x.png in Resources */,
 				4C342D021AB065D60064C8CE /* zbar-help.html in Resources */,
@@ -1247,6 +1301,7 @@
 				4CBA4DD31AB436DD00B6B71D /* ic_register_login_top@2x.png in Resources */,
 				4C342D1F1AB07AF20064C8CE /* pic_find_robot@2x.png in Resources */,
 				4CBA4DDB1AB438B600B6B71D /* ic_register_password.png in Resources */,
+				4C309DF21ADCC58000FF2690 /* pic_th_btn_LB@2x.png in Resources */,
 				4C342D241AB07FBE0064C8CE /* pic_main_course_week_bg@2x.png in Resources */,
 				4CD5C16F1ADBD0FA00D87B5B /* TopicViewController.xib in Resources */,
 				4C17EBD21AB2AF7000F1C27B /* pic_main_course_section@2x.png in Resources */,
@@ -1275,6 +1330,7 @@
 				4C282FED1A77A16300B36D47 /* TimetableViewController.m in Sources */,
 				4C12C4C41A77DA1000BE6775 /* MKNetworkEngine.m in Sources */,
 				4C5CA81C1A7A700D00627BB9 /* CourseModel.m in Sources */,
+				4C309E011ADCED3800FF2690 /* TopicDetailViewController.m in Sources */,
 				4C17EBC41AB2A0C200F1C27B /* MyCell.m in Sources */,
 				4C17EBD91AB2C7B000F1C27B /* CourseViewController.m in Sources */,
 				4CD5C1931ADBD3CC00D87B5B /* UIScrollView+MJRefresh.m in Sources */,
@@ -1283,6 +1339,7 @@
 				4C12C4C51A77DA1000BE6775 /* MKNetworkOperation.m in Sources */,
 				4C342CBC1AAFF97E0064C8CE /* CourseDetailViewController.m in Sources */,
 				4C213DA01A7680DE008CD12B /* ViewController.m in Sources */,
+				4C309DFB1ADCDD1100FF2690 /* ZanBL.m in Sources */,
 				4C5317751ADA9B54004644EB /* TopicModel.m in Sources */,
 				4C12C4BE1A77DA1000BE6775 /* NSData+MKBase64.m in Sources */,
 				4C12C4BF1A77DA1000BE6775 /* NSDate+RFC1123.m in Sources */,
@@ -1307,6 +1364,7 @@
 				4C213DC31A769DA1008CD12B /* BaseRequestUrl.m in Sources */,
 				4C5CA80E1A7A59DC00627BB9 /* MJConst.m in Sources */,
 				4CD5C18A1ADBD3CC00D87B5B /* MJRefreshComponent.m in Sources */,
+				4C309E0D1ADD0EDC00FF2690 /* CommentModel.m in Sources */,
 				4C5CA8111A7A59DC00627BB9 /* MJType.m in Sources */,
 				4C5CA80F1A7A59DC00627BB9 /* MJFoundation.m in Sources */,
 				4C12C4C31A77DA1000BE6775 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
@@ -1327,6 +1385,7 @@
 				4C5CA8141A7A59DC00627BB9 /* NSObject+MJKeyValue.m in Sources */,
 				4CD5C18D1ADBD3CC00D87B5B /* MJRefreshGifFooter.m in Sources */,
 				4C17EBBE1AB2871F00F1C27B /* ShakeItBL.m in Sources */,
+				4C309E061ADCF3BE00FF2690 /* TopicCommentCell.m in Sources */,
 				4CD5C18C1ADBD3CC00D87B5B /* MJRefreshFooter.m in Sources */,
 				4C5317701ADA98DF004644EB /* TopicBL.m in Sources */,
 				4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */,
@@ -1334,6 +1393,7 @@
 				4C5CA87E1A7B988A00627BB9 /* UIImage+KVNEmpty.m in Sources */,
 				4C12C4BD1A77DA1000BE6775 /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				4C12C4C61A77DA1000BE6775 /* Reachability.m in Sources */,
+				4C309E101ADD1BC800FF2690 /* CommentBL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

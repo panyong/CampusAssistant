@@ -8,25 +8,25 @@
 
 #import "TopicCell.h"
 #import "ImageConfig.h"
+#import "KVNProgress.h"
 
 @implementation TopicCell
 
 - (void)awakeFromNib {
     // Initialization code
     if (self) {
-        [self.zanImg setImage:[UIImage imageNamed:kFind_topic_zan_icon]];
-        [self.commentImg setImage:[UIImage imageNamed:kFind_topic_comment_icon]];
-        
+        [self.headImg setImage:[UIImage imageNamed:@"ic_biaobiao_jqr_avatar@2x.png"]];
+        [self.zanImg setImage:[UIImage imageNamed:@"pic_th_icon_hehe@2x.png"]];
+        [self.commentImg setImage:[UIImage imageNamed:@"pic_th_comment@2x.png"]];
         [self.nickname setNumberOfLines:0];
         [self.nickname setAdjustsFontSizeToFitWidth:YES];
         [self.publishTime setNumberOfLines:0];
         [self.publishTime setAdjustsFontSizeToFitWidth:YES];
-        [self.content setNumberOfLines:0];
-        [self.content setAdjustsFontSizeToFitWidth:YES];
-        [self.zanCount setNumberOfLines:0];
-        [self.zanCount setAdjustsFontSizeToFitWidth:YES];
-        [self.commentCount setNumberOfLines:0];
-        [self.commentCount setAdjustsFontSizeToFitWidth:YES];
+        
+        self.bl = [[ZanBL alloc] init];
+        self.bl.delegate = self;
+
+        self.manager = [[ObjectFileManager alloc] init];
     }
 }
 
@@ -38,9 +38,35 @@
 
 - (IBAction)zan:(id)sender {
     NSLog(@"zan+1 TopicId:%i",self.topicId);
+    
+    UserInfoModel *user =[self.manager getUserInfo];
+    NSString* userId = user.userId;
+//    NSString* topicId = [NSString stringWithFormat:@"%i",_topicId];
+    
+    [_bl zanWithUserId:userId andTopicId:_topicId];
+    
 }
 
 - (IBAction)publishComment:(id)sender {
-    NSLog(@"comment TopicId:%i",self.topicId);
+//    NSLog(@"comment TopicId:%i",self.topicId);
+    [self.delegate commentSuccessInCell:self];
+}
+
+
+#pragma mark - ZanDelegate要求实现的方法
+-(void)publishZanBegin{
+    
+}
+
+-(void)publishZanFailed:(NSString *)msg{
+    [KVNProgress showErrorWithStatus:msg];
+}
+
+-(void)publishZanSuccess{
+    [self.delegate zanSuccessInCell:self];
+}
+
+-(void)publishZanSuccessWithMsg:(NSString *)msg{
+    [KVNProgress showErrorWithStatus:msg];
 }
 @end

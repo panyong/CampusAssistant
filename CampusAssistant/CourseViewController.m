@@ -87,6 +87,9 @@
     [cell.courseSection setText:sectionStr];
     [cell.courseWeek setText:weekStr];
     
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 

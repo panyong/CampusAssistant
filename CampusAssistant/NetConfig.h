@@ -27,7 +27,7 @@
 #define kQRSignInPath @"/find/sign_in/v1"//二维码签到
 #define kCengkePath @"/find_cengke/v1"//摇一摇蹭课
 #define kFindTopicListPath @"find/topic/get_list/v1"//获取话题列表
-#define kFindCommentListPath @"/find/topic/get_comment_list/v1"//获取评论列表
+#define kFindTopicDeatiltPath @"/find/topic/get_detail/v1"//获取评论列表
 #define kFindTopicPublishPath @"/find/topic/publish/v1"//发表话题
 #define kFindCommentPublishPath @"/find/topic/comment/publish/v1"//发表评论
 #define kFindZanPublishPath @"/find/topic/zan/publish/v1"//赞
