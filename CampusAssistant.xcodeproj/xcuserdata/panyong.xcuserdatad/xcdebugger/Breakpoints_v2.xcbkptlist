@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CampusAssistant/CommentBL.m"
-            timestampString = "450711088.331705"
+            filePath = "CampusAssistant/NoteEditingViewController.m"
+            timestampString = "450805120.600939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-requestSuccess:"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-publishIt:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CampusAssistant/ObjectFileManager.m"
+            timestampString = "450806285.175751"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-writeNote:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

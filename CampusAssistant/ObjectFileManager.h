@@ -10,6 +10,8 @@
 #import "UserInfoModel.h"
 #import "ObjectFileDelegate.h"
 #import "Semester.h"
+#import "NoteModel.h"
+#import "FindConfig.h"
 
 @interface ObjectFileManager : NSObject
 @property(weak,nonatomic) id<ObjectFileDelegate> delegate;
@@ -28,4 +30,10 @@
 -(UserInfoModel*)getUserInfo;
 -(Semester*)getSemesterInfo;
 -(void)setSemester:(Semester*)semester;
+
+
+-(BOOL)writeNote:(NoteModel*)note;
+-(NSMutableArray*)readNotes;
+-(BOOL)deleteNoteById:(int)noteId;
+-(BOOL)updateNote:(NoteModel*)note;
 @end

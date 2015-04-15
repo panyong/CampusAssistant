@@ -38,12 +38,73 @@
     NSString *uerInfoFile = [self applicationDocumentsDirectoryFile:kUserInfoFileName];
     NSString *semesterFile = [self applicationDocumentsDirectoryFile:kSemesterFileName];
     NSString *courseInfoFile = [self applicationDocumentsDirectoryFile:kCourseFileName];
+    NSString *notePath = [self applicationDocumentsDirectoryFile:kNoteFileName];
     
     [fileManager removeItemAtPath:uerInfoFile error:nil];
     [fileManager removeItemAtPath:semesterFile error:nil];
     [fileManager removeItemAtPath:courseInfoFile error:nil];
+    [fileManager removeItemAtPath:notePath error:nil];
 }
 
+#pragma mark - note相关方法
+-(BOOL)writeNote:(NoteModel *)note{
+    
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kNoteFileName];
+    
+    NSMutableArray *noteList = [[NSMutableArray alloc] initWithArray:self.readNotes];
+    
+    if (noteList == nil) {
+        noteList = [[NSMutableArray alloc] init];
+    }
+    
+    [noteList addObject:note];
+    
+    BOOL flag = [noteList writeToFile:filePath atomically:YES];
+    
+    return flag;
+}
+
+-(NSArray *)readNotes{
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kNoteFileName];
+    NSArray *noteList = [NoteModel objectArrayWithFile:filePath];
+    return noteList;
+}
+
+-(BOOL)deleteNoteById:(int)noteId{
+    
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kNoteFileName];
+    
+    NSArray *noteArray = [NoteModel objectArrayWithFile:filePath];
+    NSMutableArray *noteList = [[NSMutableArray alloc] initWithArray:noteArray];
+    for (NoteModel *note in noteArray) {
+        if (note.noteId == noteId) {
+            [noteList removeObject:note];
+        }
+    }
+    
+    BOOL flag = [noteList writeToFile:filePath atomically:YES];
+    
+    return flag;
+}
+
+-(BOOL)updateNote:(NoteModel *)note{
+    NSString *filePath = [self applicationDocumentsDirectoryFile:kNoteFileName];
+    
+    NSArray *noteArray = [NoteModel objectArrayWithFile:filePath];
+    NSMutableArray *noteList = [[NSMutableArray alloc] initWithArray:noteArray];
+    for (NoteModel *noteTemp in noteArray) {
+        if (noteTemp.noteId == note.noteId) {
+            [noteList removeObject:noteTemp];
+        }
+    }
+    
+    [noteList addObject:note];
+    
+    BOOL flag = [noteList writeToFile:filePath atomically:YES];
+    
+    return flag;
+
+}
 
 #pragma mark - 读取用户昵称
 -(NSString *)getNickname{

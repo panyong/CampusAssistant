@@ -12,6 +12,7 @@
 #import "QRSignInViewController.h"
 #import "ShakeItViewController.h"
 #import "TopicViewController.h"
+#import "NotepadViewController.h"
 
 @interface FindViewController ()
 
@@ -47,13 +48,23 @@
     MyDIYButton *qrSignInBtn = [self getDIYButtonByImageName:kFind_qr_sign_in_icon title:@"二维码签到" index:3];
     [qrSignInBtn addTarget:self action:@selector(qrSignIn:) forControlEvents:UIControlEventTouchUpInside];
     
+    MyDIYButton *noteBtn = [self getDIYButtonByImageName:@"pic_find_note@2x.png" title:@"随手记" index:4];
+    [noteBtn addTarget:self action:@selector(noteView:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:talkAfterClassBtn];
     [self.view addSubview:cengkeBtn];
     [self.view addSubview:qrSignInBtn];
+    [self.view addSubview:noteBtn];
     
      self.title = @"发现";
     
     
+}
+
+-(void)noteView:(id)sender{
+    NSLog(@"随手记");
+    NotepadViewController *notePadVC = [[NotepadViewController alloc] initWithNibName:@"NotepadViewController" bundle:nil];
+    [self.navigationController pushViewController:notePadVC animated:YES];
 }
 
 #pragma mark - 下课聊响应函数

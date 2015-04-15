@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0A9CB81ADE94F900D40F22 /* NotepadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A9CB61ADE94F900D40F22 /* NotepadViewController.m */; };
+		4C0A9CB91ADE94F900D40F22 /* NotepadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A9CB71ADE94F900D40F22 /* NotepadViewController.xib */; };
+		4C0A9CBD1ADE95C500D40F22 /* NotepadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A9CBB1ADE95C500D40F22 /* NotepadTableViewCell.m */; };
+		4C0A9CBE1ADE95C500D40F22 /* NotepadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A9CBC1ADE95C500D40F22 /* NotepadTableViewCell.xib */; };
+		4C0A9CC21ADE982200D40F22 /* NoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A9CC11ADE982200D40F22 /* NoteModel.m */; };
+		4C0A9CC71ADEB12600D40F22 /* NoteEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A9CC51ADEB12600D40F22 /* NoteEditingViewController.m */; };
+		4C0A9CC81ADEB12600D40F22 /* NoteEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A9CC61ADEB12600D40F22 /* NoteEditingViewController.xib */; };
+		4C0A9CCB1ADEBC3900D40F22 /* pic_find_note@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A9CCA1ADEBC3900D40F22 /* pic_find_note@2x.png */; };
 		4C12C4A01A77D97800BE6775 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12C49F1A77D97800BE6775 /* SystemConfiguration.framework */; };
 		4C12C4A21A77D98300BE6775 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12C4A11A77D98300BE6775 /* CFNetwork.framework */; };
 		4C12C4A41A77D98D00BE6775 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12C4A31A77D98D00BE6775 /* Security.framework */; };
@@ -172,6 +180,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0A9CB51ADE94F900D40F22 /* NotepadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotepadViewController.h; sourceTree = "<group>"; };
+		4C0A9CB61ADE94F900D40F22 /* NotepadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotepadViewController.m; sourceTree = "<group>"; };
+		4C0A9CB71ADE94F900D40F22 /* NotepadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotepadViewController.xib; sourceTree = "<group>"; };
+		4C0A9CBA1ADE95C500D40F22 /* NotepadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotepadTableViewCell.h; sourceTree = "<group>"; };
+		4C0A9CBB1ADE95C500D40F22 /* NotepadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotepadTableViewCell.m; sourceTree = "<group>"; };
+		4C0A9CBC1ADE95C500D40F22 /* NotepadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotepadTableViewCell.xib; sourceTree = "<group>"; };
+		4C0A9CC01ADE982200D40F22 /* NoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteModel.h; sourceTree = "<group>"; };
+		4C0A9CC11ADE982200D40F22 /* NoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteModel.m; sourceTree = "<group>"; };
+		4C0A9CC31ADE9A1000D40F22 /* FindConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindConfig.h; sourceTree = "<group>"; };
+		4C0A9CC41ADEB12600D40F22 /* NoteEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteEditingViewController.h; sourceTree = "<group>"; };
+		4C0A9CC51ADEB12600D40F22 /* NoteEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteEditingViewController.m; sourceTree = "<group>"; };
+		4C0A9CC61ADEB12600D40F22 /* NoteEditingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteEditingViewController.xib; sourceTree = "<group>"; };
+		4C0A9CC91ADEB3CB00D40F22 /* NoteEditDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteEditDelegate.h; sourceTree = "<group>"; };
+		4C0A9CCA1ADEBC3900D40F22 /* pic_find_note@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_find_note@2x.png"; sourceTree = "<group>"; };
 		4C12C49F1A77D97800BE6775 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4C12C4A11A77D98300BE6775 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4C12C4A31A77D98D00BE6775 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -470,6 +492,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0A9CB41ADE94CD00D40F22 /* notepad */ = {
+			isa = PBXGroup;
+			children = (
+				4C0A9CBF1ADE97DF00D40F22 /* model */,
+				4C0A9CB51ADE94F900D40F22 /* NotepadViewController.h */,
+				4C0A9CB61ADE94F900D40F22 /* NotepadViewController.m */,
+				4C0A9CB71ADE94F900D40F22 /* NotepadViewController.xib */,
+				4C0A9CBA1ADE95C500D40F22 /* NotepadTableViewCell.h */,
+				4C0A9CBB1ADE95C500D40F22 /* NotepadTableViewCell.m */,
+				4C0A9CBC1ADE95C500D40F22 /* NotepadTableViewCell.xib */,
+				4C0A9CC41ADEB12600D40F22 /* NoteEditingViewController.h */,
+				4C0A9CC51ADEB12600D40F22 /* NoteEditingViewController.m */,
+				4C0A9CC61ADEB12600D40F22 /* NoteEditingViewController.xib */,
+				4C0A9CC91ADEB3CB00D40F22 /* NoteEditDelegate.h */,
+			);
+			name = notepad;
+			sourceTree = "<group>";
+		};
+		4C0A9CBF1ADE97DF00D40F22 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4C0A9CC01ADE982200D40F22 /* NoteModel.h */,
+				4C0A9CC11ADE982200D40F22 /* NoteModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		4C12C4A51A77DA1000BE6775 /* MKNetworkKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,6 +719,7 @@
 		4C282FF21A77A1B000B36D47 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				4C0A9CB41ADE94CD00D40F22 /* notepad */,
 				4C5317771ADAA228004644EB /* Topic */,
 				4C342D2F1AB1A7C80064C8CE /* Cengke */,
 				4C342D1B1AB0740C0064C8CE /* MyDIYButton.h */,
@@ -799,6 +849,7 @@
 		4C342D151AB06E6F0064C8CE /* find */ = {
 			isa = PBXGroup;
 			children = (
+				4C0A9CCA1ADEBC3900D40F22 /* pic_find_note@2x.png */,
 				4C309DF71ADCC85300FF2690 /* ic_biaobiao_jqr_avatar@2x.png */,
 				4C309DF51ADCC5D700FF2690 /* ic_info_is_avator_male@2x.png */,
 				4C309DF31ADCC58E00FF2690 /* pic_th_btn_RB@2x.png */,
@@ -872,6 +923,7 @@
 		4C4986651A791E3F00F2CA42 /* PersistenceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4C0A9CC31ADE9A1000D40F22 /* FindConfig.h */,
 				4C5CA8211A7B4D0000627BB9 /* CourseConfig.h */,
 				4C5CA7FD1A79FF7700627BB9 /* ObjectFileDelegate.h */,
 				4C49867B1A794AAA00F2CA42 /* ObjectFileManager.h */,
@@ -1259,16 +1311,20 @@
 				4C1F79FE1AAEC6E000A9CDCD /* bgImage.png in Resources */,
 				4C213DBF1A7688E3008CD12B /* img01.jpg in Resources */,
 				4C16367A1AB3341500AE29E4 /* AboutMe.xib in Resources */,
+				4C0A9CCB1ADEBC3900D40F22 /* pic_find_note@2x.png in Resources */,
 				4C4A17A01A7FC4220027F303 /* background.jpg in Resources */,
 				4C342D031AB065D60064C8CE /* zbar-helpicons.png in Resources */,
+				4C0A9CC81ADEB12600D40F22 /* NoteEditingViewController.xib in Resources */,
 				4C342D341AB1BA180064C8CE /* ShakeItViewController.xib in Resources */,
 				4C342D211AB07B870064C8CE /* pic_find_countdown@2x.png in Resources */,
 				4C5317841ADAB0EA004644EB /* pic_th_comment@2x.png in Resources */,
+				4C0A9CBE1ADE95C500D40F22 /* NotepadTableViewCell.xib in Resources */,
 				4C309E071ADCF3BE00FF2690 /* TopicCommentCell.xib in Resources */,
 				4C16367F1AB33B6600AE29E4 /* pic_setting_change_term_img@2x.png in Resources */,
 				4CD5C1891ADBD3CC00D87B5B /* MJRefresh.bundle in Resources */,
 				4CD5C1991ADBDF6200D87B5B /* PublishTopicViewController.xib in Resources */,
 				4C342CDE1AB01DFF0064C8CE /* pic_tabbar_setting_selected@2x.png in Resources */,
+				4C0A9CB91ADE94F900D40F22 /* NotepadViewController.xib in Resources */,
 				4C309E021ADCED3800FF2690 /* TopicDetailViewController.xib in Resources */,
 				4C5317861ADAB126004644EB /* pic_th_icon_hehe@2x.png in Resources */,
 				4C17EBCA1AB2AF3A00F1C27B /* pic_main_course_teacher.png in Resources */,
@@ -1327,6 +1383,7 @@
 				4C342D281AB174990064C8CE /* QRSignInBL.m in Sources */,
 				4CD5C1981ADBDF6200D87B5B /* PublishTopicViewController.m in Sources */,
 				4CD5C18F1ADBD3CC00D87B5B /* MJRefreshHeader.m in Sources */,
+				4C0A9CB81ADE94F900D40F22 /* NotepadViewController.m in Sources */,
 				4C282FED1A77A16300B36D47 /* TimetableViewController.m in Sources */,
 				4C12C4C41A77DA1000BE6775 /* MKNetworkEngine.m in Sources */,
 				4C5CA81C1A7A700D00627BB9 /* CourseModel.m in Sources */,
@@ -1339,6 +1396,7 @@
 				4C12C4C51A77DA1000BE6775 /* MKNetworkOperation.m in Sources */,
 				4C342CBC1AAFF97E0064C8CE /* CourseDetailViewController.m in Sources */,
 				4C213DA01A7680DE008CD12B /* ViewController.m in Sources */,
+				4C0A9CC71ADEB12600D40F22 /* NoteEditingViewController.m in Sources */,
 				4C309DFB1ADCDD1100FF2690 /* ZanBL.m in Sources */,
 				4C5317751ADA9B54004644EB /* TopicModel.m in Sources */,
 				4C12C4BE1A77DA1000BE6775 /* NSData+MKBase64.m in Sources */,
@@ -1356,6 +1414,7 @@
 				4CD5C16E1ADBD0FA00D87B5B /* TopicViewController.m in Sources */,
 				4C282FF61A77A1D100B36D47 /* AboutMeViewController.m in Sources */,
 				4CD5C1921ADBD3CC00D87B5B /* UIScrollView+MJExtension.m in Sources */,
+				4C0A9CBD1ADE95C500D40F22 /* NotepadTableViewCell.m in Sources */,
 				4CD5C1941ADBD3CC00D87B5B /* UIView+MJExtension.m in Sources */,
 				4C12C4C21A77DA1000BE6775 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				4C342D331AB1BA180064C8CE /* ShakeItViewController.m in Sources */,
@@ -1388,6 +1447,7 @@
 				4C309E061ADCF3BE00FF2690 /* TopicCommentCell.m in Sources */,
 				4CD5C18C1ADBD3CC00D87B5B /* MJRefreshFooter.m in Sources */,
 				4C5317701ADA98DF004644EB /* TopicBL.m in Sources */,
+				4C0A9CC21ADE982200D40F22 /* NoteModel.m in Sources */,
 				4C4986751A7937F100F2CA42 /* MyRequest.m in Sources */,
 				4C5CA8801A7B988A00627BB9 /* KVNProgress.m in Sources */,
 				4C5CA87E1A7B988A00627BB9 /* UIImage+KVNEmpty.m in Sources */,
