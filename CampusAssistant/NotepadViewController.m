@@ -33,6 +33,7 @@
 }
 
 -(void)publishSuccess{
+//    [_notepadTableView ]
     _noteList = [_manager readNotes];
     [self.notepadTableView reloadData];
 }
@@ -50,21 +51,26 @@
 {
     static NSString *CellIdentifier = @"topicCell";
     
-    NotepadTableViewCell *cell = (NotepadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"NotepadTableViewCell" owner:self options:nil];
-        cell = [array objectAtIndex:0];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
-    NoteModel *note = [self.noteList objectAtIndex:indexPath.row];
+    
+    NSArray *array = [[NSArray alloc]initWithArray:_noteList];
+    
+    NSArray *noteArray = [NoteModel objectArrayWithKeyValuesArray:array];
+    
+    NoteModel *note = [noteArray objectAtIndex:indexPath.row];
     
     //初始化Label
-    [cell.noteTitle setText:note.noteTitle];
-    [cell.noteTime setText:note.noteTime];
-    [cell.noteContent setText:note.noteContent];
+    cell.textLabel.text =  note.noteContent;
+    [cell.textLabel setAdjustsFontSizeToFitWidth:YES];
+    cell.detailTextLabel.text = note.noteTime;
+    [cell.detailTextLabel setAdjustsFontSizeToFitWidth:YES];
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -72,25 +78,42 @@
 }
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return self.noteList.count;
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *array = [[NSArray alloc]initWithArray:_noteList];
+        NSArray *noteArray = [NoteModel objectArrayWithKeyValuesArray:array];
+        NoteModel *note = [noteArray objectAtIndex:indexPath.row];
+        [_manager deleteNoteById:note.noteId];
+//        _noteList = [_manager readNotes];
+//        [_notepadTableView reloadData];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationTop];
+    }
 }
 
+
+
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NoteModel *note = [self.noteList objectAtIndex:indexPath.row];
+    NSArray *array = [[NSArray alloc]initWithArray:_noteList];
     
-    NSLog(@"NoteId:%i",note.noteId);
+    NSArray *noteArray = [NoteModel objectArrayWithKeyValuesArray:array];
+    NoteModel *note = [noteArray objectAtIndex:indexPath.row];
+    
+    NoteEditingViewController *noteEditingVC = [[NoteEditingViewController alloc] initWithNibName:@"NoteEditingViewController" bundle:nil note:note];
+    noteEditingVC.delegate  = self;
+    [self.navigationController pushViewController:noteEditingVC animated:YES];
+    
+    NSLog(@"NoteId:%@",note.noteId);
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return self.noteList.count;
 }
 
 
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150;
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 128;
+//}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 15;

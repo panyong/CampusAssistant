@@ -34,6 +34,6 @@
 
 -(BOOL)writeNote:(NoteModel*)note;
 -(NSMutableArray*)readNotes;
--(BOOL)deleteNoteById:(int)noteId;
+-(BOOL)deleteNoteById:(NSString*)noteId;
 -(BOOL)updateNote:(NoteModel*)note;
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NoteModel : NSObject
-@property int noteId;
+@property NSString *noteId;
 @property NSString *noteTitle;
 @property NSString *noteTime;
 @property NSString *noteContent;

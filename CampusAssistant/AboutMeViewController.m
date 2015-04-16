@@ -108,7 +108,7 @@
     
     cell.textLabel.text = [self.titleArray objectAtIndex:row];
     
-//    [cell.textLabel setFont:[UIFont fontWithName: size:<#(CGFloat)#>]];
+//    [cell.textLabel setFont:[UIFont fontWithName: size:(CGFloat)]];
     cell.detailTextLabel.text = [self.detailArray objectAtIndex:row];
     [cell.detailTextLabel setAdjustsFontSizeToFitWidth:YES];
     cell.imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:row]];

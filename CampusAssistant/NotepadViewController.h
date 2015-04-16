@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "NoteEditingViewController.h"
 #import "NotepadTableViewCell.h"
+#import "MJExtension/MJExtension.h"
 
 @interface NotepadViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NoteEditDelegate>
 
 @property ObjectFileManager *manager;
-@property NSArray* noteList;
+@property NSMutableArray* noteList;
 
 
 @property (weak, nonatomic) IBOutlet UITableView *notepadTableView;

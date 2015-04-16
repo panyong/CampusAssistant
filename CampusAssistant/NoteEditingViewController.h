@@ -15,6 +15,7 @@
 @property(weak,nonatomic) id<NoteEditDelegate> delegate;
 
 @property NoteModel *note;
+@property BOOL flag;
 
 @property (weak, nonatomic) IBOutlet UITextField *noteTitle;
 @property (weak, nonatomic) IBOutlet UITextView *noteContent;
@@ -22,6 +23,6 @@
 
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil note:(NoteModel*)note;
-
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 @property ObjectFileManager *manager;
 @end

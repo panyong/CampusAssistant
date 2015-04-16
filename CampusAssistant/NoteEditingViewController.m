@@ -19,6 +19,9 @@
     
     self.manager = [[ObjectFileManager alloc] init];
     
+    [_noteTitle setText:_note.noteTitle];
+    [_noteContent setText:_note.noteContent];
+    
     //自定义手势，当前VIEW接收到该手势后触发keyboardHide：方法，进行键盘的隐藏
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
@@ -28,10 +31,20 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        self.flag = YES;
+    }
+    
+    return self;
+}
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil note:(NoteModel *)note{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
+        self.flag = NO;
         self.note = note;
     }
     
@@ -86,9 +99,9 @@
     
     NSArray *noteList = [_manager readNotes];
     
-    int noteId = 1;
+    NSString* noteId = @"1";
     if (noteList != nil){
-        noteId = noteList.count * 10 + 1;
+        noteId = [NSString stringWithFormat:@"%i",noteList.count * 10 + 1];
     }
     
     NoteModel *note = [[NoteModel alloc] init];
@@ -101,7 +114,14 @@
     note.noteContent = noteContent;
     note.noteTime = noteTime;
     
-    if([_manager writeNote:note]){
+    BOOL sucFlag = NO;
+    if (_flag) {
+        sucFlag = [_manager writeNote:note];
+    }else{
+        sucFlag = [_manager updateNote:note];
+    }
+    
+    if(sucFlag){
         [KVNProgress showSuccessWithStatus:@"添加/更新成功"];
         [self.delegate publishSuccess];
         [self.navigationController popViewControllerAnimated:YES];
