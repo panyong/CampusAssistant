@@ -33,8 +33,8 @@
 
     [_accountImage setImage:[UIImage imageNamed:@"pic_super_account@2x.png"]];
     [_passwordImage setImage:[UIImage imageNamed:@"ic_register_password@2x.png"]];
-    [_backgroundImage setImage:[UIImage imageNamed:@"ic_register_background@2x.png"]];
-    [_iconImage setImage:[UIImage imageNamed:@"ic_register_login_top@2x.png"]];
+//    [_backgroundImage setImage:[UIImage imageNamed:@"ic_register_background@2x.png"]];
+    [_backgroundImage setImage:[UIImage imageNamed:@"bg_login@2x.jpg"]];
     
     //自定义手势，当前VIEW接收到该手势后触发keyboardHide：方法，进行键盘的隐藏
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
@@ -123,7 +123,7 @@
     
     [KVNProgress dismiss];
     
-    [KVNProgress showErrorWithStatus:@"咦~网络开小差了哦~"];
+    [KVNProgress showErrorWithStatus:msg];
 }
 
 -(void)loginFailed:(NSError *)error{

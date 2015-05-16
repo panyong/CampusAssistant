@@ -13,6 +13,7 @@
 #import "ShakeItViewController.h"
 #import "TopicViewController.h"
 #import "NotepadViewController.h"
+#import "EventViewController.h"
 
 @interface FindViewController ()
 
@@ -35,6 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    _scrollView.delegate = self;
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kFind_background_image] ]];
     
     self.edgesForExtendedLayout = UIRectEdgeNone ;//设置view大小
@@ -51,14 +56,29 @@
     MyDIYButton *noteBtn = [self getDIYButtonByImageName:@"pic_find_note@2x.png" title:@"随手记" index:4];
     [noteBtn addTarget:self action:@selector(noteView:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:talkAfterClassBtn];
-    [self.view addSubview:cengkeBtn];
-    [self.view addSubview:qrSignInBtn];
-    [self.view addSubview:noteBtn];
+    MyDIYButton *eventBtn = [self getDIYButtonByImageName:@"pic_find_countdown@2x.png" title:@"倒计时" index:5];
+    [eventBtn addTarget:self action:@selector(eventView:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.scrollView addSubview:talkAfterClassBtn];
+    [self.scrollView addSubview:cengkeBtn];
+    [self.scrollView addSubview:qrSignInBtn];
+    [self.scrollView addSubview:noteBtn];
+    [self.scrollView addSubview:eventBtn];
+    
+    [_scrollView setContentSize:CGSizeMake(self.view.frame.size.width, eventBtn.frame.size.width * 2+20)];
+    self.scrollView.bounces = NO;
+    
+    [self.view addSubview:_scrollView];
     
      self.title = @"发现";
     
     
+}
+
+-(void)eventView:(id)sender{
+    NSLog(@"随手记");
+    EventViewController *eventVC = [[EventViewController alloc] initWithNibName:@"EventViewController" bundle:nil];
+    [self.navigationController pushViewController:eventVC animated:YES];
 }
 
 -(void)noteView:(id)sender{

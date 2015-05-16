@@ -20,7 +20,7 @@
     
     self.notepadTableView.dataSource = self;
     self.notepadTableView.delegate = self;
-    
+    [self.notepadTableView setAllowsSelection:YES];
     self.manager = [[ObjectFileManager alloc] init];
     
     self.noteList = [_manager readNotes];
@@ -49,12 +49,12 @@
 #pragma mark - tableviewdelegate方法
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"topicCell";
+    static NSString *cellIdentifier = @"noteCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
     
     
@@ -70,7 +70,7 @@
     cell.detailTextLabel.text = note.noteTime;
     [cell.detailTextLabel setAdjustsFontSizeToFitWidth:YES];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;//UITableViewCellAccessoryDisclosureIndicator;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -84,15 +84,15 @@
         NSArray *noteArray = [NoteModel objectArrayWithKeyValuesArray:array];
         NoteModel *note = [noteArray objectAtIndex:indexPath.row];
         [_manager deleteNoteById:note.noteId];
-//        _noteList = [_manager readNotes];
-//        [_notepadTableView reloadData];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationTop];
+        _noteList = [_manager readNotes];
+        [_notepadTableView reloadData];
+//        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationTop];
     }
 }
 
 
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSArray *array = [[NSArray alloc]initWithArray:_noteList];
     
     NSArray *noteArray = [NoteModel objectArrayWithKeyValuesArray:array];

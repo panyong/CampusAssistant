@@ -8,7 +8,7 @@
 
 
 #pragma mark - 图片的定义
-#define kTimetable_background_image @"pic_main_course_week_bg@2x.png"
+#define kTimetable_background_image @"bg_index@2x.jpg"
 #define kTimetable_addCourse_icon @"pic_main_course_hide_menu_img@2x.png"
 
 

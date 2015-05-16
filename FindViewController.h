@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FindViewController : UIViewController
-
+@interface FindViewController : UIViewController<UIScrollViewDelegate>
+@property UIScrollView *scrollView;
 @end

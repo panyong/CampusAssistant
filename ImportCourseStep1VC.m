@@ -36,6 +36,9 @@
     //将触摸事件添加到当前view
     [self.view addGestureRecognizer:tapGestureRecognizer];
     // Do any additional setup after loading the view.
+    
+    
+//    _schoolYear.inputView;
 }
 
 - (void)didReceiveMemoryWarning {

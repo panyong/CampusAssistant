@@ -121,6 +121,11 @@
     [self.navigationController pushViewController:importS1VC animated:YES];
 }
 
+-(void)registerSuccessWithMsg:(NSString *)msg{
+    [KVNProgress dismiss];
+    [KVNProgress showSuccessWithStatus:msg];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

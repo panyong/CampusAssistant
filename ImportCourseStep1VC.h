@@ -21,6 +21,17 @@
 @property (weak, nonatomic) IBOutlet UITextField *stuNo;
 @property (weak, nonatomic) IBOutlet UITextField *stuPwd;
 @property (weak, nonatomic) IBOutlet UITextField *stuClassNo;
+@property (weak, nonatomic) IBOutlet UITextField *stuNameField;
+@property (weak, nonatomic) IBOutlet UITextField *schoolYear;
+@property NSString *startSchoolYear;
+@property NSString *endSchoolYear;
+@property NSString *semester;
+@property NSString *stuName;
+
+@property UIPickerView *schoolYearPickerView;
+@property UIPickerView *stuClassNoPickerView;
+
+//@property
 
 - (IBAction)nextStep:(id)sender;
 @end
