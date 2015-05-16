@@ -13,7 +13,7 @@
 #import "ObjectFileDelegate.h"
 #import "UserInfoModel.h"
 
-@interface ImportCourseStep1VC : UIViewController<UITextFieldDelegate,ImportCourseDelegate>
+@interface ImportCourseStep1VC : UIViewController<UITextFieldDelegate,ImportCourseDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 @property(strong,nonatomic) ImportCourseBL *bl;
 @property(strong,nonatomic) ObjectFileManager *manager;
 
@@ -26,7 +26,7 @@
 @property NSString *startSchoolYear;
 @property NSString *endSchoolYear;
 @property NSString *semester;
-@property NSString *stuName;
+@property NSString *stuClassNoStr;
 
 @property UIPickerView *schoolYearPickerView;
 @property UIPickerView *stuClassNoPickerView;

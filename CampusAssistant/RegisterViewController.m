@@ -37,9 +37,10 @@
     self.bl = [[LoginAndRegisterBusiness alloc]init];
     self.bl.delegate = self;
     
-    
-    [_backgroundImage setImage:[UIImage imageNamed:@"ic_register_background@2x.png"]];
-    [_iconImage setImage:[UIImage imageNamed:@"ic_register_login_top@2x.png"]];
+  
+    [_backgroundImage setImage:[UIImage imageNamed:@"bg_login@2x.jpg"]];
+//    [_backgroundImage setImage:[UIImage imageNamed:@"ic_register_background@2x.png"]];
+//    [_iconImage setImage:[UIImage imageNamed:@"ic_register_login_top@2x.png"]];
     
     //自定义手势，当前VIEW接收到该手势后触发keyboardHide：方法，进行键盘的隐藏
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];

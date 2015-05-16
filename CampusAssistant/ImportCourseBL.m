@@ -38,7 +38,7 @@
     return  self;
 }
 
--(void)beginStep1RequestWithStuNo:(NSString *)stuNo andStuPwd:(NSString *)stuPwd andClassNo:(NSString *)classNo andUserId:(NSString*)userId{
+-(void)beginStep1RequestWithStuNo:(NSString *)stuNo andStuPwd:(NSString *)stuPwd andClassNo:(NSString *)classNo andStartYear:(NSString *)startYear andEndYear:(NSString *)endYear andSemester:(NSString *)semester andStuName:(NSString *)stuName andUserId:(NSString *)userId{
     self.flag = YES;
     
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
@@ -47,6 +47,10 @@
     [param setObject:stuPwd forKey:@"stuPassword"];
     [param setObject:classNo forKey:@"stuClassNo"];
     [param setObject:userId forKey:@"userId"];
+    [param setObject:startYear forKey:@"startSchoolYear"];
+    [param setObject:endYear forKey:@"endSchoolYear"];
+    [param setObject:stuName forKey:@"stuName"];
+    [param setObject:semester forKey:@"semester"];
     
     [self.myRequest sendRequestWithPath:kGetVerifyPath andParams:param forMethod:kGet];
 }
