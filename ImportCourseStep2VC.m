@@ -76,6 +76,8 @@
         return;
     }
     
+    [_verifyCodeField resignFirstResponder];
+    
     [self.bl beginStep2RequestWithVerifyCode:verifyCode andImgName:self.picData.imgName andTimetableId:[NSString stringWithFormat:@"%i",self.picData.timetableId]];
 }
 
@@ -95,11 +97,11 @@
 }
 
 -(void)step2RequestFailedWithMsg:(NSString *)msg{
-    [KVNProgress showErrorWithStatus:@"网络在开小差，请重试~"];
+    [KVNProgress showErrorWithStatus:msg];
 }
 
 -(void)step2RequestSuccessWithMsg:(NSString *)msg{
-    [KVNProgress showWithStatus:msg];
+    [KVNProgress showErrorWithStatus:msg];
 }
 
 -(void)writeBegin{
